@@ -19,8 +19,9 @@ public class InputManagerGun : MonoBehaviour
 
         shoot = GetComponent<Shooting>();
         switching = GetComponentInParent<WeaponSwitching>();
+        
         gunActions.Shoot.performed += ctx => shoot.Shoot();
-        //gunActions.Shoot.canceled += ctx => shoot.EndShoot();
+        gunActions.Reload.performed += ctx => shoot.Reload();
         gunActions.Switch.performed += ctx => switching.Switch();
     }
 
