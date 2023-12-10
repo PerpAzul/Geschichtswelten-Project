@@ -36,47 +36,63 @@ public class PlayerLook : MonoBehaviour
         {
             GravityPush();
         }
-        
+
+        if (powersActions.GravityPull.IsPressed())
+        {
+            GravityPull();
+        }
     }
 
     //Method to detect if an enemy is in front of you
-    private bool DetectCollision()
+    private void GravityPush()
     {
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position,cam.transform.TransformDirection(Vector3.forward),out hit,Mathf.Infinity))
+        if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
+                Mathf.Infinity))
         {
             GameObject hitGameObject = hit.collider.gameObject;
             if (hitGameObject.CompareTag("Enemy"))
             {
-                return true;
+                Debug.Log("Hit");
+                var rigidbody = hitGameObject.GetComponent<Rigidbody>();
+                rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 50f, ForceMode.Force);
             }
         }
-       
-        return false;
+
+        Debug.Log("No Hit");
     }
 
-    private void GravityPush()
+    private void GravityPull()
     {
-        if (DetectCollision())
+        RaycastHit hit;
+        if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
+                Mathf.Infinity))
         {
-            Debug.Log("Hit");
+            GameObject hitGameObject = hit.collider.gameObject;
+            if (hitGameObject.CompareTag("Enemy"))
+            {
+                Debug.Log("Hit");
+                var rigidbody = hitGameObject.GetComponent<Rigidbody>();
+                rigidbody.AddForce((transform.position - rigidbody.transform.position).normalized * 50f, ForceMode.Force);
+            }
         }
-        Debug.Log("No hit");
-    }
-    
 
+        Debug.Log("No Hit");
+    }
+
+    
     public void Look(Vector2 input)
     {
         float mouseX = input.x;
         float mouseY = input.y;
-        
+
         //calculate camera rotation for looking up and down
         rotation -= (mouseY * Time.deltaTime) * ySensitivity;
         rotation = Mathf.Clamp(rotation, -80f, 80f);
-        
+
         //apply this to camera transform
         cam.transform.localRotation = Quaternion.Euler(rotation, 0, 0);
-        
+
         //rotate player to look left and right
         transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
     }
