@@ -145,6 +145,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Powers",
+            "id": "7b6225d2-372d-4871-83f8-64b9563b08f8",
+            "actions": [
+                {
+                    "name": "Activate Gravity Push",
+                    "type": "Button",
+                    "id": "781219ba-03e2-463e-a8e3-c10ac4f83e41",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c23bdfe9-c465-434f-bd13-53ea1c9d045d",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Activate Gravity Push",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

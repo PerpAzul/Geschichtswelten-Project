@@ -167,6 +167,34 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Powers"",
+            ""id"": ""7b6225d2-372d-4871-83f8-64b9563b08f8"",
+            ""actions"": [
+                {
+                    ""name"": ""Activate Gravity Push"",
+                    ""type"": ""Button"",
+                    ""id"": ""781219ba-03e2-463e-a8e3-c10ac4f83e41"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""c23bdfe9-c465-434f-bd13-53ea1c9d045d"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Activate Gravity Push"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -176,6 +204,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_PlayerBasics_Move = m_PlayerBasics.FindAction("Move", throwIfNotFound: true);
         m_PlayerBasics_Jump = m_PlayerBasics.FindAction("Jump", throwIfNotFound: true);
         m_PlayerBasics_Look = m_PlayerBasics.FindAction("Look", throwIfNotFound: true);
+        // Powers
+        m_Powers = asset.FindActionMap("Powers", throwIfNotFound: true);
+        m_Powers_ActivateGravityPush = m_Powers.FindAction("Activate Gravity Push", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -280,10 +311,47 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         }
     }
     public PlayerBasicsActions @PlayerBasics => new PlayerBasicsActions(this);
+
+    // Powers
+    private readonly InputActionMap m_Powers;
+    private IPowersActions m_PowersActionsCallbackInterface;
+    private readonly InputAction m_Powers_ActivateGravityPush;
+    public struct PowersActions
+    {
+        private @PlayerInput m_Wrapper;
+        public PowersActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ActivateGravityPush => m_Wrapper.m_Powers_ActivateGravityPush;
+        public InputActionMap Get() { return m_Wrapper.m_Powers; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PowersActions set) { return set.Get(); }
+        public void SetCallbacks(IPowersActions instance)
+        {
+            if (m_Wrapper.m_PowersActionsCallbackInterface != null)
+            {
+                @ActivateGravityPush.started -= m_Wrapper.m_PowersActionsCallbackInterface.OnActivateGravityPush;
+                @ActivateGravityPush.performed -= m_Wrapper.m_PowersActionsCallbackInterface.OnActivateGravityPush;
+                @ActivateGravityPush.canceled -= m_Wrapper.m_PowersActionsCallbackInterface.OnActivateGravityPush;
+            }
+            m_Wrapper.m_PowersActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ActivateGravityPush.started += instance.OnActivateGravityPush;
+                @ActivateGravityPush.performed += instance.OnActivateGravityPush;
+                @ActivateGravityPush.canceled += instance.OnActivateGravityPush;
+            }
+        }
+    }
+    public PowersActions @Powers => new PowersActions(this);
     public interface IPlayerBasicsActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+    }
+    public interface IPowersActions
+    {
+        void OnActivateGravityPush(InputAction.CallbackContext context);
     }
 }
