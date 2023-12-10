@@ -180,6 +180,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GravityPull"",
+                    ""type"": ""Button"",
+                    ""id"": ""8aac374a-5f8b-42cd-8f00-d06a71027f5d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -191,6 +200,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Activate Gravity Push"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13365194-bcfd-4f1a-841f-845821c51c5b"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GravityPull"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -207,6 +227,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         // Powers
         m_Powers = asset.FindActionMap("Powers", throwIfNotFound: true);
         m_Powers_ActivateGravityPush = m_Powers.FindAction("Activate Gravity Push", throwIfNotFound: true);
+        m_Powers_GravityPull = m_Powers.FindAction("GravityPull", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -316,11 +337,13 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Powers;
     private IPowersActions m_PowersActionsCallbackInterface;
     private readonly InputAction m_Powers_ActivateGravityPush;
+    private readonly InputAction m_Powers_GravityPull;
     public struct PowersActions
     {
         private @PlayerInput m_Wrapper;
         public PowersActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @ActivateGravityPush => m_Wrapper.m_Powers_ActivateGravityPush;
+        public InputAction @GravityPull => m_Wrapper.m_Powers_GravityPull;
         public InputActionMap Get() { return m_Wrapper.m_Powers; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -333,6 +356,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @ActivateGravityPush.started -= m_Wrapper.m_PowersActionsCallbackInterface.OnActivateGravityPush;
                 @ActivateGravityPush.performed -= m_Wrapper.m_PowersActionsCallbackInterface.OnActivateGravityPush;
                 @ActivateGravityPush.canceled -= m_Wrapper.m_PowersActionsCallbackInterface.OnActivateGravityPush;
+                @GravityPull.started -= m_Wrapper.m_PowersActionsCallbackInterface.OnGravityPull;
+                @GravityPull.performed -= m_Wrapper.m_PowersActionsCallbackInterface.OnGravityPull;
+                @GravityPull.canceled -= m_Wrapper.m_PowersActionsCallbackInterface.OnGravityPull;
             }
             m_Wrapper.m_PowersActionsCallbackInterface = instance;
             if (instance != null)
@@ -340,6 +366,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @ActivateGravityPush.started += instance.OnActivateGravityPush;
                 @ActivateGravityPush.performed += instance.OnActivateGravityPush;
                 @ActivateGravityPush.canceled += instance.OnActivateGravityPush;
+                @GravityPull.started += instance.OnGravityPull;
+                @GravityPull.performed += instance.OnGravityPull;
+                @GravityPull.canceled += instance.OnGravityPull;
             }
         }
     }
@@ -353,5 +382,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     public interface IPowersActions
     {
         void OnActivateGravityPush(InputAction.CallbackContext context);
+        void OnGravityPull(InputAction.CallbackContext context);
     }
 }

@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
 {
     private PlayerInput playerInput;
     private PlayerInput.PlayerBasicsActions playerActions;
+    private PlayerInput.PowersActions powersActions;
 
     private Player player;
     private PlayerLook look;
@@ -16,10 +17,12 @@ public class InputManager : MonoBehaviour
     {
         playerInput = new PlayerInput();
         playerActions = playerInput.PlayerBasics;
-
+        powersActions = playerInput.Powers;
         player = GetComponent<Player>();
         look = GetComponent<PlayerLook>();
         playerActions.Jump.performed += ctx => player.Jump();
+        powersActions.GravityPull.performed += ctx => look.GravityPull();
+        powersActions.ActivateGravityPush.performed += ctx => look.GravityPush();
     }
 
     private void FixedUpdate()
@@ -35,10 +38,12 @@ public class InputManager : MonoBehaviour
     private void OnEnable()
     {
         playerActions.Enable();
+        powersActions.Enable();
     }
 
     private void OnDisable()
     {
         playerActions.Disable();
+        powersActions.Disable();
     }
 }
