@@ -35,6 +35,24 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Switch"",
+                    ""type"": ""Button"",
+                    ""id"": ""479e9398-91f8-4474-ab20-ded6c46e5cf3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d009daf-bba9-4339-9ac3-f54064ed321f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -59,6 +77,50 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cfac3998-a3e7-4edf-9ef3-f55780619fc8"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Switch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bdd6cee3-7937-4171-8ea3-1ab288f77ce1"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Switch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3c7a00e6-c802-471a-88fd-cbfe62abd31b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""967b1de3-e5a1-4c3d-9a1c-142d35cdf531"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -68,6 +130,8 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
         // Gun
         m_Gun = asset.FindActionMap("Gun", throwIfNotFound: true);
         m_Gun_Shoot = m_Gun.FindAction("Shoot", throwIfNotFound: true);
+        m_Gun_Switch = m_Gun.FindAction("Switch", throwIfNotFound: true);
+        m_Gun_Reload = m_Gun.FindAction("Reload", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -128,11 +192,15 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Gun;
     private IGunActions m_GunActionsCallbackInterface;
     private readonly InputAction m_Gun_Shoot;
+    private readonly InputAction m_Gun_Switch;
+    private readonly InputAction m_Gun_Reload;
     public struct GunActions
     {
         private @GunInput m_Wrapper;
         public GunActions(@GunInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Shoot => m_Wrapper.m_Gun_Shoot;
+        public InputAction @Switch => m_Wrapper.m_Gun_Switch;
+        public InputAction @Reload => m_Wrapper.m_Gun_Reload;
         public InputActionMap Get() { return m_Wrapper.m_Gun; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -145,6 +213,12 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
                 @Shoot.started -= m_Wrapper.m_GunActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_GunActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_GunActionsCallbackInterface.OnShoot;
+                @Switch.started -= m_Wrapper.m_GunActionsCallbackInterface.OnSwitch;
+                @Switch.performed -= m_Wrapper.m_GunActionsCallbackInterface.OnSwitch;
+                @Switch.canceled -= m_Wrapper.m_GunActionsCallbackInterface.OnSwitch;
+                @Reload.started -= m_Wrapper.m_GunActionsCallbackInterface.OnReload;
+                @Reload.performed -= m_Wrapper.m_GunActionsCallbackInterface.OnReload;
+                @Reload.canceled -= m_Wrapper.m_GunActionsCallbackInterface.OnReload;
             }
             m_Wrapper.m_GunActionsCallbackInterface = instance;
             if (instance != null)
@@ -152,6 +226,12 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
+                @Switch.started += instance.OnSwitch;
+                @Switch.performed += instance.OnSwitch;
+                @Switch.canceled += instance.OnSwitch;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
             }
         }
     }
@@ -159,5 +239,7 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
     public interface IGunActions
     {
         void OnShoot(InputAction.CallbackContext context);
+        void OnSwitch(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
 }

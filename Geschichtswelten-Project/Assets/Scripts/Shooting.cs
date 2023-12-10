@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour
 {
     public float damage = 10f;
     public float range = 100f;
+    public float ammo = 10f;
 
     public Camera cam;
     private bool isShooting;
@@ -22,6 +23,7 @@ public class Shooting : MonoBehaviour
 
     public void Shoot()
     {
+        ammo--;
         flash.Play();
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
