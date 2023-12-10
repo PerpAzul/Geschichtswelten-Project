@@ -11,76 +11,80 @@ public class PlayerLook : MonoBehaviour
 
     public float xSensitivity = 30f;
     public float ySensitivity = 30f;
-    private PlayerInput playerInput;
-    private PlayerInput.PowersActions powersActions;
+    private bool canUsePowers = true;
 
-    private void Awake()
-    {
-        playerInput = new PlayerInput();
-        powersActions = playerInput.Powers;
-    }
-
-    private void OnEnable()
-    {
-        powersActions.Enable();
-    }
-
-    private void OnDisable()
-    {
-        powersActions.Disable();
-    }
-
-    private void LateUpdate()
-    {
-        if (powersActions.ActivateGravityPush.IsPressed())
-        {
-            GravityPush();
-        }
-
-        if (powersActions.GravityPull.IsPressed())
-        {
-            GravityPull();
-        }
-    }
 
     //Method to detect if an enemy is in front of you
-    private void GravityPush()
+    public void GravityPush()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
-                Mathf.Infinity))
+        if (canUsePowers)
         {
-            GameObject hitGameObject = hit.collider.gameObject;
-            if (hitGameObject.CompareTag("Enemy"))
+            RaycastHit hit;
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
+                    Mathf.Infinity))
             {
-                Debug.Log("Hit");
-                var rigidbody = hitGameObject.GetComponent<Rigidbody>();
-                rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 50f, ForceMode.Force);
+                GameObject hitGameObject = hit.collider.gameObject;
+                if (hitGameObject.CompareTag("Enemy"))
+                {
+                    Debug.Log("Hit");
+                    var rigidbody = hitGameObject.GetComponent<Rigidbody>();
+                    rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 1500f,
+                        ForceMode.Force);
+                    //Cooldown
+                    StartCoroutine(StartCountdown(5));
+                }
             }
+            else
+            {
+                StartCoroutine(StartCountdown(1));
+            }
+        }
+        else
+        {
+            return;
         }
 
         Debug.Log("No Hit");
     }
 
-    private void GravityPull()
+    public void GravityPull()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
-                Mathf.Infinity))
+        if (canUsePowers)
         {
-            GameObject hitGameObject = hit.collider.gameObject;
-            if (hitGameObject.CompareTag("Enemy"))
+            RaycastHit hit;
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
+                    Mathf.Infinity))
             {
-                Debug.Log("Hit");
-                var rigidbody = hitGameObject.GetComponent<Rigidbody>();
-                rigidbody.AddForce((transform.position - rigidbody.transform.position).normalized * 50f, ForceMode.Force);
+                GameObject hitGameObject = hit.collider.gameObject;
+                if (hitGameObject.CompareTag("Enemy"))
+                {
+                    Debug.Log("Hit");
+                    var rigidbody = hitGameObject.GetComponent<Rigidbody>();
+                    rigidbody.AddForce((transform.position - rigidbody.transform.position).normalized * 1500f,
+                        ForceMode.Force);
+                    StartCoroutine(StartCountdown(5));
+                }
             }
+            else
+            {
+                StartCoroutine(StartCountdown(1));
+            }
+        }
+        else
+        {
+            return;
         }
 
         Debug.Log("No Hit");
     }
 
-    
+    private IEnumerator StartCountdown(int time)
+    {
+        canUsePowers = false;
+        yield return new WaitForSeconds(time);
+        canUsePowers = true;
+    }
+
     public void Look(Vector2 input)
     {
         float mouseX = input.x;

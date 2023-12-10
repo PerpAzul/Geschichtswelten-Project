@@ -492,6 +492,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8671838047122556450, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
+      propertyPath: m_Height
+      value: 2.6252122
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671838047122556450, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
+      propertyPath: m_Radius
+      value: 1.3126061
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671838047122556450, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
+      propertyPath: m_Center.x
+      value: -0.06770325
+      objectReference: {fileID: 0}
     - target: {fileID: 8671838047122556461, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
       propertyPath: m_RootOrder
       value: 4
