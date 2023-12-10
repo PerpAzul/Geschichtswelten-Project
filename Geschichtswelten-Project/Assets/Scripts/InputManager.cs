@@ -16,13 +16,14 @@ public class InputManager : MonoBehaviour
     {
         playerInput = new PlayerInput();
         playerActions = playerInput.PlayerBasics;
+
         player = GetComponent<Player>();
         look = GetComponent<PlayerLook>();
         playerActions.Jump.performed += ctx => player.Jump();
     }
 
     private void FixedUpdate()
-    {
+    { 
         player.Move(playerActions.Move.ReadValue<Vector2>());
     }
 
