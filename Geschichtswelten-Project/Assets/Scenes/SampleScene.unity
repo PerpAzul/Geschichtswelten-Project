@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &115795885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5865444199070404664, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
+  m_PrefabInstance: {fileID: 449777601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7cc8bd33917eb41818d9aee270cc7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &440382261
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +148,7 @@ GameObject:
   - component: {fileID: 440382262}
   - component: {fileID: 440382266}
   - component: {fileID: 440382267}
+  - component: {fileID: 440382268}
   m_Layer: 6
   m_Name: Box
   m_TagString: Untagged
@@ -247,7 +259,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f6255b9e3708949b53678f2b3ec50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useEvents: 1
   promptMessage: Ammo
+--- !u!114 &440382268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440382261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9beeed2968bb588408016ad92040322d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1815097408}
+        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 115795885}
+        m_TargetAssemblyTypeName: Shooting, Assembly-CSharp
+        m_MethodName: pickAmmo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &449777601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255,6 +307,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 539414886, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
+      propertyPath: m_Range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 539414886, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 539414886, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 539414886, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
+      propertyPath: m_SpotAngle
+      value: 67
+      objectReference: {fileID: 0}
     - target: {fileID: 1815097406, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
       propertyPath: promptText
       value: 
@@ -813,6 +881,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691917850}
   m_CullTransparentMesh: 1
+--- !u!1 &1815097396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5243885340865882826, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
+  m_PrefabInstance: {fileID: 449777601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1815097408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815097396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352ed1a5c89ecd6418a2ec5316af770d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 3
 --- !u!1 &2035460938
 GameObject:
   m_ObjectHideFlags: 0

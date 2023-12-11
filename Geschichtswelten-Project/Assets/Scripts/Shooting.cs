@@ -8,7 +8,8 @@ public class Shooting : MonoBehaviour
 {
     public float damage = 10f;
     public float range = 100f;
-    public float maxAmmo = 10f;
+    public float maxReload = 10f;
+    public float maxAmmo;
     public float ammo;
     public float reloadTime = 1f;
 
@@ -23,15 +24,8 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-        ammo = maxAmmo;
-    }
-
-    private void Update()
-    {
-        //if (isShooting)
-        //{
-        //    Shoot();
-        //}
+        maxAmmo = 20f;
+        ammo = maxReload;
     }
 
     public void Shoot()
@@ -64,27 +58,31 @@ public class Shooting : MonoBehaviour
         animator.SetBool("Reloading", false);
         
         yield return new WaitForSeconds(0.25f);
-        
-        ammo = maxAmmo;
+
+        if (maxAmmo >= 10 || ammo + maxAmmo >= 10)
+        {
+            maxAmmo -= (maxReload - ammo);
+            ammo = maxReload;
+        }
+        else
+        {
+            ammo = maxAmmo;
+            maxAmmo = 0;
+        }
         isReloading = false;
     }
 
     public void Reload()
     {
-        if (isReloading == false)
+        if (isReloading == false && maxAmmo > 0 && ammo < 10)
         {
             StartCoroutine(Reloading());   
         }
     }
 
-    public void StartShoot()
+    public void pickAmmo()
     {
-        isShooting = true;
-    }
-    
-    public void EndShoot()
-    {
-        isShooting = false;
+        maxAmmo += 5;
     }
 
     private void OnEnable()
