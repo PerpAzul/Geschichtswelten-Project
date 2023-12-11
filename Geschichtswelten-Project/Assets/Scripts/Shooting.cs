@@ -15,7 +15,6 @@ public class Shooting : MonoBehaviour
 
     public Camera cam;
     
-    private bool isShooting;
     private bool isReloading;
     
     public ParticleSystem flash;
