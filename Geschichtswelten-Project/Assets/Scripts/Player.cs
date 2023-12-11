@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool isGrounded;
-    
+    private bool running;
+
+    public float baseSpeed = 10f;
     public float speed;
     public float gravity = -9.8f;
     public float jumpHeight;
@@ -46,5 +48,15 @@ public class Player : MonoBehaviour
         {
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
         }
+    }
+
+    public void StartRun()
+    {
+        speed *= 1.5f;
+    }
+
+    public void EndRun()
+    {
+        speed = baseSpeed;
     }
 }

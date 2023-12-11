@@ -255,6 +255,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1815097406, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
+      propertyPath: promptText
+      value: 
+      objectReference: {fileID: 1691917852}
     - target: {fileID: 4042494439144317953, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -334,7 +338,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.25
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -490,7 +494,7 @@ Transform:
   m_GameObject: {fileID: 1138156422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.47, y: -1.83, z: -0.59}
-  m_LocalScale: {x: 13.073139, y: 1, z: 10.259098}
+  m_LocalScale: {x: 55.21702, y: 1, z: 34.414146}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -809,40 +813,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691917850}
   m_CullTransparentMesh: 1
---- !u!1 &1815097396 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5243885340865882826, guid: 66b25c7428e277f49a0965685c23febd, type: 3}
-  m_PrefabInstance: {fileID: 449777601}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1815097405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815097396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da28a03c1db3c14ab626a20b4a2e595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 3
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &1815097406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815097396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc61c8449347d2445bff39e2581574a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptText: {fileID: 1691917852}
 --- !u!1 &2035460938
 GameObject:
   m_ObjectHideFlags: 0

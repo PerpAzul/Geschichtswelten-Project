@@ -48,7 +48,7 @@
                 {
                     "name": "",
                     "id": "18f4b68c-e66c-4e72-9802-945cb577d70f",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -70,7 +70,7 @@
                 {
                     "name": "",
                     "id": "bdd6cee3-7937-4171-8ea3-1ab288f77ce1",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
