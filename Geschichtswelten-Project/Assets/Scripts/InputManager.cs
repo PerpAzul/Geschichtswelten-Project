@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    private PlayerInput playerInput;
-    private PlayerInput.PlayerBasicsActions playerActions;
+    public PlayerInput playerInput;
+    public PlayerInput.PlayerBasicsActions playerActions;
     private PlayerInput.PowersActions powersActions;
 
     private Player player;
