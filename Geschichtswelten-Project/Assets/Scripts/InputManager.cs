@@ -23,6 +23,7 @@ public class InputManager : MonoBehaviour
         playerActions.Jump.performed += ctx => player.Jump();
         powersActions.GravityPull.performed += ctx => look.GravityPull();
         powersActions.ActivateGravityPush.performed += ctx => look.GravityPush();
+        powersActions.GravityFloat.performed += ctx => look.GravityFloat();
     }
 
     private void FixedUpdate()

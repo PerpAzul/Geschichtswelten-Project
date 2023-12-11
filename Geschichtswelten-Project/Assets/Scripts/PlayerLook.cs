@@ -12,16 +12,18 @@ public class PlayerLook : MonoBehaviour
     public float xSensitivity = 30f;
     public float ySensitivity = 30f;
     private bool canUsePowers = true;
+    private bool useGravityFloat = false;
+    private Rigidbody turnoff;
+    
 
-
-    //Method to detect if an enemy is in front of you
+    //GravityPush Power with Collision Detection
     public void GravityPush()
     {
         if (canUsePowers)
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
-                    Mathf.Infinity))
+                    15f))
             {
                 GameObject hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Enemy"))
@@ -30,6 +32,7 @@ public class PlayerLook : MonoBehaviour
                     var rigidbody = hitGameObject.GetComponent<Rigidbody>();
                     rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 1500f,
                         ForceMode.Force);
+                    
                     //Cooldown
                     StartCoroutine(StartCountdown(5));
                 }
@@ -47,13 +50,51 @@ public class PlayerLook : MonoBehaviour
         Debug.Log("No Hit");
     }
 
+    //GravityFloat 
+    public void GravityFloat()
+    {
+        if (canUsePowers)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
+                    15f))
+            {
+                GameObject hitGameObject = hit.collider.gameObject;
+                if (hitGameObject.CompareTag("Enemy"))
+                {
+                    Debug.Log("Float hit!");
+                    
+                    //var rigidBody = hitGameObject.GetComponent<Rigidbody>();
+                    turnoff = hitGameObject.GetComponent<Rigidbody>();
+                    turnoff.transform.position = new Vector3(turnoff.transform.position.x,
+                        turnoff.transform.position.y + 2f,
+                        turnoff.transform.position.z);
+                    turnoff.useGravity = false;
+                    useGravityFloat = true;
+                    StartCoroutine(StartCountdown(3));
+                    
+                }
+            }
+            else
+            {
+                StartCoroutine(StartCountdown(1));
+            }
+        }
+        else
+        {
+            return;
+        }
+        Debug.Log("No Float Hit");
+    }
+
+    //GravityPull with Detection 
     public void GravityPull()
     {
         if (canUsePowers)
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
-                    Mathf.Infinity))
+                    15f))
             {
                 GameObject hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Enemy"))
@@ -83,6 +124,14 @@ public class PlayerLook : MonoBehaviour
         canUsePowers = false;
         yield return new WaitForSeconds(time);
         canUsePowers = true;
+        if (useGravityFloat)
+        {
+            turnoff.useGravity = true;
+            turnoff.transform.position = new Vector3(turnoff.transform.position.x, turnoff.transform.position.y - 2f,
+                turnoff.transform.position.z);
+            Debug.Log("Gravity on");
+            useGravityFloat = false;
+        }
     }
 
     public void Look(Vector2 input)
