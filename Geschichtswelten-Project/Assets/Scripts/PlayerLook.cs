@@ -1,25 +1,24 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
+
 
 public class PlayerLook : MonoBehaviour
 {
     public Camera cam;
-    private float rotation = 0f;
+    private float _rotation;
 
     public float xSensitivity = 30f;
     public float ySensitivity = 30f;
-    private bool canUsePowers = true;
-    private bool useGravityFloat = false;
-    private Rigidbody turnoff;
+    private bool _canUsePowers = true;
+    private bool _useGravityFloat;
+    private Rigidbody _turnoff;
     
+
 
     //GravityPush Power with Collision Detection
     public void GravityPush()
     {
-        if (canUsePowers)
+        if (_canUsePowers)
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
@@ -32,7 +31,7 @@ public class PlayerLook : MonoBehaviour
                     var rigidbody = hitGameObject.GetComponent<Rigidbody>();
                     rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 1500f,
                         ForceMode.Force);
-                    
+
                     //Cooldown
                     StartCoroutine(StartCountdown(5));
                 }
@@ -53,26 +52,25 @@ public class PlayerLook : MonoBehaviour
     //GravityFloat 
     public void GravityFloat()
     {
-        if (canUsePowers)
+        if (_canUsePowers)
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
                     15f))
             {
-                GameObject hitGameObject = hit.collider.gameObject;
+                var hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Enemy"))
                 {
                     Debug.Log("Float hit!");
+                    _turnoff = hitGameObject.GetComponent<Rigidbody>();
+                    _turnoff.useGravity = false;
+                    _turnoff.AddForce(Vector3.up.normalized * 15f, ForceMode.Force);
+                    _turnoff.GetComponent<SphereCollider>().radius = 3.02f;
+                    _turnoff.GetComponent<SphereCollider>().enabled = true;
+                    _useGravityFloat = true;
                     
-                    //var rigidBody = hitGameObject.GetComponent<Rigidbody>();
-                    turnoff = hitGameObject.GetComponent<Rigidbody>();
-                    turnoff.transform.position = new Vector3(turnoff.transform.position.x,
-                        turnoff.transform.position.y + 2f,
-                        turnoff.transform.position.z);
-                    turnoff.useGravity = false;
-                    useGravityFloat = true;
+
                     StartCoroutine(StartCountdown(3));
-                    
                 }
             }
             else
@@ -84,19 +82,21 @@ public class PlayerLook : MonoBehaviour
         {
             return;
         }
+
         Debug.Log("No Float Hit");
     }
+
 
     //GravityPull with Detection 
     public void GravityPull()
     {
-        if (canUsePowers)
+        if (_canUsePowers)
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
                     15f))
             {
-                GameObject hitGameObject = hit.collider.gameObject;
+                var hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Enemy"))
                 {
                     Debug.Log("Hit");
@@ -121,17 +121,19 @@ public class PlayerLook : MonoBehaviour
 
     private IEnumerator StartCountdown(int time)
     {
-        canUsePowers = false;
+        
+        _canUsePowers = false;
         yield return new WaitForSeconds(time);
-        canUsePowers = true;
-        if (useGravityFloat)
+        _canUsePowers = true;
+        if (_useGravityFloat)
         {
-            turnoff.useGravity = true;
-            turnoff.transform.position = new Vector3(turnoff.transform.position.x, turnoff.transform.position.y - 2f,
-                turnoff.transform.position.z);
-            Debug.Log("Gravity on");
-            useGravityFloat = false;
+            _turnoff.useGravity = true;
+            _turnoff.AddForce(Vector3.up.normalized * 0f, ForceMode.Force);
+            _useGravityFloat = false;
+            _turnoff.GetComponent<SphereCollider>().radius = 0.1f;
+            
         }
+        Debug.Log("End of StartCountdown");
     }
 
     public void Look(Vector2 input)
@@ -140,11 +142,11 @@ public class PlayerLook : MonoBehaviour
         float mouseY = input.y;
 
         //calculate camera rotation for looking up and down
-        rotation -= (mouseY * Time.deltaTime) * ySensitivity;
-        rotation = Mathf.Clamp(rotation, -80f, 80f);
+        _rotation -= (mouseY * Time.deltaTime) * ySensitivity;
+        _rotation = Mathf.Clamp(_rotation, -80f, 80f);
 
         //apply this to camera transform
-        cam.transform.localRotation = Quaternion.Euler(rotation, 0, 0);
+        cam.transform.localRotation = Quaternion.Euler(_rotation, 0, 0);
 
         //rotate player to look left and right
         transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
