@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -12,7 +13,6 @@ public class PlayerLook : MonoBehaviour
     private bool _canUsePowers = true;
     private bool _useGravityFloat;
     private Rigidbody _turnoff;
-    
 
 
     //GravityPush Power with Collision Detection
@@ -24,14 +24,29 @@ public class PlayerLook : MonoBehaviour
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
                     15f))
             {
-                GameObject hitGameObject = hit.collider.gameObject;
+                var hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Enemy"))
                 {
-                    Debug.Log("Hit");
+                    Debug.Log("Push Hit");
                     var rigidbody = hitGameObject.GetComponent<Rigidbody>();
-                    rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 1500f,
-                        ForceMode.Force);
-
+                    var distance = Vector3.Distance(transform.position, rigidbody.transform.position);
+                    Debug.Log(distance);
+                    switch (distance)
+                    {
+                        
+                        case <= 5f:
+                            rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 7500f,
+                                ForceMode.Force);
+                            break;
+                        case > 5f and <= 10f:
+                            rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 3500f,
+                                ForceMode.Force);
+                            break;
+                        case > 10f and < 15f:
+                            rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 1500f,
+                                ForceMode.Force);
+                            break;
+                    }
                     //Cooldown
                     StartCoroutine(StartCountdown(5));
                 }
@@ -68,7 +83,7 @@ public class PlayerLook : MonoBehaviour
                     _turnoff.GetComponent<SphereCollider>().radius = 3.02f;
                     _turnoff.GetComponent<SphereCollider>().enabled = true;
                     _useGravityFloat = true;
-                    
+
 
                     StartCoroutine(StartCountdown(3));
                 }
@@ -94,14 +109,17 @@ public class PlayerLook : MonoBehaviour
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
-                    15f))
+                    Mathf.Infinity))
             {
                 var hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Enemy"))
                 {
-                    Debug.Log("Hit");
+                    Debug.Log("Pull Hit");
+
                     var rigidbody = hitGameObject.GetComponent<Rigidbody>();
-                    rigidbody.AddForce((transform.position - rigidbody.transform.position).normalized * 1500f,
+                    var distance = transform.position - rigidbody.transform.position;
+                    rigidbody.AddForce(
+                        (transform.position - rigidbody.transform.position).normalized + distance * 75.75f,
                         ForceMode.Force);
                     StartCoroutine(StartCountdown(5));
                 }
@@ -121,7 +139,6 @@ public class PlayerLook : MonoBehaviour
 
     private IEnumerator StartCountdown(int time)
     {
-        
         _canUsePowers = false;
         yield return new WaitForSeconds(time);
         _canUsePowers = true;
@@ -131,8 +148,8 @@ public class PlayerLook : MonoBehaviour
             _turnoff.AddForce(Vector3.up.normalized * 0f, ForceMode.Force);
             _useGravityFloat = false;
             _turnoff.GetComponent<SphereCollider>().radius = 0.1f;
-            
         }
+
         Debug.Log("End of StartCountdown");
     }
 
