@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Shooting : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Shooting : MonoBehaviour
     public float maxAmmo;
     public float ammo;
     public float reloadTime = 1f;
+    [SerializeField] private TextMeshProUGUI ammoCount;
 
     public Camera cam;
     
@@ -25,6 +27,7 @@ public class Shooting : MonoBehaviour
     {
         maxAmmo = 20f;
         ammo = maxReload;
+        ammoCount.text = ammo + "/10";
     }
 
     public void Shoot()
@@ -32,6 +35,7 @@ public class Shooting : MonoBehaviour
         if (ammo > 0)
         {
             ammo--;
+            ammoCount.text = ammo + "/10";
             flash.Play();
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
@@ -68,6 +72,8 @@ public class Shooting : MonoBehaviour
             ammo = maxAmmo;
             maxAmmo = 0;
         }
+
+        ammoCount.text =  ammo + "/10";
         isReloading = false;
     }
 
