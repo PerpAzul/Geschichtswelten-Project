@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
@@ -24,16 +25,18 @@ public class InputManager : MonoBehaviour
         playerActions.Run.started += ctx => player.StartRun();
         playerActions.Run.canceled += ctx => player.EndRun();
         playerActions.Flashlight.performed += ctx => flash.Flash();
-        
+        playerActions.PickupStuff.performed += ctx => look.PickUpStuff();
         powersActions.GravityPull.performed += ctx => look.GravityPull();
         powersActions.ActivateGravityPush.performed += ctx => look.GravityPush();
         powersActions.GravityFloat.performed += ctx => look.GravityFloat();
+        
     }
 
     private void FixedUpdate()
     { 
         player.Move(playerActions.Move.ReadValue<Vector2>());
     }
+    
 
     private void LateUpdate()
     {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,7 +14,9 @@ public class PlayerLook : MonoBehaviour
     private bool _canUsePowers = true;
     private bool _useGravityFloat;
     private Rigidbody _turnoff;
+    private bool Stop;
 
+        
 
     //GravityPush Power with Collision Detection
     public void GravityPush()
@@ -99,6 +102,41 @@ public class PlayerLook : MonoBehaviour
         }
 
         Debug.Log("No Float Hit");
+    }
+
+    //Can Pick Up Stuff but does not move with Player 
+    public void PickUpStuff()
+    {
+        if (!Stop)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,  Mathf.Infinity))
+            {
+                var hitGameObject = hit.collider.gameObject;
+                if (!hitGameObject.CompareTag("Untagged") && hitGameObject.GetComponent<Rigidbody>())
+                {
+                    //Place it slighty above
+                    hitGameObject.GetComponent<Rigidbody>().useGravity = false;
+                    hitGameObject.GetComponent<Rigidbody>().drag = 10;
+                    hitGameObject.GetComponent<Rigidbody>().freezeRotation = true;
+                    Stop = true;
+                    var moveDirection = (cam.transform.position - hitGameObject.transform.position);
+                    hitGameObject.GetComponent<Rigidbody>().AddForce(moveDirection * 150.0f);
+                }
+            }
+        }
+        else
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
+                    Mathf.Infinity))
+            {
+                hit.collider.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                hit.collider.gameObject.GetComponent<Rigidbody>().drag = 0;
+                hit.collider.gameObject.GetComponent<Rigidbody>().freezeRotation = false;
+                Stop = false;
+            }
+        }
     }
 
 

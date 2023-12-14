@@ -80,6 +80,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pickup Stuff"",
+                    ""type"": ""Button"",
+                    ""id"": ""1eba6ba4-07e2-4ca6-b84e-a24b6be871a2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -256,6 +265,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Flashlight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9140d65-8532-45c8-abbd-a8df97d1f0c5"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup Stuff"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -856,6 +876,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_PlayerBasics_Interact = m_PlayerBasics.FindAction("Interact", throwIfNotFound: true);
         m_PlayerBasics_Run = m_PlayerBasics.FindAction("Run", throwIfNotFound: true);
         m_PlayerBasics_Flashlight = m_PlayerBasics.FindAction("Flashlight", throwIfNotFound: true);
+        m_PlayerBasics_PickupStuff = m_PlayerBasics.FindAction("Pickup Stuff", throwIfNotFound: true);
         // Powers
         m_Powers = asset.FindActionMap("Powers", throwIfNotFound: true);
         m_Powers_ActivateGravityPush = m_Powers.FindAction("Activate Gravity Push", throwIfNotFound: true);
@@ -938,6 +959,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerBasics_Interact;
     private readonly InputAction m_PlayerBasics_Run;
     private readonly InputAction m_PlayerBasics_Flashlight;
+    private readonly InputAction m_PlayerBasics_PickupStuff;
     public struct PlayerBasicsActions
     {
         private @PlayerInput m_Wrapper;
@@ -948,6 +970,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_PlayerBasics_Interact;
         public InputAction @Run => m_Wrapper.m_PlayerBasics_Run;
         public InputAction @Flashlight => m_Wrapper.m_PlayerBasics_Flashlight;
+        public InputAction @PickupStuff => m_Wrapper.m_PlayerBasics_PickupStuff;
         public InputActionMap Get() { return m_Wrapper.m_PlayerBasics; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -975,6 +998,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Flashlight.started -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnFlashlight;
                 @Flashlight.performed -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnFlashlight;
                 @Flashlight.canceled -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnFlashlight;
+                @PickupStuff.started -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnPickupStuff;
+                @PickupStuff.performed -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnPickupStuff;
+                @PickupStuff.canceled -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnPickupStuff;
             }
             m_Wrapper.m_PlayerBasicsActionsCallbackInterface = instance;
             if (instance != null)
@@ -997,6 +1023,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Flashlight.started += instance.OnFlashlight;
                 @Flashlight.performed += instance.OnFlashlight;
                 @Flashlight.canceled += instance.OnFlashlight;
+                @PickupStuff.started += instance.OnPickupStuff;
+                @PickupStuff.performed += instance.OnPickupStuff;
+                @PickupStuff.canceled += instance.OnPickupStuff;
             }
         }
     }
@@ -1163,6 +1192,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnFlashlight(InputAction.CallbackContext context);
+        void OnPickupStuff(InputAction.CallbackContext context);
     }
     public interface IPowersActions
     {
