@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Ammo
+  - Asset
   layers:
   - Default
   - TransparentFX
