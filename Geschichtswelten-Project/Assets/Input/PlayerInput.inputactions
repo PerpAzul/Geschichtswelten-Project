@@ -138,17 +138,6 @@
                 },
                 {
                     "name": "",
-                    "id": "f9539d1d-cd9e-463c-9b65-0a353ddaeb0c",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "17c94f4b-db51-4195-9b13-ec68a65c6ffe",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -183,7 +172,7 @@
                 {
                     "name": "",
                     "id": "9143a277-224c-4d17-9501-03df3489e41b",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -305,6 +294,17 @@
                 },
                 {
                     "name": "",
+                    "id": "92dbbb3a-cc97-4e27-b274-c58214fcc71b",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Activate Gravity Push",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "13365194-bcfd-4f1a-841f-845821c51c5b",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -316,8 +316,30 @@
                 },
                 {
                     "name": "",
+                    "id": "dfb5ce88-4ae0-4f3d-96df-f02d608fa30e",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GravityPull",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "13775e12-1170-4cd7-86c2-2c46ed2dd43d",
                     "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GravityFloat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "15f0d7c6-708f-4f97-a710-5ce0961812dd",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

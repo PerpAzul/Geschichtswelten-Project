@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 5607242760832296404}
   - component: {fileID: 5607242760832296407}
   - component: {fileID: 5607242760832296406}
+  - component: {fileID: 1260979091}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -245,6 +246,23 @@ MonoBehaviour:
   flashlight: {fileID: 5607242762108585101}
   on: 0
   off: 0
+--- !u!114 &1260979091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366736032068697891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352ed1a5c89ecd6418a2ec5316af770d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 3
+  overlay: {fileID: 0}
+  duration: 2
+  fadeSpeed: 1.5
 --- !u!1 &844191852215003251
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069074145491319319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -0.5400001, z: -0.04}
+  m_LocalPosition: {x: 0.094, y: -0.551, z: -0.162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
