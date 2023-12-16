@@ -5,7 +5,6 @@ using UnityEngine;
 public class AttackState : BaseState
 {
     private float moveTimer;
-    private float losePlayerTimer;
     private float shotTimer;
 
     public override void Enter()
@@ -17,7 +16,6 @@ public class AttackState : BaseState
     {
         if (enemy.CanSeePlayer())
         {
-            losePlayerTimer = 0;
             moveTimer += Time.deltaTime;
             shotTimer += Time.deltaTime;
             enemy.transform.LookAt(enemy.Player.transform);
@@ -36,12 +34,8 @@ public class AttackState : BaseState
             enemy.LastknowPos = enemy.Player.transform.position;
         }
         else
-        {
-            losePlayerTimer += Time.deltaTime;
-            if (losePlayerTimer > 0.1f)
-            {
-                stateMachine.ChangeState(new SearchState());
-            }
+        { 
+            stateMachine.ChangeState(new SearchState());
         }
     }
 
