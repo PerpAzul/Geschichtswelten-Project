@@ -53,6 +53,15 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Button"",
+                    ""id"": ""dbf258a0-ff62-47ce-9709-66eae62ac372"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -121,6 +130,28 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
                     ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cdb76470-ddc9-48cc-8e21-08ef0ce6d172"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1f88bab7-b317-42fa-9ef4-8782c8dbe8e4"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -132,6 +163,7 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
         m_Gun_Shoot = m_Gun.FindAction("Shoot", throwIfNotFound: true);
         m_Gun_Switch = m_Gun.FindAction("Switch", throwIfNotFound: true);
         m_Gun_Reload = m_Gun.FindAction("Reload", throwIfNotFound: true);
+        m_Gun_Aim = m_Gun.FindAction("Aim", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -194,6 +226,7 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gun_Shoot;
     private readonly InputAction m_Gun_Switch;
     private readonly InputAction m_Gun_Reload;
+    private readonly InputAction m_Gun_Aim;
     public struct GunActions
     {
         private @GunInput m_Wrapper;
@@ -201,6 +234,7 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
         public InputAction @Shoot => m_Wrapper.m_Gun_Shoot;
         public InputAction @Switch => m_Wrapper.m_Gun_Switch;
         public InputAction @Reload => m_Wrapper.m_Gun_Reload;
+        public InputAction @Aim => m_Wrapper.m_Gun_Aim;
         public InputActionMap Get() { return m_Wrapper.m_Gun; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -219,6 +253,9 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
                 @Reload.started -= m_Wrapper.m_GunActionsCallbackInterface.OnReload;
                 @Reload.performed -= m_Wrapper.m_GunActionsCallbackInterface.OnReload;
                 @Reload.canceled -= m_Wrapper.m_GunActionsCallbackInterface.OnReload;
+                @Aim.started -= m_Wrapper.m_GunActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_GunActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_GunActionsCallbackInterface.OnAim;
             }
             m_Wrapper.m_GunActionsCallbackInterface = instance;
             if (instance != null)
@@ -232,6 +269,9 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
                 @Reload.started += instance.OnReload;
                 @Reload.performed += instance.OnReload;
                 @Reload.canceled += instance.OnReload;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
             }
         }
     }
@@ -241,5 +281,6 @@ public partial class @GunInput : IInputActionCollection2, IDisposable
         void OnShoot(InputAction.CallbackContext context);
         void OnSwitch(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
     }
 }

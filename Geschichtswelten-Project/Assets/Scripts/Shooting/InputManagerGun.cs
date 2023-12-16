@@ -11,6 +11,7 @@ public class InputManagerGun : MonoBehaviour
     
     private Shooting shoot;
     private WeaponSwitching switching;
+    private Aim aiming;
 
     void Awake()
     {
@@ -19,10 +20,13 @@ public class InputManagerGun : MonoBehaviour
 
         shoot = GetComponent<Shooting>();
         switching = GetComponentInParent<WeaponSwitching>();
+        aiming = GetComponent<Aim>();
         
         gunActions.Shoot.performed += ctx => shoot.Shoot();
         gunActions.Reload.performed += ctx => shoot.Reload();
         gunActions.Switch.performed += ctx => switching.Switch();
+        gunActions.Aim.started += ctx => aiming.StartAiming();
+        gunActions.Aim.canceled += ctx => aiming.StopAiming();
     }
 
     private void OnEnable()

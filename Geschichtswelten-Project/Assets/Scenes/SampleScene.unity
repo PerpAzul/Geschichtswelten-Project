@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 3ba2763a80290fb419e973602aaf87ea, type: 2}
+--- !u!1 &77168398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2069074146378376177, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+  m_PrefabInstance: {fileID: 1798897194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &168585923
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,17 +447,39 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!20 &309848388 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 844191852215003249, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+  m_PrefabInstance: {fileID: 1798897194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &392890771 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069074146893858257, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
   m_PrefabInstance: {fileID: 1798897194}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 77168398}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf7cc8bd33917eb41818d9aee270cc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &392890776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77168398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c2d7397156e1f44bdcbf9b881b9417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalPose: {x: 0.33, y: 0.272, z: 0.4}
+  aimPose: {x: -0.0935, y: 0.37, z: 0.4}
+  aimSpeed: 15
+  cam: {fileID: 309848388}
+  crosshair: {fileID: 1278853523}
 --- !u!1 &549085184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1477,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542024359}
   m_CullTransparentMesh: 1
+--- !u!1 &1570854660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2069074146631137225, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+  m_PrefabInstance: {fileID: 1798897194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1570854666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570854660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c2d7397156e1f44bdcbf9b881b9417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalPose: {x: 0.33, y: 0.272, z: 0.4}
+  aimPose: {x: -0.0935, y: 0.37, z: 0.4}
+  aimSpeed: 15
+  cam: {fileID: 309848388}
+  crosshair: {fileID: 1278853523}
 --- !u!1 &1601090735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,9 +1698,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 844191852215003249, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: near clip plane
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 2069074145491319316, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069074146378421665, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069074146630853403, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069074146630853403, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.272
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069074146630853403, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2069074146893858257, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
       propertyPath: ammoCount
@@ -1665,6 +1734,14 @@ PrefabInstance:
       propertyPath: promptText
       value: 
       objectReference: {fileID: 1395883683}
+    - target: {fileID: 5820368726480556433, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025387976274172032, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8487384050716799464, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
       propertyPath: m_RootOrder
       value: 1
