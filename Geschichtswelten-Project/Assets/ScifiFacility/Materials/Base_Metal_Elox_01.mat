@@ -2,14 +2,17 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Base_Metal_Elox_01
   m_Shader: {fileID: 4800000, guid: fe40ccd092f87e84e858fa22d461031b, type: 3}
-  m_ShaderKeywords: _DETAIL_MULX2 _NORMALMAP
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _DETAIL_MULX2
+  - _NORMALMAP
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -115,10 +118,11 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BaseDielectricSmoothness: 1
     - _BaseDirtAmount: 0.001
-    - _BaseDirtStrength: 0.6
+    - _BaseDirtStrength: 0.25
     - _BaseMetallic: 1
     - _BaseMetalness: 1
     - _BaseNormalStrength: 0.23
