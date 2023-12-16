@@ -2063,6 +2063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3717259463730192051, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
+      propertyPath: m_Speed
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
       propertyPath: m_RootOrder
       value: 5
