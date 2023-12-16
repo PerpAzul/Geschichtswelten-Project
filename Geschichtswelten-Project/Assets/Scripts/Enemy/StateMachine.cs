@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,11 +7,23 @@ public class StateMachine : MonoBehaviour
 {
     public BaseState activeState;
     private PlayerLook Look;
+    public GameObject player;
+    
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        Look = player.GetComponent<PlayerLook>();
+    }
 
     void Update()
     {
         if (activeState != null)
         {
+            if (Look.navMeshisDeactivated)
+            {
+                Debug.Log(Look.navMeshisDeactivated);
+                ChangeState(new WaitingState());
+            }
             
             activeState.Perform();
         }
