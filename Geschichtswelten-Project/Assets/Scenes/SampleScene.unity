@@ -1162,17 +1162,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1260979091 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1260979091, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
-  m_PrefabInstance: {fileID: 1798897194}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 352ed1a5c89ecd6418a2ec5316af770d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1278853523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,10 +1903,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4765295759558337214, guid: 2f1b6e7b63ddf5d4fa5c71e7db5f6c0d, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1260979091}
-    - target: {fileID: 4765295759558337214, guid: 2f1b6e7b63ddf5d4fa5c71e7db5f6c0d, type: 3}
-      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 392890771}
     m_RemovedComponents: []
