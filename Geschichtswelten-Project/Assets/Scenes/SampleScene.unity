@@ -1649,6 +1649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2069074145491319316, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.21
+      objectReference: {fileID: 0}
     - target: {fileID: 2069074146893858257, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
       propertyPath: ammoCount
       value: 

@@ -7,11 +7,17 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     private StateMachine stateMachine;
-    private GameObject player;
     private NavMeshAgent agent;
+    private GameObject player;
+    private Vector3 lastKnownPos;
 
     public NavMeshAgent Agent {get => agent;}
     public GameObject Player {get => player;}
+    public Vector3 LastknowPos
+    {
+        get => lastKnownPos;
+        set => lastKnownPos = value;
+    }
 
     //Path
     public Way path;
