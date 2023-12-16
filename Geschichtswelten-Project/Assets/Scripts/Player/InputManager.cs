@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
@@ -7,12 +8,14 @@ public class InputManager : MonoBehaviour
     public PlayerInput.PlayerBasicsActions playerActions;
     private PlayerInput.PowersActions powersActions;
 
+
     private Player player;
     private PlayerLook look;
     private Flashlight flash;
 
     void Awake()
     {
+        
         playerInput = new PlayerInput();
         playerActions = playerInput.PlayerBasics;
         powersActions = playerInput.Powers;
@@ -47,6 +50,7 @@ public class InputManager : MonoBehaviour
     {
         playerActions.Enable();
         powersActions.Enable();
+        
     }
 
     private void OnDisable()
