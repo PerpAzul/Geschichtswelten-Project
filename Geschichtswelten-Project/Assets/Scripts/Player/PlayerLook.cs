@@ -87,7 +87,6 @@ public class PlayerLook : MonoBehaviour
                     _turnoff = hitGameObject.GetComponent<Rigidbody>();
                     navMeshisDeactivated = true;
                     _turnoff.GetComponent<NavMeshAgent>().enabled = false;
-                    _turnoff.GetComponent<NavMeshAgent>().speed = 0;
                     _turnoff.useGravity = false;
                     _turnoff.AddForce(Vector3.up.normalized * 50f, ForceMode.Force);
                     _useGravityFloat = true;

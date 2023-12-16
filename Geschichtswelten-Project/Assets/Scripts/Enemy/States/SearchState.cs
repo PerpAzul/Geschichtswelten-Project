@@ -14,6 +14,7 @@ public class SearchState : BaseState
 
     public override void Perform()
     {
+        Debug.Log("Search State");
         if (enemy.CanSeePlayer())
         {
             stateMachine.ChangeState(new AttackState());

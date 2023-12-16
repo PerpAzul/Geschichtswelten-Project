@@ -14,6 +14,7 @@ public class AttackState : BaseState
 
     public override void Perform()
     {
+        Debug.Log("AttackState");
         if (Look.navMeshisDeactivated)
         {
             return;
