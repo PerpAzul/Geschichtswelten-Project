@@ -4,15 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class Shooting : MonoBehaviour
 {
-    public float damage = 10f;
-    public float range = 100f;
-    public float maxReload = 10f;
+    public float damage;
+    public float timeBetweenShooting;
+    public float spread;
+    public float range;
+    public float maxReload;
     public float maxAmmo;
     public float ammo;
-    public float reloadTime = 1f;
+    public float reloadTime;
     
     //UI
     [SerializeField] private TextMeshProUGUI ammoCount;
@@ -22,6 +25,7 @@ public class Shooting : MonoBehaviour
     public Camera cam;
     
     private bool isReloading;
+    public bool isShooting;
     
     public ParticleSystem flash;
 
@@ -36,15 +40,26 @@ public class Shooting : MonoBehaviour
         crosshairUI.gameObject.SetActive(true);
     }
 
+    private void Update()
+    {
+        ammoCount.text = ammo + "/" + maxAmmo;
+    }
+
     public void Shoot()
     {
-        if (ammo > 0)
+        if (ammo > 0 && isShooting == false)
         {
+            isShooting = true;
             ammo--;
-            ammoCount.text = ammo + "/10";
+            Invoke("ResetShot", timeBetweenShooting);
             flash.Play();
+
+            float x = Random.Range(-spread, spread);
+            float y = Random.Range(-spread, spread);
+            Vector3 direction = cam.transform.forward + new Vector3(x, y, 0);
+            
             RaycastHit hit;
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
+            if (Physics.Raycast(cam.transform.position, direction, out hit, range))
             {
                 Debug.Log(hit.transform.name);
                 Enemy target = hit.transform.GetComponent<Enemy>();
@@ -70,14 +85,14 @@ public class Shooting : MonoBehaviour
         
         yield return new WaitForSeconds(0.25f);
 
-        if (maxAmmo >= 10 || ammo + maxAmmo >= 10)
+        if (maxAmmo >= maxReload || ammo + maxAmmo >= maxReload)
         {
             maxAmmo -= (maxReload - ammo);
             ammo = maxReload;
         }
         else
         {
-            ammo = maxAmmo;
+            ammo += maxAmmo;
             maxAmmo = 0;
         }
 
@@ -87,7 +102,7 @@ public class Shooting : MonoBehaviour
 
     public void Reload()
     {
-        if (isReloading == false && maxAmmo > 0 && ammo < 10)
+        if (isReloading == false && maxAmmo > 0 && ammo < maxReload)
         {
             StartCoroutine(Reloading());   
         }
@@ -98,9 +113,15 @@ public class Shooting : MonoBehaviour
         maxAmmo += 5;
     }
 
+    public void ResetShot()
+    {
+        isShooting = false;
+    }
+
     private void OnEnable()
     {
         isReloading = false;
+        isShooting = false;
         animator.SetBool("Reloading", false);
     }
     
