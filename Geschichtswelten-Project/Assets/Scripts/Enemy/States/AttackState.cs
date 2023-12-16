@@ -14,6 +14,10 @@ public class AttackState : BaseState
 
     public override void Perform()
     {
+        if (Look.navMeshisDeactivated)
+        {
+            return;
+        }
         if (enemy.CanSeePlayer())
         {
             moveTimer += Time.deltaTime;

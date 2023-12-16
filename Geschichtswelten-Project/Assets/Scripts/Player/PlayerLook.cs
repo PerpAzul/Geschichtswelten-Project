@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 
@@ -18,6 +19,7 @@ public class PlayerLook : MonoBehaviour
     private bool Stop;
     [SerializeField] private Transform hold;
     private RaycastHit PickUpHit;
+    public bool navMeshisDeactivated = false;
 
 
     //GravityPush Power with Collision Detection
@@ -83,10 +85,11 @@ public class PlayerLook : MonoBehaviour
                 {
                     Debug.Log("Float hit!");
                     _turnoff = hitGameObject.GetComponent<Rigidbody>();
+                    navMeshisDeactivated = true;
+                    _turnoff.GetComponent<NavMeshAgent>().enabled = false;
+                    _turnoff.GetComponent<NavMeshAgent>().speed = 0;
                     _turnoff.useGravity = false;
-                    _turnoff.AddForce(Vector3.up.normalized * Time.deltaTime * 15f, ForceMode.Force);
-                    _turnoff.GetComponent<SphereCollider>().radius = 3.02f;
-                    _turnoff.GetComponent<SphereCollider>().enabled = true;
+                    _turnoff.AddForce(Vector3.up.normalized * 50f, ForceMode.Force);
                     _useGravityFloat = true;
 
 
@@ -103,7 +106,8 @@ public class PlayerLook : MonoBehaviour
             return;
         }
 
-        Debug.Log("No Float Hit");
+        
+        Debug.Log("End of Float Function");
     }
 
 
@@ -188,9 +192,10 @@ public class PlayerLook : MonoBehaviour
         if (_useGravityFloat)
         {
             _turnoff.useGravity = true;
-            _turnoff.AddForce(Vector3.up.normalized * 0f, ForceMode.Force);
             _useGravityFloat = false;
-            _turnoff.GetComponent<SphereCollider>().radius = 0.1f;
+            navMeshisDeactivated = false;
+            yield return new WaitForSeconds(2);
+            _turnoff.GetComponent<NavMeshAgent>().enabled = true;
         }
 
         Debug.Log("End of StartCountdown");

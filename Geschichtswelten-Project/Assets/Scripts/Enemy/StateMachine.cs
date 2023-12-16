@@ -5,11 +5,13 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 {
     public BaseState activeState;
+    private PlayerLook Look;
 
     void Update()
     {
         if (activeState != null)
         {
+            
             activeState.Perform();
         }
     }
