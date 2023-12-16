@@ -13,7 +13,11 @@ public class Shooting : MonoBehaviour
     public float maxAmmo;
     public float ammo;
     public float reloadTime = 1f;
+    
+    //UI
     [SerializeField] private TextMeshProUGUI ammoCount;
+    [SerializeField] private GameObject hitmarkerUI;
+    [SerializeField] private GameObject crosshairUI;
 
     public Camera cam;
     
@@ -28,6 +32,8 @@ public class Shooting : MonoBehaviour
         maxAmmo = 20f;
         ammo = maxReload;
         ammoCount.text = ammo + "/10";
+        hitmarkerUI.gameObject.SetActive(false);
+        crosshairUI.gameObject.SetActive(true);
     }
 
     public void Shoot()
@@ -44,6 +50,8 @@ public class Shooting : MonoBehaviour
                 Enemy target = hit.transform.GetComponent<Enemy>();
                 if (target != null)
                 {
+                    hitActive();
+                    Invoke("hitDisable", 0.2f);
                     target.TakeDamage(damage);
                 }
             }
@@ -94,5 +102,17 @@ public class Shooting : MonoBehaviour
     {
         isReloading = false;
         animator.SetBool("Reloading", false);
+    }
+    
+    private void hitActive()
+    {
+        crosshairUI.gameObject.SetActive(false);
+        hitmarkerUI.gameObject.SetActive(true);
+    }
+
+    private void hitDisable()
+    {
+        crosshairUI.gameObject.SetActive(true);
+        hitmarkerUI.gameObject.SetActive(false);
     }
 }
