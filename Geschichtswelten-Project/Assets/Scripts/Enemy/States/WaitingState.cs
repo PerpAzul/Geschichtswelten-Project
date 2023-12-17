@@ -11,7 +11,7 @@ public class WaitingState : BaseState
 
     public override void Perform()
     {
-        Debug.Log("In WaitingClass");
+        //Debug.Log("In WaitingClass");
         if (enemy.CanSeePlayer())
         {
             stateMachine.ChangeState(new AttackState());

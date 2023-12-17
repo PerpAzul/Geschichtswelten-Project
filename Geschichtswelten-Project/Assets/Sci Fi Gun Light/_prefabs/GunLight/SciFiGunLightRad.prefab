@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 457962}
   - component: {fileID: 3333994}
   - component: {fileID: 2319220}
+  - component: {fileID: 3942034098283363092}
   m_Layer: 0
   m_Name: SciFiGunLightRad
   m_TagString: Untagged
@@ -83,3 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3942034098283363092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c2d7397156e1f44bdcbf9b881b9417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalPose: {x: 0.33, y: 0.272, z: 0.4}
+  aimPose: {x: -0.0935, y: 0.37, z: 0.4}
+  aimSpeed: 15
+  cam: {fileID: 0}
+  crosshair: {fileID: 0}

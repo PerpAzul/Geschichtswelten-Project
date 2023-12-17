@@ -121,7 +121,7 @@ public class PlayerLook : MonoBehaviour
                     Mathf.Infinity))
             {
                 var hitGameObject = hit.collider.gameObject;
-                if (!hitGameObject.CompareTag("Untagged") && hitGameObject.GetComponent<Rigidbody>())
+                if (!hitGameObject.CompareTag("Enemy") && hitGameObject.GetComponent<Rigidbody>())
                 {
                     //Place it slighty above
                     hitGameObject.GetComponent<Rigidbody>().useGravity = false;
