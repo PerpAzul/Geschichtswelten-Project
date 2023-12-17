@@ -105,15 +105,14 @@ public class PlayerLook : MonoBehaviour
             return;
         }
 
-        
+
         Debug.Log("End of Float Function");
     }
 
 
-    //Can Pick Up Stuff but now it does not Rotate with the Camera Upwards again will fix later
+    //Can Pick Up Stuff
     public void PickUpStuff()
     {
-        
         if (!Stop)
         {
             RaycastHit hit;
@@ -123,26 +122,19 @@ public class PlayerLook : MonoBehaviour
                 var hitGameObject = hit.collider.gameObject;
                 if (!hitGameObject.CompareTag("Enemy") && hitGameObject.GetComponent<Rigidbody>())
                 {
-                    //Place it slighty above
-                    hitGameObject.GetComponent<Rigidbody>().useGravity = false;
-                    hitGameObject.GetComponent<Rigidbody>().drag = 10;
                     Stop = true;
-                    hitGameObject.GetComponent<Rigidbody>().transform.parent = hold;
-                    hitGameObject.GetComponent<Rigidbody>().rotation = cam.transform.rotation;
+                    hitGameObject.transform.parent = cam.transform;
                     hitGameObject.GetComponent<Rigidbody>().freezeRotation = true;
-                    var moveDirection = (cam.transform.position - hitGameObject.transform.position);
-                    hitGameObject.GetComponent<Rigidbody>().AddForce(moveDirection * 250.0f);
-                    hitGameObject.transform.rotation = cam.transform.rotation;
+                    hitGameObject.GetComponent<Rigidbody>().useGravity = false;
                     PickUpHit = hit;
                 }
             }
         }
         else
         {
-            PickUpHit.collider.gameObject.GetComponent<Rigidbody>().useGravity = true;
-            PickUpHit.collider.gameObject.GetComponent<Rigidbody>().drag = 1;
-            PickUpHit.collider.gameObject.GetComponent<Rigidbody>().transform.parent = null;
+            PickUpHit.collider.gameObject.transform.parent = null;
             PickUpHit.collider.gameObject.GetComponent<Rigidbody>().freezeRotation = false;
+            PickUpHit.collider.gameObject.GetComponent<Rigidbody>().useGravity = true;
             Stop = false;
         }
     }
@@ -168,6 +160,7 @@ public class PlayerLook : MonoBehaviour
                         (transform.position - rigidbody.transform.position).normalized * Time.deltaTime +
                         distance * 75.75f,
                         ForceMode.Force);
+                        
                     StartCoroutine(StartCountdown(5));
                 }
             }
