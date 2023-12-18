@@ -258,11 +258,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50089554}
   m_CullTransparentMesh: 1
---- !u!1 &77168398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2069074146378376177, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
-  m_PrefabInstance: {fileID: 1798897194}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &194394375
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,29 +403,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2069074146893858257, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
   m_PrefabInstance: {fileID: 1798897194}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77168398}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf7cc8bd33917eb41818d9aee270cc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &392890776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77168398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c2d7397156e1f44bdcbf9b881b9417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalPose: {x: 0.33, y: 0.272, z: 0.4}
-  aimPose: {x: -0.0935, y: 0.37, z: 0.4}
-  aimSpeed: 15
-  cam: {fileID: 309848388}
-  crosshair: {fileID: 1055963447}
 --- !u!1 &422704837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,7 +1381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1099424934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2154,28 +2132,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1570854660 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2069074146631137225, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
-  m_PrefabInstance: {fileID: 1798897194}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1570854666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570854660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c2d7397156e1f44bdcbf9b881b9417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalPose: {x: 0.33, y: 0.272, z: 0.4}
-  aimPose: {x: -0.0935, y: 0.37, z: 0.4}
-  aimSpeed: 15
-  cam: {fileID: 309848388}
-  crosshair: {fileID: 1055963447}
 --- !u!1 &1589077861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,6 +2417,22 @@ PrefabInstance:
       propertyPath: timeBetweenShooting
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2303412570011344334, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 309848388}
+    - target: {fileID: 2303412570011344334, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 813444750}
+    - target: {fileID: 3027044404951667295, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 309848388}
+    - target: {fileID: 3027044404951667295, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 813444750}
     - target: {fileID: 5607242760832296407, guid: d84d41a8e232d47469b52f82ffdfdcaf, type: 3}
       propertyPath: promptText
       value: 
@@ -2922,10 +2894,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192051, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_Speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2974,10 +2942,6 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 724124208}
-    - target: {fileID: 3717259463730192061, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: health
-      value: 60
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
 --- !u!1001 &4765295759926612354

@@ -17,7 +17,14 @@ public class PatrolState : BaseState
       PatrolCycle();
       if (enemy.CanSeePlayer())
       {
-         stateMachine.ChangeState(new AttackState());
+         if (enemy.index == 0)
+         {
+            stateMachine.ChangeState(new AttackState());
+         }
+         else
+         {
+            stateMachine.ChangeState(new AttackNearState());
+         }
       }
    }
    

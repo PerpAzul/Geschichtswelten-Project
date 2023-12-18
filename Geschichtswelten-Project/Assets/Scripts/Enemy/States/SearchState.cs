@@ -17,7 +17,14 @@ public class SearchState : BaseState
         Debug.Log("Search State");
         if (enemy.CanSeePlayer())
         {
-            stateMachine.ChangeState(new AttackState());
+            if (enemy.index == 0)
+            {
+                stateMachine.ChangeState(new AttackState());
+            }
+            else
+            {
+                stateMachine.ChangeState(new AttackNearState());
+            }
         }
 
         if (enemy.Agent.remainingDistance < enemy.Agent.stoppingDistance)

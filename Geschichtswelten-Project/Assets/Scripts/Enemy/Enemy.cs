@@ -34,8 +34,10 @@ public class Enemy : MonoBehaviour
     public Transform gunBarrel;
     [Range(0.1f, 10f)]
     public float fireRate;
-
     public ParticleSystem flash;
+    
+    //Index
+    public int index;
     
     //Debug
     [SerializeField] private string currentState;
