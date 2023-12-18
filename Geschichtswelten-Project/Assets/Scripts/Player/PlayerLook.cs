@@ -20,6 +20,9 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] private Transform hold;
     private RaycastHit PickUpHit;
     public bool navMeshisDeactivated = false;
+    private StateMachine _state = new StateMachine();
+    
+    
 
 
     //GravityPush Power with Collision Detection
@@ -83,16 +86,16 @@ public class PlayerLook : MonoBehaviour
                 var hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Enemy"))
                 {
-                    Debug.Log("Float hit!");
                     _turnoff = hitGameObject.GetComponent<Rigidbody>();
+                    _turnoff.useGravity = false;
+                    Debug.Log("Float hit!");
                     navMeshisDeactivated = true;
                     _turnoff.GetComponent<NavMeshAgent>().enabled = false;
-                    _turnoff.useGravity = false;
-                    _turnoff.AddForce(Vector3.up.normalized * 50f, ForceMode.Force);
+                    _turnoff.AddForce(Vector3.up.normalized * 7.5f, ForceMode.VelocityChange);
                     _useGravityFloat = true;
+                    _state.inAir = true;
 
-
-                    StartCoroutine(StartCountdown(3));
+                    StartCoroutine(StartFloatCountdown(5));
                 }
             }
             else
@@ -178,6 +181,17 @@ public class PlayerLook : MonoBehaviour
         Debug.Log("No Hit");
     }
 
+    private IEnumerator StartFloatCountdown(int time)
+    {
+        _turnoff.useGravity = true;
+        _canUsePowers = false;
+        _useGravityFloat = false;
+        yield return new WaitForSeconds(time);
+        _canUsePowers = true;
+        _state.inAir = false;
+        _turnoff.GetComponent<NavMeshAgent>().enabled = true;
+        navMeshisDeactivated = false;
+    }
     private IEnumerator StartCountdown(int time)
     {
         _canUsePowers = false;
@@ -187,14 +201,15 @@ public class PlayerLook : MonoBehaviour
         {
             _turnoff.useGravity = true;
             _useGravityFloat = false;
-            navMeshisDeactivated = false;
-            yield return new WaitForSeconds(2);
+            Debug.Log("Waiting");
+            _state.inAir = false;
             _turnoff.GetComponent<NavMeshAgent>().enabled = true;
+            navMeshisDeactivated = false;
         }
 
         Debug.Log("End of StartCountdown");
     }
-
+    
     public void Look(Vector2 input)
     {
         float mouseX = input.x;

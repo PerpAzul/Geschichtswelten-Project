@@ -8,6 +8,7 @@ public class StateMachine : MonoBehaviour
     public BaseState activeState;
     private PlayerLook Look;
     public GameObject player;
+    public bool inAir = false;
     
     private void Start()
     {
@@ -17,6 +18,10 @@ public class StateMachine : MonoBehaviour
 
     void Update()
     {
+        if (inAir)
+        {
+            return;
+        }
         if (activeState != null)
         {
             if (Look.navMeshisDeactivated)
