@@ -32,7 +32,7 @@ public class Gun : MonoBehaviour
     [Header("Aiming Variables")] public Vector3 normalPose;
     public Vector3 aimPose;
     public float aimSpeed;
-    public bool isAiming;
+    public bool isAiming = false;
 
     #endregion
 
@@ -176,8 +176,8 @@ public class Gun : MonoBehaviour
         isAiming = true;
         transform.localPosition = Vector3.Slerp(transform.localPosition, aimPose, aimSpeed * Time.deltaTime);
         //cam.fieldOfView -= 200 * Time.deltaTime;
-        POV_cam.m_Lens.FieldOfView = 40;
-        cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 30, 60);
+        POV_cam.m_Lens.FieldOfView -= 200 * Time.deltaTime;
+        POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 30, 60);
         crosshair.SetActive(false);
     }
 
@@ -185,9 +185,9 @@ public class Gun : MonoBehaviour
     {
         isAiming = false;
         transform.localPosition = Vector3.Slerp(transform.localPosition, normalPose, aimSpeed * Time.deltaTime);
-        //cam.fieldOfView -= 200 * Time.deltaTime;
-        POV_cam.m_Lens.FieldOfView = 60;
-        cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 30, 60);
+        //cam.fieldOfView += 200 * Time.deltaTime;
+        POV_cam.m_Lens.FieldOfView += 200 * Time.deltaTime;
+        POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 30, 60);
         crosshair.SetActive(true);
     }
 
