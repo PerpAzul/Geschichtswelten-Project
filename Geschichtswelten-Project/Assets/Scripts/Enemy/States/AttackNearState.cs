@@ -22,11 +22,7 @@ public class AttackNearState : BaseState
         {
             float targetDistance = Mathf.Abs(Vector3.Distance(enemy.Player.transform.position, enemy.transform.position));
             enemy.transform.LookAt(enemy.Player.transform);
-
-            if (targetDistance > enemy.Agent.stoppingDistance)
-            {
-                enemy.Agent.SetDestination(enemy.Player.transform.position);   
-            }
+            enemy.Agent.SetDestination(enemy.Player.transform.position);
 
             if (targetDistance < enemy.Agent.stoppingDistance)
             {
