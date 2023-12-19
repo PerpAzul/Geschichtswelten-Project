@@ -3703,8 +3703,16 @@ PrefabInstance:
       value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: 6276911937453893848, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276911937453893848, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
       propertyPath: m_UpdateMethod
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276911937453893849, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6276911937453893849, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
       propertyPath: m_Name
