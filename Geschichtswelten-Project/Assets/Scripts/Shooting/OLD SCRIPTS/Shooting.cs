@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using Cinemachine;
 using TMPro;
 using Random = UnityEngine.Random;
 
@@ -22,7 +23,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private GameObject hitmarkerUI;
     [SerializeField] private GameObject crosshairUI;
 
-    public Camera cam;
+    public CinemachineVirtualCamera cam;
     
     private bool isReloading;
     public bool isShooting;

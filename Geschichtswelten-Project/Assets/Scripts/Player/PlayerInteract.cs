@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    private Camera cam;
+    public Camera cam;
     [SerializeField]
     private float distance = 3f;
 
@@ -15,7 +16,6 @@ public class PlayerInteract : MonoBehaviour
 
     private void Start()
     {
-        cam = GetComponent<PlayerLook>().cam;
         playerUI = GetComponent<PlayerUI>();
         inputManager = GetComponent<InputManager>();
     }
@@ -23,9 +23,9 @@ public class PlayerInteract : MonoBehaviour
     private void Update()
     {
         playerUI.UpdateText(string.Empty);
-        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+        //var ray = new Ray(cam.transform.position, cam.transform.TransformDirection(Vector3.forward));
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, distance, mask))
+        if (Physics.Raycast(cam.transform.position,cam.transform.TransformDirection(Vector3.forward), out hit, distance, mask))
         {
             if (hit.collider.GetComponent<Interactable>() != null)
             {

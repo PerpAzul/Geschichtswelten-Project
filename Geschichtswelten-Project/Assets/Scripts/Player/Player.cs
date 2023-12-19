@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     public float speed;
     public float gravity = -9.8f;
     public float jumpHeight;
+    public Camera mainCamera;
+    [SerializeField]
+    private Transform cameraTransform;
     
     void Start()
     {
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        cameraTransform = mainCamera.transform;
         isGrounded = controller.isGrounded;
     }
 
@@ -31,6 +35,7 @@ public class Player : MonoBehaviour
         Vector3 moveDirection = Vector3.zero;
         moveDirection.x = input.x;
         moveDirection.z = input.y;
+        moveDirection = cameraTransform.forward * moveDirection.z + cameraTransform.right * moveDirection.x;
         controller.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
 
         playerVelocity.y += gravity * Time.deltaTime;

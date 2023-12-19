@@ -35,7 +35,7 @@ public class PatrolState : BaseState
 
    public void PatrolCycle()
    {
-      //Debug.Log("Patrol State");
+      Debug.Log("Patrol State");
       if (enemy.Agent.remainingDistance < 0.2f)
       {
          waitTimer += Time.deltaTime;

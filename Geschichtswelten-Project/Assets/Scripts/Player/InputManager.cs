@@ -41,11 +41,6 @@ public class InputManager : MonoBehaviour
     }
     
 
-    private void LateUpdate()
-    {
-        look.Look(playerActions.Look.ReadValue<Vector2>());
-    }
-
     private void OnEnable()
     {
         playerActions.Enable();

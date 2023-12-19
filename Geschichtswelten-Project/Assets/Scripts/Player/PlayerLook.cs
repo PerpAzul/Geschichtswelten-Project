@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -209,7 +210,7 @@ public class PlayerLook : MonoBehaviour
 
         Debug.Log("End of StartCountdown");
     }
-    
+    /*
     public void Look(Vector2 input)
     {
         float mouseX = input.x;
@@ -225,4 +226,5 @@ public class PlayerLook : MonoBehaviour
         //rotate player to look left and right
         transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
     }
+    */
 }
