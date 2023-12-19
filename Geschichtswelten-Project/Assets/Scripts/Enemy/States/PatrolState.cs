@@ -35,7 +35,7 @@ public class PatrolState : BaseState
 
    public void PatrolCycle()
    {
-      Debug.Log("Patrol State");
+      //Debug.Log("Patrol State");
       if (enemy.Agent.remainingDistance < 0.2f)
       {
          waitTimer += Time.deltaTime;
@@ -51,6 +51,7 @@ public class PatrolState : BaseState
                waypointIndex = 0;
             }
 
+            Debug.Log("Moving to Location");
             enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
             waitTimer = 0;
          }

@@ -121,7 +121,7 @@ public class PlayerLook : MonoBehaviour
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
-                    Mathf.Infinity))
+                    15f))
             {
                 var hitGameObject = hit.collider.gameObject;
                 if (!hitGameObject.CompareTag("Enemy") && hitGameObject.GetComponent<Rigidbody>())
