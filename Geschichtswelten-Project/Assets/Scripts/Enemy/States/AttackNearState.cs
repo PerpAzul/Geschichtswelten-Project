@@ -23,8 +23,7 @@ public class AttackNearState : BaseState
             float targetDistance = Mathf.Abs(Vector3.Distance(enemy.Player.transform.position, enemy.transform.position));
             enemy.transform.LookAt(enemy.Player.transform);
             enemy.Agent.SetDestination(enemy.Player.transform.position);
-
-            if (targetDistance < enemy.Agent.stoppingDistance)
+            if (targetDistance < enemy.Agent.stoppingDistance + 1.2f)
             {
                 attackTimer += Time.deltaTime;
                 if (attackTimer > 1f)

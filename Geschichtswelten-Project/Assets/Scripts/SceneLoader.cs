@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public GameObject MainMenu;
-    public GameObject OptionMenu;
+    public List<GameObject> scenes = new List<GameObject>();
 
     private void Awake()
     {
-        MainMenu.SetActive(true);
-        OptionMenu.SetActive(false);
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            return;
+        }
+
+        scenes[0].SetActive(true);
+        scenes[1].SetActive(false);
     }
 
     public void LoadLevel()
@@ -27,14 +31,13 @@ public class SceneLoader : MonoBehaviour
 
     public void OpenOptions()
     {
-        OptionMenu.SetActive(true);
-        MainMenu.SetActive(false);
+        scenes[0].SetActive(false);
+        scenes[1].SetActive(true);
     }
 
     public void CloseOptions()
     {
-        OptionMenu.SetActive(false);
-        MainMenu.SetActive(true);
+        scenes[0].SetActive(true);
+        scenes[1].SetActive(false);
     }
-    
 }

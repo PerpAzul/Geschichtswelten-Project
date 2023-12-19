@@ -3568,6 +3568,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cinemachine Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3740094302082070833, guid: a3c4c515412ea9b4dbe04af75eb93810, type: 3}
+      propertyPath: m_Radius
+      value: 0.52799034
+      objectReference: {fileID: 0}
+    - target: {fileID: 3740094302082070833, guid: a3c4c515412ea9b4dbe04af75eb93810, type: 3}
+      propertyPath: m_Center.z
+      value: 0.027990341
+      objectReference: {fileID: 0}
     - target: {fileID: 3740094302082070840, guid: a3c4c515412ea9b4dbe04af75eb93810, type: 3}
       propertyPath: overlay
       value: 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -35,6 +36,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage()
     {
+        if (currentHealth < 1)
+        {
+            SceneManager.LoadScene("Death Screen");
+        }
         currentHealth--;
         durationTimer = 0;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0.5f);
