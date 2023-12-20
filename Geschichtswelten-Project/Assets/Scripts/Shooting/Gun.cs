@@ -8,7 +8,7 @@ public class Gun : MonoBehaviour
 {
     #region UI
 
-    [Header("UI")] [SerializeField] private TextMeshProUGUI ammoCount;
+    [Header("UI Variables")] [SerializeField] private TextMeshProUGUI ammoCount;
     [SerializeField] private GameObject hitMarkerUI;
     [SerializeField] private GameObject crosshairUI;
 
@@ -175,7 +175,6 @@ public class Gun : MonoBehaviour
     {
         isAiming = true;
         transform.localPosition = Vector3.Slerp(transform.localPosition, aimPose, aimSpeed * Time.deltaTime);
-        //cam.fieldOfView -= 200 * Time.deltaTime;
         POV_cam.m_Lens.FieldOfView -= 200 * Time.deltaTime;
         POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 30, 60);
         crosshair.SetActive(false);
@@ -185,7 +184,6 @@ public class Gun : MonoBehaviour
     {
         isAiming = false;
         transform.localPosition = Vector3.Slerp(transform.localPosition, normalPose, aimSpeed * Time.deltaTime);
-        //cam.fieldOfView += 200 * Time.deltaTime;
         POV_cam.m_Lens.FieldOfView += 200 * Time.deltaTime;
         POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 30, 60);
         crosshair.SetActive(true);
