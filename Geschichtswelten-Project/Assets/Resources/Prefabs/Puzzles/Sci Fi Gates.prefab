@@ -343,6 +343,9 @@ MonoBehaviour:
   pressurePlate1: {fileID: 0}
   pressurePlate2: {fileID: 0}
   animator: {fileID: 8063548017674069763}
+  _clip: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
+  _Source: {fileID: 0}
+  _keypad: {fileID: 0}
 --- !u!1 &7657185354665032521
 GameObject:
   m_ObjectHideFlags: 0

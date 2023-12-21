@@ -95,11 +95,11 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 0
+  m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -287,10 +287,12 @@ MonoBehaviour:
   normalPose: {x: 0.2299999, y: -0.22, z: 0.2699999}
   aimPose: {x: 0, y: -0.18, z: -0.09}
   aimSpeed: 15
+  isAiming: 0
   isShooting: 0
   flash: {fileID: 220475579877399081}
   animator: {fileID: 6276911938666264716}
   cam: {fileID: 6276911937453893846}
+  POV_cam: {fileID: 0}
   crosshair: {fileID: 0}
 --- !u!114 &6276911938125311372
 MonoBehaviour:
@@ -425,10 +427,12 @@ MonoBehaviour:
   normalPose: {x: 0.2299999, y: -0.22, z: 0.2699999}
   aimPose: {x: 0, y: -0.18, z: -0.09}
   aimSpeed: 15
+  isAiming: 0
   isShooting: 0
   flash: {fileID: 3254271941578821734}
   animator: {fileID: 6276911938666264716}
   cam: {fileID: 6276911937453893846}
+  POV_cam: {fileID: 0}
   crosshair: {fileID: 0}
 --- !u!114 &6276911938407738611
 MonoBehaviour:

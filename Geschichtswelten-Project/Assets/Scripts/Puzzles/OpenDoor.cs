@@ -1,4 +1,5 @@
 using System;
+using NavKeypad;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -12,21 +13,32 @@ public class OpenDoor : MonoBehaviour
     public AudioClip _clip;
     public AudioSource _Source;
     private bool canPlay;
-
-  
+    public Keypad _keypad;
+    
+    
 
     private void Update()
     {
-        if (pressurePlate1.isActivated && pressurePlate2.isActivated || pressurePlate2.isActivated && pressurePlate1.isActivated)
+        if (pressurePlate1.isActivated && pressurePlate2.isActivated || pressurePlate2.isActivated && pressurePlate1.isActivated || _keypad.stopDoor)
         {
-            animator.SetBool("OpenDoor",true);
-            PlaySound();
+            PlayOpenDoor();
         }
         else
         {
-            animator.SetBool("OpenDoor",false);
-            canPlay = false;
+            CloseDoor();
         }
+    }
+
+    public void CloseDoor()
+    {
+        animator.SetBool("OpenDoor",false);
+        canPlay = false;
+    }
+
+    public void PlayOpenDoor()
+    {
+        animator.SetBool("OpenDoor",true);
+        PlaySound();
     }
 
     private void PlaySound()

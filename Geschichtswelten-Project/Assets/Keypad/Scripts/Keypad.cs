@@ -10,12 +10,15 @@ public class Keypad : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent onAccessGranted;
     [SerializeField] private UnityEvent onAccessDenied;
+    [SerializeField] private UnityEvent _Quit;
     [Header("Combination Code (9 Numbers Max)")]
     [SerializeField] private int keypadCombo = 12345;
 
     public UnityEvent OnAccessGranted => onAccessGranted;
     public UnityEvent OnAccessDenied => onAccessDenied;
 
+    public UnityEvent Quit => _Quit;
+    
     [Header("Settings")]
     [SerializeField] private string accessGrantedText = "Granted";
     [SerializeField] private string accessDeniedText = "Denied";
@@ -37,6 +40,8 @@ public class Keypad : MonoBehaviour
     [SerializeField] private TMP_Text keypadDisplayText;
     [SerializeField] private AudioSource audioSource;
 
+    public bool stopDoor = false;
+
 
     private string currentInput;
     private bool displayingResult = false;
@@ -48,6 +53,13 @@ public class Keypad : MonoBehaviour
         panelMesh.material.SetVector("_EmissionColor", screenNormalColor * screenIntensity);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("q"))
+        {
+            _Quit?.Invoke();
+        }
+    }
 
     //Gets value from pressedbutton
     public void AddInput(string input)
@@ -124,6 +136,7 @@ public class Keypad : MonoBehaviour
         onAccessGranted?.Invoke();
         panelMesh.material.SetVector("_EmissionColor", screenGrantedColor * screenIntensity);
         audioSource.PlayOneShot(accessGrantedSfx);
+        stopDoor = true;
     }
 
 }

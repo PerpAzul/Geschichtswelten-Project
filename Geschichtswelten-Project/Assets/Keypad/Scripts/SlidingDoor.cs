@@ -12,7 +12,7 @@ namespace NavKeypad
         public void ToggleDoor()
         {
             isOpen = !isOpen;
-            anim.SetBool("isOpen", isOpen);
+            anim.SetBool("OpenDoor", isOpen);
         }
 
         public void OpenDoor()
