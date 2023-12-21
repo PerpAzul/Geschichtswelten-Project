@@ -1,30 +1,32 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-namespace NavKeypad { 
-public class KeypadInteractionFPV : MonoBehaviour
+namespace NavKeypad
 {
-    public CinemachineVirtualCamera cam;
-    
-    private void Update()
+    public class KeypadInteractionFPV : MonoBehaviour
     {
-        //var ray = cam.ScreenPointToRay(Input.mousePosition);
-        var ray = cam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0))
+        public CinemachineVirtualCamera cam;
+
+        private void Update()
         {
-            Debug.Log("Mouse Clicked");
-            if (Physics.Raycast(ray, out var hit))
+            Debug.Log("Is not paused");
+            //var ray = cam.ScreenPointToRay(Input.mousePosition);
+            var ray = cam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("RayCast shot");
-                if (hit.collider.TryGetComponent(out KeypadButton keypadButton))
+                Debug.Log("Mouse Clicked");
+                if (Physics.Raycast(ray, out var hit))
                 {
-                    Debug.Log("KeypadButton hit");
-                    keypadButton.PressButton();
+                    Debug.Log("RayCast shot");
+                    if (hit.collider.TryGetComponent(out KeypadButton keypadButton))
+                    {
+                        Debug.Log("KeypadButton hit");
+                        keypadButton.PressButton();
+                    }
                 }
             }
         }
     }
-}
 }

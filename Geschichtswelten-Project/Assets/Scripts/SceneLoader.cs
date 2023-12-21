@@ -17,6 +17,20 @@ public class SceneLoader : MonoBehaviour
 
         scenes[0].SetActive(true);
         scenes[1].SetActive(false);
+        scenes[2].SetActive(false);
+    }
+
+    public void OpenLevelSelecter()
+    {
+        scenes[0].SetActive(false);
+        scenes[1].SetActive(true);
+    }
+
+    public void CloseLevelSelecter()
+    {
+        scenes[0].SetActive(true);
+        scenes[1].SetActive(false);
+        scenes[2].SetActive(false);
     }
 
     public void LoadLevel()
@@ -32,12 +46,14 @@ public class SceneLoader : MonoBehaviour
     public void OpenOptions()
     {
         scenes[0].SetActive(false);
-        scenes[1].SetActive(true);
+        scenes[1].SetActive(false);
+        scenes[2].SetActive(true);
     }
 
     public void CloseOptions()
     {
         scenes[0].SetActive(true);
         scenes[1].SetActive(false);
+        scenes[2].SetActive(false);
     }
 }

@@ -44,7 +44,7 @@ public class Gun : MonoBehaviour
     public Camera cam;
     public CinemachineVirtualCamera POV_cam;
     public GameObject crosshair;
-
+    [SerializeField] private PauseMenu PauseMenu;
     #endregion
 
     // Start is called before the first frame update
@@ -60,6 +60,7 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
         //transform.position = cam.transform.position;
         ammoCount.text = ammo + "/" + maxAmmo;
         if (isAiming)
