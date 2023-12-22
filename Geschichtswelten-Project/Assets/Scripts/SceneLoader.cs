@@ -33,6 +33,11 @@ public class SceneLoader : MonoBehaviour
         scenes[2].SetActive(false);
     }
 
+    public void OpenMainMenu()
+    {
+        SceneManager.LoadScene("Start Menu");
+    }
+
     public void LoadLevel()
     {
         SceneManager.LoadScene("Jorge Scene");
