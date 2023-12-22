@@ -128,6 +128,7 @@ public class PlayerLook : MonoBehaviour
                 {
                     Stop = true;
                     hitGameObject.transform.parent = cam.transform;
+                    hitGameObject.GetComponent<Rigidbody>().isKinematic = true;
                     hitGameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
                     hitGameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     hitGameObject.GetComponent<Rigidbody>().useGravity = false;
@@ -139,6 +140,7 @@ public class PlayerLook : MonoBehaviour
         {
             PickUpHit.collider.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             PickUpHit.collider.gameObject.transform.parent = null;
+            PickUpHit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             PickUpHit.collider.gameObject.GetComponent<Rigidbody>().useGravity = true;
             Stop = false;
         }

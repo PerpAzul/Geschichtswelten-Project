@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class SettingMenu : MonoBehaviour
@@ -15,6 +16,5 @@ public class SettingMenu : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(index);
     }
-    
     
 }
