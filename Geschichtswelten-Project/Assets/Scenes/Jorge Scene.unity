@@ -6228,6 +6228,14 @@ PrefabInstance:
       propertyPath: crosshair
       value: 
       objectReference: {fileID: 802430382}
+    - target: {fileID: 6276911937247620124, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276911937312836398, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6276911937453893845, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6307,7 +6315,7 @@ PrefabInstance:
     - target: {fileID: 6276911938125311371, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
       propertyPath: crosshair
       value: 
-      objectReference: {fileID: 802430382}
+      objectReference: {fileID: 442145563}
     - target: {fileID: 6276911938125311371, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
       propertyPath: crosshairUI
       value: 
