@@ -11,7 +11,6 @@ namespace NavKeypad
 
         private void Update()
         {
-            Debug.Log("Is not paused");
             //var ray = cam.ScreenPointToRay(Input.mousePosition);
             var ray = cam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             if (Input.GetMouseButtonDown(0))
