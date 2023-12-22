@@ -77,6 +77,10 @@ public class Gun : MonoBehaviour
 
     public void Shoot()
     {
+        if (PauseMenu.isPaused)
+        {
+            return;
+        }
         if (ammo > 0 && isShooting == false)
         {
             isShooting = true;

@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
     private PlayerInput.PauseMenuActions playerActions;
     private PlayerInput PlayerInput;
     public bool isPaused = false;
+    public bool inOptions;
 
     private void Awake()
     {
@@ -51,6 +52,7 @@ public class PauseMenu : MonoBehaviour
         
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
+        OptionsMenu.SetActive(false);
         gameUI.SetActive(true);
         isPaused = false;
     }
@@ -60,6 +62,7 @@ public class PauseMenu : MonoBehaviour
         
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
+        OptionsMenu.SetActive(false);
         gameUI.SetActive(false);
         isPaused = true;
     }
