@@ -23,6 +23,12 @@ public class PlayerLook : MonoBehaviour
     public bool navMeshisDeactivated = false;
     private StateMachine _state = new StateMachine();
 
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     //GravityPush Power with Collision Detection
     public void GravityPush()
     {
