@@ -22,9 +22,6 @@ public class PlayerLook : MonoBehaviour
     private RaycastHit PickUpHit;
     public bool navMeshisDeactivated = false;
     private StateMachine _state = new StateMachine();
-    
-    
-
 
     //GravityPush Power with Collision Detection
     public void GravityPush()
