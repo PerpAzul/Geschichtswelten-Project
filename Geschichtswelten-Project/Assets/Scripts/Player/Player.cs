@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     public float baseSpeed = 10f;
     public float speed;
     public float gravity = -9.8f;
-    public float jumpHeight;
     public Camera mainCamera;
     [SerializeField]
     private Transform cameraTransform;
@@ -45,14 +44,6 @@ public class Player : MonoBehaviour
             playerVelocity.y = -2f;
         }
         controller.Move(playerVelocity * Time.deltaTime);
-    }
-
-    public void Jump()
-    {
-        if (isGrounded)
-        {
-            playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
-        }
     }
 
     public void StartRun()

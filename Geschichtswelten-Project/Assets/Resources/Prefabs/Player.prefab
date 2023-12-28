@@ -33,7 +33,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051077051376489652}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -60.200558, y: 1, z: -4.8923273}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -129,10 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2789c1ffbc9a0747a1430b6758a9142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 10
-  speed: 5
+  baseSpeed: 6
+  speed: 6
   gravity: -10
-  jumpHeight: 0
   mainCamera: {fileID: 5008036653556056702}
   cameraTransform: {fileID: 5008036653556056701}
 --- !u!114 &7435773726013582101
@@ -442,6 +441,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1465349730479999960}
     m_Modifications:
+    - target: {fileID: 709152020945175641, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
+      propertyPath: m_Cookie
+      value: 
+      objectReference: {fileID: 2800000, guid: b807d8af8078947bab78a9acf23bfd8f, type: 3}
+    - target: {fileID: 709152020945175641, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
+      propertyPath: m_Intensity
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 709152020945175641, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
+      propertyPath: m_SpotAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 709152020945175641, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 709152020945175643, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -37,15 +37,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""a40581af-0288-43be-9828-3f247e2bd17b"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Look"",
                     ""type"": ""Value"",
                     ""id"": ""16a38809-4960-4330-8821-cc03735d0d69"",
@@ -157,17 +148,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""17c94f4b-db51-4195-9b13-ec68a65c6ffe"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -921,7 +901,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         // PlayerBasics
         m_PlayerBasics = asset.FindActionMap("PlayerBasics", throwIfNotFound: true);
         m_PlayerBasics_Move = m_PlayerBasics.FindAction("Move", throwIfNotFound: true);
-        m_PlayerBasics_Jump = m_PlayerBasics.FindAction("Jump", throwIfNotFound: true);
         m_PlayerBasics_Look = m_PlayerBasics.FindAction("Look", throwIfNotFound: true);
         m_PlayerBasics_Interact = m_PlayerBasics.FindAction("Interact", throwIfNotFound: true);
         m_PlayerBasics_Run = m_PlayerBasics.FindAction("Run", throwIfNotFound: true);
@@ -1007,7 +986,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_PlayerBasics;
     private IPlayerBasicsActions m_PlayerBasicsActionsCallbackInterface;
     private readonly InputAction m_PlayerBasics_Move;
-    private readonly InputAction m_PlayerBasics_Jump;
     private readonly InputAction m_PlayerBasics_Look;
     private readonly InputAction m_PlayerBasics_Interact;
     private readonly InputAction m_PlayerBasics_Run;
@@ -1018,7 +996,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         private @PlayerInput m_Wrapper;
         public PlayerBasicsActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_PlayerBasics_Move;
-        public InputAction @Jump => m_Wrapper.m_PlayerBasics_Jump;
         public InputAction @Look => m_Wrapper.m_PlayerBasics_Look;
         public InputAction @Interact => m_Wrapper.m_PlayerBasics_Interact;
         public InputAction @Run => m_Wrapper.m_PlayerBasics_Run;
@@ -1036,9 +1013,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Move.started -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnMove;
-                @Jump.started -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnJump;
                 @Look.started -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_PlayerBasicsActionsCallbackInterface.OnLook;
@@ -1061,9 +1035,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
@@ -1273,7 +1244,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     public interface IPlayerBasicsActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);

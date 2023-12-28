@@ -24,7 +24,6 @@ public class InputManager : MonoBehaviour
         look = GetComponent<PlayerLook>();
         flash = GetComponent<Flashlight>();
         
-        playerActions.Jump.performed += ctx => player.Jump();
         playerActions.Run.started += ctx => player.StartRun();
         playerActions.Run.canceled += ctx => player.EndRun();
         playerActions.Flashlight.performed += ctx => flash.Flash();

@@ -73369,13 +73369,5 @@ PrefabInstance:
       propertyPath: overlay
       value: 
       objectReference: {fileID: 559389971}
-    - target: {fileID: 7083522273317921439, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
-      propertyPath: speed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083522273317921439, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
-      propertyPath: baseSpeed
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
