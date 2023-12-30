@@ -73289,6 +73289,30 @@ PrefabInstance:
       propertyPath: promptText
       value: 
       objectReference: {fileID: 1073819014}
+    - target: {fileID: 5008036652084171301, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036652084171301, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036652084171301, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036652084171301, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036652084171301, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036652084171301, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5008036652616992547, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: PauseMenu
       value: 
@@ -73309,6 +73333,42 @@ PrefabInstance:
       propertyPath: hitMarkerUI
       value: 
       objectReference: {fileID: 687794531}
+    - target: {fileID: 5008036652616992547, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: timeBetweenShooting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036653349712100, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036653349712100, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036653349712100, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036653349712100, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036653349712100, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036653349712100, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036653349712100, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008036653349783220, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5008036653556056702, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: near clip plane
       value: 0.002
@@ -73333,9 +73393,45 @@ PrefabInstance:
       propertyPath: hitMarkerUI
       value: 
       objectReference: {fileID: 687794531}
+    - target: {fileID: 6380635294459533659, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: timeBetweenShooting
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6398357481623291102, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: overlay
       value: 
       objectReference: {fileID: 559389971}
+    - target: {fileID: 7907457161505039525, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907457161505536133, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907457161505536133, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907457161505536133, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907457161505536133, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907457161505536133, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907457161505536133, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907457161505536133, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b06820c665c7eab4db6477040a4feedd, type: 3}

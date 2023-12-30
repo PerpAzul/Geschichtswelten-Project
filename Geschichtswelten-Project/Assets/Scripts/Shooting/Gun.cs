@@ -25,8 +25,8 @@ public class Gun : MonoBehaviour
     public float ammo;
     public float maxAmmo;
     public float reloadTime;
-
     private bool _isReloading;
+    private bool isRecoiling;
 
     //Aiming Variables
     [Header("Aiming Variables")] public Vector3 normalPose;
@@ -50,7 +50,6 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isAiming = false;
         maxAmmo = 20f;
         ammoCount.text = ammo + "/10";
         hitMarkerUI.gameObject.SetActive(false);
@@ -81,12 +80,13 @@ public class Gun : MonoBehaviour
         {
             return;
         }
-        if (ammo > 0 && isShooting == false)
+        if (ammo > 0 && isShooting == false && isRecoiling == false)
         {
             isShooting = true;
             ammo--;
             Invoke("ResetShot", timeBetweenShooting);
             flash.Play();
+            StartCoroutine(Recoil());
 
             float x = Random.Range(-spread, spread);
             float y = Random.Range(-spread, spread);
@@ -134,6 +134,21 @@ public class Gun : MonoBehaviour
         _isReloading = false;
     }
 
+    IEnumerator Recoil()
+    {
+        isRecoiling = true;
+        
+        animator.SetBool("Shooting", true);
+
+        yield return new WaitForSeconds(0.05f);
+
+        animator.SetBool("Shooting", false);
+        
+        yield return new WaitForSeconds(0.05f);
+
+        isRecoiling = false;
+    }
+
     public void Reload()
     {
         if (_isReloading == false && maxAmmo > 0 && ammo < maxReload)
@@ -156,7 +171,10 @@ public class Gun : MonoBehaviour
     {
         _isReloading = false;
         isShooting = false;
+        isRecoiling = false;
+        isAiming = false;
         animator.SetBool("Reloading", false);
+        animator.SetBool("Shooting", false);
     }
 
     private void hitActive()
