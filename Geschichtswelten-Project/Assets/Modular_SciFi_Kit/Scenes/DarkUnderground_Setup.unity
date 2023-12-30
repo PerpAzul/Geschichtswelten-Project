@@ -77523,6 +77523,10 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 0.002
       objectReference: {fileID: 0}
+    - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_VerticalAxis.m_MinValue
+      value: -70
+      objectReference: {fileID: 0}
     - target: {fileID: 6380635294459533659, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: PauseMenu
       value: 
