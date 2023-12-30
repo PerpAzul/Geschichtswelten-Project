@@ -40,7 +40,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene("Jorge Scene");
+        SceneManager.LoadScene("DarkUnderground_Setup");
     }
 
     public void ExitToDesktop()
