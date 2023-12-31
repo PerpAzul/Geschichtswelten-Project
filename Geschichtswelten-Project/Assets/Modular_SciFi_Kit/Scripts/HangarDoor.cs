@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +20,7 @@ public class HangarDoor : MonoBehaviour
             mat.SetColor("_EmissionColor", finalColor);
         }
     }
-
+    
     void OnTriggerEnter(Collider other)
     {
         if (!doorLocked) {

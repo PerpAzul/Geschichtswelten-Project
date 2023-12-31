@@ -7,17 +7,35 @@ using Debug = UnityEngine.Debug;
 
 public class PressurePlate : MonoBehaviour
 {
+    [SerializeField] private HangarDoor _hangarDoor;
     public bool isActivated;
+    bool doorCanClose = false;
+    bool doorCanOpen = true;
+    public bool turnedOn;
+
+   
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("TriggerEnter");
-        isActivated = true;
+        StartCoroutine(OpenDoor());
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("TriggerExit");
-        isActivated = false;
+        StartCoroutine(CloseDoor());
+    }
+
+    IEnumerator OpenDoor()
+    {
+        _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");
+        turnedOn = true;
+        yield return new WaitForSeconds(1);
+    }
+
+    IEnumerator CloseDoor()
+    {
+        _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Close");
+        turnedOn = false;
+        yield return new WaitForSeconds(1);
     }
 }
