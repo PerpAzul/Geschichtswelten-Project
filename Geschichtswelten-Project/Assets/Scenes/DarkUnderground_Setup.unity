@@ -36586,7 +36586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7061086072759959464, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7061086072759959464, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
       propertyPath: m_Priority
@@ -79635,7 +79635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008036653556056688, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_DefaultBlend.m_Style
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5008036653556056689, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_IsActive

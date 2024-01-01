@@ -46,13 +46,13 @@ public class InteractWithKeypad : Interactable
 
     protected override void Interact()
     {
+        _KeypadCam.Priority = 1;
+        mainCamera.Priority = 0;
         _KeypadCam.enabled = true;
         _KeypadCam.GetComponent<Camera>().enabled = true;
         mainCamera.enabled = false;
         Weapons.gameObject.SetActive(false);
         hitMarker.gameObject.SetActive(false);
-        _KeypadCam.Priority = 1;
-        mainCamera.Priority = 0;
         player.gameObject.SetActive(false);
         GetComponent<BoxCollider>().enabled = false;
         Cursor.visible = true;
