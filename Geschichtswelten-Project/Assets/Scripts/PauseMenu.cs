@@ -53,6 +53,7 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Start Menu");
     }
+
     private void Unpause()
     {
         if (PapersUI.gameObject.activeSelf)
@@ -62,6 +63,7 @@ public class PauseMenu : MonoBehaviour
             isPaused = false;
             return;
         }
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         Time.timeScale = 1;
@@ -90,7 +92,6 @@ public class PauseMenu : MonoBehaviour
 
     public void OpenOptions()
     {
-        
         //gameUI.SetActive(false);
         pauseMenu.SetActive(false);
         OptionsMenu.SetActive(true);
