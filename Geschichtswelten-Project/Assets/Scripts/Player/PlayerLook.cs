@@ -129,7 +129,7 @@ public class PlayerLook : MonoBehaviour
                     15f))
             {
                 var hitGameObject = hit.collider.gameObject;
-                if (!hitGameObject.CompareTag("Enemy") && hitGameObject.GetComponent<Rigidbody>())
+                if (hitGameObject.CompareTag("Box") && hitGameObject.GetComponent<Rigidbody>())
                 {
                     Stop = true;
                     hitGameObject.transform.parent = cam.transform;
