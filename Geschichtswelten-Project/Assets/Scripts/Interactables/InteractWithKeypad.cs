@@ -14,8 +14,7 @@ public class InteractWithKeypad : Interactable
     public GameObject Weapons;
     public GameObject hitMarker;
     public GameObject player;
-    public bool stopDoor;
-    public GameObject UI;
+    //public GameObject UI;
 
     private void Awake()
     {
@@ -41,7 +40,7 @@ public class InteractWithKeypad : Interactable
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         promptMessage = "Keypad";
-        UI.gameObject.SetActive(true);
+        //UI.gameObject.SetActive(true);
     }
 
     protected override void Interact()
@@ -58,6 +57,6 @@ public class InteractWithKeypad : Interactable
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         promptMessage = "";
-        UI.gameObject.SetActive(false);
+        //UI.gameObject.SetActive(false);
     }
 }

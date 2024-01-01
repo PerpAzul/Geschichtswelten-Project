@@ -36516,6 +36516,18 @@ PrefabInstance:
       propertyPath: promptMessage
       value: Keypad
       objectReference: {fileID: 0}
+    - target: {fileID: 1563828677137395904, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
+      propertyPath: m_Size.z
+      value: 0.11378609
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563828677137395904, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563828677137395904, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
+      propertyPath: m_Center.z
+      value: 0.015983885
+      objectReference: {fileID: 0}
     - target: {fileID: 2819367522260345505, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -36579,6 +36591,10 @@ PrefabInstance:
     - target: {fileID: 2819367522260345507, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
       propertyPath: m_Name
       value: KeypadStandard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819367522260345507, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282301645311225802, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
       propertyPath: m_Enabled
