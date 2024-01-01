@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject OptionsMenu;
+    [SerializeField] private GameObject PapersUI;
     private PlayerInput.PauseMenuActions playerActions;
     private PlayerInput PlayerInput;
     public bool isPaused = false;
@@ -54,6 +55,13 @@ public class PauseMenu : MonoBehaviour
     }
     private void Unpause()
     {
+        if (PapersUI.gameObject.activeSelf)
+        {
+            pauseMenu.SetActive(false);
+            OptionsMenu.SetActive(false);
+            isPaused = false;
+            return;
+        }
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         Time.timeScale = 1;
