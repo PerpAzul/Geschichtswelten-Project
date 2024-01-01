@@ -38,4 +38,9 @@ public class PressurePlate : MonoBehaviour
         turnedOn = false;
         yield return new WaitForSeconds(1);
     }
+    
+    public void OpenDoorSimple()
+    {
+        _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");
+    }
 }
