@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class LetterInteract : Interactable
     [SerializeField] private TextMeshProUGUI textToUpdate;
     public GameObject gameUI;
     public GameObject Text;
-    private bool NomorePaper;
+    private bool NomorePaper = false;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class LetterInteract : Interactable
             Text.SetActive(true);
             NomorePaper = true;
             Time.timeScale = 0;
+            Debug.Log("in");
         }
         else
         {
@@ -31,6 +33,7 @@ public class LetterInteract : Interactable
             Text.SetActive(false);
             NomorePaper = false;
             Time.timeScale = 1;
+            Debug.Log("out");
         }
     }
 }

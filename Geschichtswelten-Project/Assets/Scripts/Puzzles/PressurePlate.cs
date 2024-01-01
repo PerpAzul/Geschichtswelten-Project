@@ -42,6 +42,5 @@ public class PressurePlate : MonoBehaviour
     public void OpenDoorSimple()
     {
         _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");
-        
     }
 }
