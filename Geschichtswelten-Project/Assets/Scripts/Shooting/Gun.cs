@@ -24,6 +24,7 @@ public class Gun : MonoBehaviour
     public float maxReload;
     public float ammo;
     public float maxAmmo;
+    public float ammoPicked;
     public float reloadTime;
     private bool _isReloading;
     private bool isRecoiling;
@@ -50,7 +51,6 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxAmmo = 20f;
         ammoCount.text = ammo + "/10";
         hitMarkerUI.gameObject.SetActive(false);
         crosshairUI.gameObject.SetActive(true);
@@ -159,7 +159,7 @@ public class Gun : MonoBehaviour
 
     public void pickAmmo()
     {
-        maxAmmo += 5;
+        maxAmmo += ammoPicked;
     }
 
     public void ResetShot()
