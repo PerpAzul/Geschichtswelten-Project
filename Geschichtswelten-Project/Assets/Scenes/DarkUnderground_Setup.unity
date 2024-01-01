@@ -47312,7 +47312,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1483456558547258, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: m_Name
-      value: DU_HangarDoor_1 (3)
+      value: HangarDoorOutside
       objectReference: {fileID: 0}
     - target: {fileID: 4951408050531192, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: m_RootOrder
@@ -47367,11 +47367,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: doorLocked
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
 --- !u!1001 &1282554671
 PrefabInstance:
@@ -64319,9 +64322,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985b8bdb8d3875145b1e752a6eedcbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hangarDoor: {fileID: 1828940063}
+  _hangarDoor: {fileID: 1716309917}
   isActivated: 0
   turnedOn: 0
+--- !u!114 &1716309917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+  m_PrefabInstance: {fileID: 1282412945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574419976}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c38776775bb8d4793bee2e9d16a0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1717513606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4638355216031824, guid: 798dd5b58555bee428239fe6bdf1c44d, type: 3}
