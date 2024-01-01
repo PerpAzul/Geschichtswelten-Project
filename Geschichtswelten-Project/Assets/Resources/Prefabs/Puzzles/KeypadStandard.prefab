@@ -1044,8 +1044,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: OpenDoor, Assembly-CSharp
-        m_MethodName: PlayOpenDoor
+        m_TargetAssemblyTypeName: PressurePlate, Assembly-CSharp
+        m_MethodName: OpenDoorSimple
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1058,6 +1058,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1367207451086249214}
         m_TargetAssemblyTypeName: InteractWithKeypad, Assembly-CSharp
         m_MethodName: SwitchToMainCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1367207451086249214}
+        m_TargetAssemblyTypeName: InteractWithKeypad, Assembly-CSharp
+        m_MethodName: ReeenableBoxCollider
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1097,7 +1109,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  keypadCombo: 5567
+  keypadCombo: 312
   accessGrantedText: Granted
   accessDeniedText: Denied
   displayResultTime: 1
@@ -1235,8 +1247,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33167267, y: 0.32430673, z: 0.10384369}
-  m_Center: {x: 0.029273987, y: -0.004951179, z: 0.020955086}
+  m_Size: {x: 0.33167267, y: 0.32430673, z: 0.11378609}
+  m_Center: {x: 0.029273987, y: -0.004951179, z: 0.015983885}
 --- !u!114 &1367207451086249214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,13 +1262,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: 
+  promptMessage: Keypad
   _KeypadCam: {fileID: 7061086072759959464}
   mainCamera: {fileID: 0}
   Weapons: {fileID: 0}
   hitMarker: {fileID: 0}
   player: {fileID: 0}
-  stopDoor: 0
+  Text: {fileID: 0}
 --- !u!1 &3161823819457644882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,7 +2100,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8858119535999545769}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
