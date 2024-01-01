@@ -10,7 +10,6 @@ public class LetterInteract : Interactable
     public GameObject gameUI;
     public GameObject Text;
     private bool NomorePaper;
-    public GameObject Player;
 
     private void Awake()
     {
@@ -23,7 +22,6 @@ public class LetterInteract : Interactable
         {
             gameUI.SetActive(false);
             Text.SetActive(true);
-            textToUpdate.text = "TEstytesty";
             NomorePaper = true;
             Time.timeScale = 0;
         }
