@@ -5,6 +5,7 @@ using System.Text;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class InteractWithKeypad : Interactable
 {
@@ -14,6 +15,7 @@ public class InteractWithKeypad : Interactable
     public GameObject hitMarker;
     public GameObject player;
     public bool stopDoor;
+    public GameObject UI;
 
     private void Awake()
     {
@@ -35,11 +37,17 @@ public class InteractWithKeypad : Interactable
         hitMarker.gameObject.SetActive(true);
         Weapons.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
+        _KeypadCam.GetComponent<Camera>().enabled = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        promptMessage = "Keypad";
+        UI.gameObject.SetActive(true);
     }
 
     protected override void Interact()
     {
         _KeypadCam.enabled = true;
+        _KeypadCam.GetComponent<Camera>().enabled = true;
         mainCamera.enabled = false;
         Weapons.gameObject.SetActive(false);
         hitMarker.gameObject.SetActive(false);
@@ -47,5 +55,9 @@ public class InteractWithKeypad : Interactable
         mainCamera.Priority = 0;
         player.gameObject.SetActive(false);
         GetComponent<BoxCollider>().enabled = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        promptMessage = "";
+        UI.gameObject.SetActive(false);
     }
 }

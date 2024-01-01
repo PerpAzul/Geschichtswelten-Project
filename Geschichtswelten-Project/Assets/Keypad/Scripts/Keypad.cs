@@ -55,7 +55,7 @@ public class Keypad : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("q"))
+        if (Input.GetKeyDown("f"))
         {
             _Quit?.Invoke();
         }
