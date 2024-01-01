@@ -8,7 +8,7 @@ using UnityEngine;
 public class LetterInteract : Interactable
 {
     [SerializeField] private TextMeshProUGUI textToUpdate;
-    public GameObject gameUI;
+    [SerializeField] private GameObject gameUI;
     public GameObject Text;
     private bool NomorePaper = false;
 
