@@ -14,8 +14,6 @@ public class PressurePlate : MonoBehaviour
     public bool turnedOn;
     private float isOpen = 0;
 
-   
-
     private void OnTriggerEnter(Collider other)
     {
         StartCoroutine(OpenDoor());
