@@ -12,6 +12,7 @@ public class PressurePlate : MonoBehaviour
     bool doorCanClose = false;
     bool doorCanOpen = true;
     public bool turnedOn;
+    private float isOpen = 0;
 
    
 
@@ -42,5 +43,14 @@ public class PressurePlate : MonoBehaviour
     public void OpenDoorSimple()
     {
         _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");
+    }
+    
+    public void OpenDoorSimple2()
+    {
+        if (isOpen == 0)
+        {
+            isOpen = 1;
+            _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");   
+        }
     }
 }
