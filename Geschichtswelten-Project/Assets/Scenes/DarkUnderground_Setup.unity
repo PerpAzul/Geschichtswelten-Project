@@ -6192,43 +6192,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -55.199
+      value: -47.283
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.437
+      value: -0.279
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.156
+      value: 16.366
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9853317
+      value: 0.64736414
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0950801
+      value: -0.18205057
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.045662235
+      value: 0.7324463
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.13414982
+      value: 0.106299974
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -11.515
+      value: -23.043
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -3.773
+      value: 98.703
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -15.125
+      value: -8.062
       objectReference: {fileID: 0}
     - target: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -6281,6 +6281,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2603720780140549485, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
+--- !u!4 &142271439 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4695067885090292, guid: 55787d8c0810f6d43881fc1fe3a229a2, type: 3}
+  m_PrefabInstance: {fileID: 142271438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &142750501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30548,7 +30553,7 @@ Transform:
   - {fileID: 685609243}
   - {fileID: 1714916712}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &802244796 stripped
 Transform:
@@ -31191,13 +31196,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829930735}
-  m_LocalRotation: {x: -0.019791681, y: -0.09985027, z: 0.005144342, w: 0.99479234}
-  m_LocalPosition: {x: -55.025, y: 0.108, z: -8.152}
-  m_LocalScale: {x: 0.34, y: 0.030909093, z: 0.68}
+  m_LocalRotation: {x: 0.088713385, y: -0.056105364, z: 0.12993005, w: 0.98595154}
+  m_LocalPosition: {x: 0.008152849, y: 0.16299714, z: 0.029416263}
+  m_LocalScale: {x: 0.09855073, y: 0.0089591555, z: 0.19710146}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_Father: {fileID: 142271439}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -2.198, y: -11.479, z: 0.814}
 --- !u!1001 &831318461
 PrefabInstance:
@@ -53668,16 +53673,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6660688140283708474, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
-      value: '1: Opens the door in the other side of the corridor.
-
-        2: Opens
-        the red.
-
-        3: Opens the green.
-
-        2 and 3: Opens the white.
-
-'
+      value: "Attention all Personell! Due to recent break in attempts, a new Security
+        System has been implemented. \n\nPlease read carefully though the systems
+        steps:\n\n1: Opens the door in the other side of the corridor.\n2: Opens
+        the red.\n3: Opens the green.\n2 and 3: Opens the white."
       objectReference: {fileID: 0}
     - target: {fileID: 6660688140283708474, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontSize
