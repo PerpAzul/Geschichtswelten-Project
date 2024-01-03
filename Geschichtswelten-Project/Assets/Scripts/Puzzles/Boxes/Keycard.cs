@@ -7,11 +7,7 @@ public class Keycard : Interactable
 {
     [SerializeField] private BoxOpen Open;
     public bool switchCard;
-
-    private void Update()
-    {
-        Debug.Log(switchCard);
-    }
+    
 
     protected override void Interact()
     {

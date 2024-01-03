@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,28 +6,26 @@ using UnityEngine.PlayerLoop;
 
 public class PressurePlateMulti : MonoBehaviour
 {
-    public PressurePlate PressurePlate;
+    [SerializeField] private PressurePlate PressurePlate;
+    [SerializeField] private PressurePlate PressurePlate2;
     [SerializeField] private HangarDoor _hangarDoor;
     public bool isActivated;
     bool doorCanClose = false;
     bool doorCanOpen = true;
     private bool doorLocked;
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (PressurePlate.turnedOn)
+        
+        if (PressurePlate.turnedOn & PressurePlate2.turnedOn)
         {
-            Debug.Log("both open");
             StartCoroutine(OpenDoor());
             doorCanOpen = false;
         }
-       
-    }
-    
-    private void OnTriggerExit(Collider other)
-    {
-        doorCanClose = true;
-        StartCoroutine(CloseDoor());
+        else
+        {
+            doorCanClose = true;
+        }
     }
 
     IEnumerator OpenDoor()
@@ -50,7 +49,7 @@ public class PressurePlateMulti : MonoBehaviour
         }
 
         _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Close");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(10);
 
         doorCanClose = false;
         doorCanOpen = true;
