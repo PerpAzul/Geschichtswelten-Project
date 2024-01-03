@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,46 +7,47 @@ using UnityEngine.Serialization;
 
 public class DialogSystem : MonoBehaviour
 {
-//based on this yt tutorial: https://youtu.be/8oTYabhj248?si=JnXvAmiuMDO14vIT
+//based on this yt tutorial: https://youtu.be/8oTYabhj248?si=JnXvAmiuMDO14vIT and adapted
     [SerializeField] private TextMeshProUGUI textComponent;
 
-    [SerializeField] private string[] dialogLines;
+    private List<string> dialogLines;
 
     [SerializeField] private float textDelay; //lower values mean faster typing of the words on screen
     [SerializeField] private float timeBeforeNextLine;
 
     private int curIndex;
 
-    private int lastIndexToPlay;
-
     private bool currentlyTyping;
+    
     // Start is called before the first frame update
     void Start()
     {
-        textComponent.text = string.Empty;
-        curIndex = -1;
-        lastIndexToPlay = -1;
-        currentlyTyping = false;
+       // the Dialog System should start disabled. Can easily be changed
+       this.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!currentlyTyping && curIndex < lastIndexToPlay) //all the current text is displayed and another text is in the queue
+        if (!currentlyTyping && curIndex < dialogLines.Count - 1) //all the current text is displayed and another text is in the queue
         {
             curIndex++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         }
     }
-    
-    //the next line will be queued and played once the current one is over
-    public void QueueNextLine()
+
+    private void OnEnable()
     {
-        if (lastIndexToPlay < dialogLines.Length - 1) //there is another line to show
-        {
-            lastIndexToPlay++;
-        }
+        textComponent.text = string.Empty;
+        curIndex = -1;
+        currentlyTyping = false;
+        dialogLines = new List<string>();
+    }
+    
+    public void AddMultipleLines(List<string> nextLines)
+    {
+        dialogLines.AddRange(nextLines);
     }
 
     //types the next line, one by one character at textSpeed
@@ -61,11 +63,11 @@ public class DialogSystem : MonoBehaviour
         yield return new WaitForSeconds(timeBeforeNextLine);
         currentlyTyping = false;
         
-        if(curIndex == dialogLines.Length - 1)
+        if(curIndex == dialogLines.Count - 1)
         {
             //giving some extra time on the last one (could be unnecessary)
             yield return new WaitForSeconds(timeBeforeNextLine);
-            //no more need for the Dialog box (?)
+            //no more need for the Dialog box currently, so it will disappear from the screen
             gameObject.SetActive(false);
         }
     }
