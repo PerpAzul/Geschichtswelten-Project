@@ -8,7 +8,7 @@ public class BoxOpen : Interactable
     public bool hasKey;
     public GameObject Box;
 
-    protected  override void Interact()
+    protected override void Interact()
     {
         promptMessage = "I might need a Key for this...";
         if (hasKey)
@@ -23,5 +23,4 @@ public class BoxOpen : Interactable
             Debug.Log("No Key");
         }
     }
-   
 }
