@@ -17,17 +17,20 @@ public class InteractWithKeypad : Interactable
 
     [SerializeField] private GameObject Text;
     //public GameObject UI;
+    private bool isInKeyPad;
 
     private void Awake()
     {
         _KeypadCam.enabled = false;
     }
 
-    public void ReeenableBoxCollider()
+    private void Update()
     {
-        GetComponent<BoxCollider>().enabled = true;
+        if (Input.GetKeyDown("f") && isInKeyPad)
+        {
+            SwitchToMainCamera();
+        }
     }
-
 
     public void SwitchToMainCamera()
     {
@@ -43,7 +46,8 @@ public class InteractWithKeypad : Interactable
         Cursor.lockState = CursorLockMode.Locked;
         promptMessage = "Keypad";
         Text.SetActive(true);
-        //UI.gameObject.SetActive(true);
+        isInKeyPad = false;
+        GetComponent<BoxCollider>().enabled = true;
     }
 
     protected override void Interact()
@@ -61,6 +65,7 @@ public class InteractWithKeypad : Interactable
         Cursor.lockState = CursorLockMode.None;
         promptMessage = "";
         Text.SetActive(false);
+        isInKeyPad = true;
         //UI.gameObject.SetActive(false);
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Ammo
   - Asset
   - Box
+  - Panel
   layers:
   - Default
   - TransparentFX

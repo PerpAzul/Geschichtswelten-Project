@@ -53,13 +53,7 @@ public class Keypad : MonoBehaviour
         panelMesh.material.SetVector("_EmissionColor", screenNormalColor * screenIntensity);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown("f"))
-        {
-            _Quit?.Invoke();
-        }
-    }
+    
 
     //Gets value from pressedbutton
     public void AddInput(string input)
