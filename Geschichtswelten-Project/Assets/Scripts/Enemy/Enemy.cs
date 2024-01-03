@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     public float health = 50f;
     
     //Sight Values
-    public float sightDistance = 20f;
+    public float sightDistance = 100f;
     public float fieldOfView = 90f;
     public float eyeHeight;
     

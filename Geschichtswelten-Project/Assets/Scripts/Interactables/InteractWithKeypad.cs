@@ -26,7 +26,7 @@ public class InteractWithKeypad : Interactable
 
     private void Update()
     {
-        if (Input.GetKeyDown("f") && isInKeyPad)
+        if (Input.GetKeyDown("q") && isInKeyPad)
         {
             SwitchToMainCamera();
         }

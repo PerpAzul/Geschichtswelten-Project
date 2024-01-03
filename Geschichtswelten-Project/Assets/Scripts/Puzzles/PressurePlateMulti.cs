@@ -11,8 +11,6 @@ public class PressurePlateMulti : MonoBehaviour
     bool doorCanClose = false;
     bool doorCanOpen = true;
     private bool doorLocked;
-    
-    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,8 +22,7 @@ public class PressurePlateMulti : MonoBehaviour
         }
        
     }
-
-
+    
     private void OnTriggerExit(Collider other)
     {
         doorCanClose = true;
@@ -57,16 +54,5 @@ public class PressurePlateMulti : MonoBehaviour
 
         doorCanClose = false;
         doorCanOpen = true;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
