@@ -4480,6 +4480,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0db57f973da78f34e9a6284f0eb90671, type: 3}
+--- !u!4 &92887229 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+  m_PrefabInstance: {fileID: 1853610015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &94910348 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4713256726172378, guid: 2ca1ede8860f95f41a0960b00e32a137, type: 3}
@@ -6591,7 +6596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7113,6 +7118,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4909461884150142, guid: d5e31cf3ae2abb94db56256a2cfd3089, type: 3}
   m_PrefabInstance: {fileID: 156406192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &156418147 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+  m_PrefabInstance: {fileID: 2090851983}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &157959519
 PrefabInstance:
@@ -14199,6 +14209,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a0c2933d04c2f94abb927f3591da20b, type: 3}
+--- !u!1 &338200935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338200936}
+  m_Layer: 0
+  m_Name: Dialogues
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338200936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338200935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -33, y: 1, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 92887229}
+  - {fileID: 156418147}
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &338295594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20876,91 +20919,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4086845937227598, guid: 2efcbe1f2839047488c4bac4583f18e6, type: 3}
   m_PrefabInstance: {fileID: 1575946478}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &543229402
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1012986126}
-    m_Modifications:
-    - target: {fileID: 3717259463730192036, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192050, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192050, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 15.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 17.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192058, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1955284624}
-    - target: {fileID: 3717259463730192061, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: path
-      value: 
-      objectReference: {fileID: 1105219909}
-    - target: {fileID: 3717259463730192061, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: index
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463730192062, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717259463940304337, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
 --- !u!1001 &545097780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38022,11 +37980,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4043625353383108, guid: 30ea8056993c51343b6edf7ea84c81c9, type: 3}
   m_PrefabInstance: {fileID: 454030680}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &869526857 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3717259463730192057, guid: f4d324b78c277004fbd8dc2e6f7860e3, type: 3}
-  m_PrefabInstance: {fileID: 543229402}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &869941138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44343,7 +44296,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 869526857}
   - {fileID: 1490990153}
   - {fileID: 1161090588}
   m_Father: {fileID: 0}
@@ -44668,7 +44620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Tablet
-  textToUpdate: {fileID: 0}
+  textToUpdate: {fileID: 2005967202}
   gameUI: {fileID: 56300031}
   papers: {fileID: 30284989}
   Text: {fileID: 1172002697}
@@ -46601,10 +46553,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Tablet
-  textToUpdate: {fileID: 0}
+  textToUpdate: {fileID: 1519392204}
   gameUI: {fileID: 56300031}
   papers: {fileID: 30284989}
-  Text: {fileID: 0}
+  Text: {fileID: 1045742361}
 --- !u!4 &1090118041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4661375390127208, guid: 2206ef4e1f5567246b0c1d620c627df5, type: 3}
@@ -64432,40 +64384,74 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1545887243, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_text
+      value: "1 day ago\r\n\nWARNIG!!!\r\n\nThe subject GP160 from Loppu Project
+        got away and it is dangerous. Be careful\r.\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 865420756977829316, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 865420756977829316, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420756977829316, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420756977829316, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420756977829316, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.92806685
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420756977829316, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -97
       objectReference: {fileID: 0}
     - target: {fileID: 865420756977829316, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -250
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420756977829319, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: textDelay
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 865420756977829319, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: pauseManager
       value: 
       objectReference: {fileID: 906817669}
+    - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1406604274599010487, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
-      value: '1 month ago.
-
-        - Head Scientist: It is done. The Loppu Project
-        was a success. This is the biggest technology discovery of all time chief.
-
-        -
-        Kurja: Our dreams will finally become true.
-
-        - Head Scientist: They
-        already are.
-
-'
+      value: "2 years ago.\r\n\n- Head Scientist: This facility will no longer be
+        used. The new one will be ready in a month and the Loppu Project will already
+        start being transported. This will be my last day working in this facility.
+        I know it didn\xB4t had the technology necessary to finish the project. It
+        just was where everything started, and I guess I will miss it.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2041829962809901275, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Name
-      value: Letter2
+      value: Letter1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722531094761180416, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722531095167437865, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2722531095538110261, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_RootOrder
@@ -64514,6 +64500,26 @@ PrefabInstance:
     - target: {fileID: 2722531095538110266, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722531096032749067, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412534399314919358, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_text
+      value: '1 month ago.
+
+
+        - Head Scientist: It is done. The Loppu Project
+        was a success. This is the biggest technology discovery of all time chief.
+
+        -
+        Kurja: Our dreams will finally become true.
+
+        - Head Scientist: They
+        already are.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6660688140283708469, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Name
@@ -67920,7 +67926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100116, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100116, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_TagString
@@ -67932,7 +67938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_LocalPosition.x
@@ -69414,6 +69420,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bf95ab9c5c70e841885469b5364d78d, type: 3}
+--- !u!114 &1519392204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3412534399314919358, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+  m_PrefabInstance: {fileID: 1408656657}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1521077322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82631,7 +82648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1483456558547258, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4951408050531192, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: m_RootOrder
@@ -83362,23 +83379,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 338200936}
     m_Modifications:
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -47
+      value: 3.8600006
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -83386,15 +83403,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -83414,23 +83431,52 @@ PrefabInstance:
       objectReference: {fileID: 1500244293}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.size
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[0]
-      value: you found the second dialog part
+      value: 'Yuri: You know what we could do when we get home chief? We could go
+        to that karaoke bar we went once.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[1]
-      value: but I guess this could also be the first
+      value: "Kurja: I don\xB4t have time."
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[2]
-      value: 
+      value: "Yuri: It\xB4s just that you seem really stressed out these last few
+        months and it\xB4s been a long time since we hanged out. It could be a good
+        idea to relax a little."
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[3]
-      value: 
+      value: "Kurja: As I said I don\xB4t have time."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[4]
+      value: "Yuri: Well, you could just take half a day off to\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[5]
+      value: 'Kurja: DO YOU THINK THE WAR WAITS? DO YOU THINK THE CHILDREN OF RASHKTAR
+        WILL WAIT FOR ME TO RELAX? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[6]
+      value: "Kurja: We are in war for a long-time kid, the NHM, our people, have
+        already suffered to much in the hands of those filthy terrorists. Don\u2019t
+        you care about that?  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[7]
+      value: 'Yuri: I care about it. I dedicated my life to helping our people. I
+        just thought maybe relaxing a little bit would help to clear our minds and
+        think about the next move. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[8]
+      value: 'Kurja: I understand but believe me, with this weapon it will all be
+        over soon.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703189, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_Name
@@ -90902,7 +90948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1483456558547258, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1778714762889666, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: m_Layer
@@ -91942,27 +91988,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 338200936}
     m_Modifications:
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33
+      value: 32.7
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: -16.77
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalRotation.x
@@ -91970,7 +92016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalRotation.z
@@ -91982,7 +92028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -91994,28 +92040,52 @@ PrefabInstance:
       objectReference: {fileID: 1500244293}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.size
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[0]
-      value: text
+      value: 'Yuri: There was something I have been wanting to discuss with you chief.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[1]
-      value: text246
+      value: 'Kurja: What is it?'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[2]
-      value: a long text including many words                                                  
-        and a suprise
+      value: 'Yuri: Do you know why the war began?'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[3]
-      value: well this was stupid
+      value: 'Kurja: Why is it important?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[4]
+      value: "Yuri: Well, it\xB4s just that I dedicated my whole life trying to be
+        the best soldier possible and to help our people win the war and I don\xB4t
+        even know why we are fighting this war.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[5]
+      value: 'Kurja: As you said kid, you are trying to help our people against those
+        terrorists, what better reason can you have?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[6]
+      value: "Yuri: But what does the other side feel like? Isn\xB4t it possible
+        that they are also fighting to protect\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[7]
+      value: 'Kurja: ENOUGH!!!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[8]
+      value: "Kurja: They are horrific persons, terrorists, and you know that. We
+        won\xB4t discuss it no more."
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703189, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_Name
-      value: DialogTrigger (1)
+      value: DialogTrigger2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
