@@ -10,7 +10,7 @@ public class BoxOpen : Interactable
 
     protected override void Interact()
     {
-        promptMessage = "I might need a Key for this...";
+        
         if (_keycard.hasKey)
         {
             promptMessage = "";
@@ -20,7 +20,7 @@ public class BoxOpen : Interactable
         }
         else
         {
-            Debug.Log("No Key");
+            promptMessage = "I might need a Keycard for this";
         }
     }
 }

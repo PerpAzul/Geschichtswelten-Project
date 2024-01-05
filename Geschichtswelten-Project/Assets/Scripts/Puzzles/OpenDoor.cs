@@ -10,10 +10,15 @@ public class OpenDoor : Interactable
 
     protected override void Interact()
     {
+        
         if (Keycard.hasKey)
         {
             GetComponent<Animation>().Play("HangarDoor1Open");
             GetComponent<BoxCollider>().enabled = false;
+        }
+        else
+        {
+            promptMessage = "I might need a Keycard for this...";
         }
     }
 }
