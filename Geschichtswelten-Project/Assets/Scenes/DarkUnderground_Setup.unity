@@ -64909,19 +64909,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 865420756977829317, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Color.a
-      value: 0.39215687
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 865420756977829317, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 865420756977829317, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 865420756977829317, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 865420756977829319, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: textDelay
@@ -64941,15 +64941,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontSizeBase
@@ -64957,7 +64957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4278190080
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1406604274599010487, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
