@@ -16,14 +16,15 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(OpenDoor());
+        turnedOn = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        StartCoroutine(CloseDoor());
+        turnedOn = false;
     }
 
+    /*
     IEnumerator OpenDoor()
     {
         _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");
@@ -37,7 +38,7 @@ public class PressurePlate : MonoBehaviour
         turnedOn = false;
         yield return new WaitForSeconds(1);
     }
-    
+    */
     public void OpenDoorSimple()
     {
         _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");

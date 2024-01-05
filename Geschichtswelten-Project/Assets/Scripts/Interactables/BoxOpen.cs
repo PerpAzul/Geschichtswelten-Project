@@ -5,13 +5,13 @@ using UnityEngine.InputSystem;
 
 public class BoxOpen : Interactable
 {
-    public bool hasKey;
+    [SerializeField] private Keycard _keycard;
     public GameObject Box;
 
     protected override void Interact()
     {
         promptMessage = "I might need a Key for this...";
-        if (hasKey)
+        if (_keycard.hasKey)
         {
             promptMessage = "";
             Debug.Log("Opening");
