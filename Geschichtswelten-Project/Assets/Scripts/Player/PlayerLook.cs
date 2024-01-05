@@ -119,6 +119,7 @@ public class PlayerLook : MonoBehaviour
     }
 
 
+    /*
     //Can Pick Up Stuff
     public void PickUpStuff()
     {
@@ -150,6 +151,7 @@ public class PlayerLook : MonoBehaviour
             Stop = false;
         }
     }
+    */
 
 
     //GravityPull with Detection 

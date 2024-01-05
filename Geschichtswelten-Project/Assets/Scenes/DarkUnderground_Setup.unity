@@ -35274,6 +35274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Box
+  cam: {fileID: 1493005386}
 --- !u!1 &776365102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1483456558547258, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
@@ -50248,6 +50249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Box
+  cam: {fileID: 1493005386}
 --- !u!1001 &1153893662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92210,6 +92212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Box
+  cam: {fileID: 1493005386}
 --- !u!1001 &1933080167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100470,10 +100473,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8854784133178291727, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1493005386}
     - target: {fileID: 8885374574965044569, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: animator
       value: 
