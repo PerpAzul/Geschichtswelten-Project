@@ -8037,6 +8037,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -450
       objectReference: {fileID: 0}
+    - target: {fileID: 65233403699507508, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
+      propertyPath: m_Size.y
+      value: 2.800833
+      objectReference: {fileID: 0}
+    - target: {fileID: 65233403699507508, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.34448087
+      objectReference: {fileID: 0}
+    - target: {fileID: 65233403699507508, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
+      propertyPath: m_Center.z
+      value: -2.9627002e-15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
 --- !u!1 &175586363
@@ -16739,7 +16751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Tablet
-  textToUpdate: {fileID: 2005967202}
+  textToUpdate: {fileID: 1519392204}
   gameUI: {fileID: 56300031}
   papers: {fileID: 30284989}
   Text: {fileID: 1045742361}
@@ -28006,6 +28018,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4227638746839032, guid: 7fd6a948288578541b257d2bf344c826, type: 3}
   m_PrefabInstance: {fileID: 608115980}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &608549656 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6081233490486973502, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+  m_PrefabInstance: {fileID: 1408656657}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &609714118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42086,6 +42109,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 65390899814714910, guid: 11297c6bc8306084180447a52c58af90, type: 3}
+      propertyPath: m_Size.y
+      value: 2.877923
+      objectReference: {fileID: 0}
+    - target: {fileID: 65390899814714910, guid: 11297c6bc8306084180447a52c58af90, type: 3}
+      propertyPath: m_Center.y
+      value: 1.154377
+      objectReference: {fileID: 0}
+    - target: {fileID: 65390899814714910, guid: 11297c6bc8306084180447a52c58af90, type: 3}
+      propertyPath: m_Center.z
+      value: 3.0785974e-16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11297c6bc8306084180447a52c58af90, type: 3}
 --- !u!4 &952714789 stripped
@@ -46996,10 +47031,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Tablet
-  textToUpdate: {fileID: 1519392204}
+  textToUpdate: {fileID: 1533817722}
   gameUI: {fileID: 56300031}
   papers: {fileID: 30284989}
-  Text: {fileID: 1045742361}
+  Text: {fileID: 241409908}
 --- !u!4 &1090118041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4661375390127208, guid: 2206ef4e1f5567246b0c1d620c627df5, type: 3}
@@ -54246,6 +54281,18 @@ PrefabInstance:
     - target: {fileID: 4933846811210934, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -450
+      objectReference: {fileID: 0}
+    - target: {fileID: 65233403699507508, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
+      propertyPath: m_Size.y
+      value: 2.740844
+      objectReference: {fileID: 0}
+    - target: {fileID: 65233403699507508, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.31448638
+      objectReference: {fileID: 0}
+    - target: {fileID: 65233403699507508, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
+      propertyPath: m_Center.z
+      value: -2.4857608e-14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
@@ -63597,6 +63644,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -360
       objectReference: {fileID: 0}
+    - target: {fileID: 65233403699507508, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
+      propertyPath: m_Size.y
+      value: 2.4471257
+      objectReference: {fileID: 0}
+    - target: {fileID: 65233403699507508, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.16762722
+      objectReference: {fileID: 0}
+    - target: {fileID: 65233403699507508, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
+      propertyPath: m_Center.z
+      value: 2.2806616e-14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42aa952e8eceb7c4fbcf8bd88d9b051a, type: 3}
 --- !u!1001 &1378270903
@@ -64879,6 +64938,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 865420756977829317, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_Color.a
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420756977829317, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420756977829317, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420756977829317, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 865420756977829319, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: textDelay
       value: 0.01
@@ -64887,13 +64962,33 @@ PrefabInstance:
       propertyPath: pauseManager
       value: 
       objectReference: {fileID: 906817669}
+    - target: {fileID: 865420756977829323, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontSize
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontSizeBase
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 865420757127835460, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
       objectReference: {fileID: 0}
     - target: {fileID: 1406604274599010487, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
@@ -64902,6 +64997,14 @@ PrefabInstance:
         start being transported. This will be my last day working in this facility.
         I know it didn\xB4t had the technology necessary to finish the project. It
         just was where everything started, and I guess I will miss it.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1406604274599010487, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1406604274599010487, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2041829962809901275, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Name
@@ -64985,28 +65088,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6660688140283708469, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Name
-      value: Charade2
+      value: Charade1
       objectReference: {fileID: 0}
     - target: {fileID: 6660688140283708474, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
-      value: '1: Opens the door in the other side of the corridor.
-
-        2: Opens
-        the red.
-
-        3: Opens the green.
-
-        2 and 3: Opens the white.
-
-'
+      value: "- Ep\xE4ill\xE4: Who changed the password again?\r\n- \u0160arada:
+        I did. Remember to look at the planets. First comes my favorite planet, then
+        the one with my favorite color, then the last one left.\r\n- Ep\xE4ill\xE4:
+        You told me that when I was drunk last week, how would I remember. \r\n-
+        \u0160arada: But you still remember how I tripped and fell in our boss.\r\n-
+        Ep\xE4ill\xE4: That I wouldn\xB4t forget.\r\n- \u0160arada: Fine. But don\xB4t
+        you remember how I love the big planets that make the universe seem so huge?\r\n-
+        Ep\xE4ill\xE4: Oh yeah that\u2019s right, and what about your favorite color.
+        I remember it, it is just to make sure.\r\n- \u0160arada: I can\xB4t believe
+        it, you forget everything! I like the bright colors the most.\r\n- Ep\xE4ill\xE4:
+        Alright, now I got it.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6660688140283708474, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontSize
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6660688140283708474, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6660688140283708474, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontSizeBase
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660688140283708474, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
@@ -65660,6 +65772,18 @@ PrefabInstance:
     - target: {fileID: 4045888943249512, guid: 910d818f8e1be1944baacc7299964e98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 269.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 65227362324548582, guid: 910d818f8e1be1944baacc7299964e98, type: 3}
+      propertyPath: m_Size.x
+      value: 0.30232543
+      objectReference: {fileID: 0}
+    - target: {fileID: 65227362324548582, guid: 910d818f8e1be1944baacc7299964e98, type: 3}
+      propertyPath: m_Size.y
+      value: 2.778121
+      objectReference: {fileID: 0}
+    - target: {fileID: 65227362324548582, guid: 910d818f8e1be1944baacc7299964e98, type: 3}
+      propertyPath: m_Center.y
+      value: 1.104476
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 910d818f8e1be1944baacc7299964e98, type: 3}
@@ -76156,6 +76280,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 566881d1d238b294db1292ad7aef9de6, type: 3}
+--- !u!1 &1654282855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6081233489999151765, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+  m_PrefabInstance: {fileID: 1408656657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1654366890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92337,6 +92466,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 269.999
       objectReference: {fileID: 0}
+    - target: {fileID: 65668626493484938, guid: 02b6bb32f7647344cba09ab8ad1daf6a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.30232543
+      objectReference: {fileID: 0}
+    - target: {fileID: 65668626493484938, guid: 02b6bb32f7647344cba09ab8ad1daf6a, type: 3}
+      propertyPath: m_Size.y
+      value: 2.2253313
+      objectReference: {fileID: 0}
+    - target: {fileID: 65668626493484938, guid: 02b6bb32f7647344cba09ab8ad1daf6a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.82808113
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b6bb32f7647344cba09ab8ad1daf6a, type: 3}
 --- !u!4 &1936076939 stripped
@@ -97426,10 +97567,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 1
   promptMessage: Tablet
-  textToUpdate: {fileID: 1533817722}
+  textToUpdate: {fileID: 608549656}
   gameUI: {fileID: 56300031}
   papers: {fileID: 30284989}
-  Text: {fileID: 241409908}
+  Text: {fileID: 1654282855}
 --- !u!114 &2075284964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100100,6 +100241,10 @@ PrefabInstance:
     - target: {fileID: 1465349730479999960, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966778819888115441, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_Intensity
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2195773274878559409, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: promptText
