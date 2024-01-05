@@ -655,7 +655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &14545866
 Light:
   m_ObjectHideFlags: 0
@@ -17805,6 +17805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DU_Light_Flashing_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1308382372817124, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4669088267391188, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -28291,6 +28295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DU_Roof_1_Light (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1313146083206678, guid: 09f988b26deb2b3438ce5eb8553e80b5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4346245602026332, guid: 09f988b26deb2b3438ce5eb8553e80b5, type: 3}
       propertyPath: m_RootOrder
       value: 97
@@ -30332,7 +30340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &657476291
 Light:
   m_ObjectHideFlags: 0
@@ -34553,7 +34561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &764891673
 Light:
   m_ObjectHideFlags: 0
@@ -34692,6 +34700,10 @@ PrefabInstance:
     - target: {fileID: 1313146083206678, guid: 09f988b26deb2b3438ce5eb8553e80b5, type: 3}
       propertyPath: m_Name
       value: DU_Roof_1_Light (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313146083206678, guid: 09f988b26deb2b3438ce5eb8553e80b5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4346245602026332, guid: 09f988b26deb2b3438ce5eb8553e80b5, type: 3}
       propertyPath: m_RootOrder
@@ -36404,7 +36416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &824188311
 Light:
   m_ObjectHideFlags: 0
@@ -39233,6 +39245,10 @@ PrefabInstance:
     - target: {fileID: 1308382372817124, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
       propertyPath: m_Name
       value: DU_Light_Flashing_1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308382372817124, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4669088267391188, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
       propertyPath: m_RootOrder
@@ -45770,7 +45786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1056377779
 Transform:
   m_ObjectHideFlags: 0
@@ -66351,7 +66367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1439597412
 Light:
   m_ObjectHideFlags: 0
@@ -72848,6 +72864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DU_Light_Flashing_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1308382372817124, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4669088267391188, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -75424,6 +75444,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1093304016}
     m_Modifications:
+    - target: {fileID: 1308382372817124, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4669088267391188, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -92617,6 +92641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DU_Light_Flashing_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1308382372817124, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4669088267391188, guid: 4f80c0906bd56914e9b2c9b8bd570b3b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -95554,7 +95582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2032207250
 Transform:
   m_ObjectHideFlags: 0
