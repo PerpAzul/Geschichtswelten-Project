@@ -4601,8 +4601,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 2036089371}
     m_Modifications:
     - target: {fileID: 1341657580949746, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341657580949746, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416725574125110, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1416725574125110, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4613,12 +4621,20 @@ PrefabInstance:
       value: box_01 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1821009113927454, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821009113927454, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_TagString
       value: Box
       objectReference: {fileID: 0}
     - target: {fileID: 1821009113927454, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996465679840692, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1996465679840692, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13380,8 +13396,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 2036089371}
     m_Modifications:
     - target: {fileID: 1341657580949746, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341657580949746, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416725574125110, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1416725574125110, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13392,12 +13416,20 @@ PrefabInstance:
       value: box_01 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1821009113927454, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821009113927454, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_TagString
       value: Box
       objectReference: {fileID: 0}
     - target: {fileID: 1821009113927454, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996465679840692, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1996465679840692, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14525,6 +14557,7 @@ Transform:
   - {fileID: 92887229}
   - {fileID: 156418147}
   - {fileID: 1552645908}
+  - {fileID: 722665446}
   m_Father: {fileID: 0}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29301,8 +29334,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 2036089371}
     m_Modifications:
     - target: {fileID: 1341657580949746, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341657580949746, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416725574125110, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1416725574125110, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -29313,12 +29354,20 @@ PrefabInstance:
       value: box_01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1821009113927454, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821009113927454, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_TagString
       value: Box
       objectReference: {fileID: 0}
     - target: {fileID: 1821009113927454, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996465679840692, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1996465679840692, guid: 8f86d2d6beeee6a49bfafa3e67b3e106, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33394,6 +33443,16 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!1 &722665445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3122256404153703189, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+  m_PrefabInstance: {fileID: 1788170150}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &722665446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+  m_PrefabInstance: {fileID: 1788170150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &724788808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4227638746839032, guid: 7fd6a948288578541b257d2bf344c826, type: 3}
@@ -35178,6 +35237,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &775546690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775546682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2515ab04ccf008144b8ff5e086fe6553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useEvents: 0
+  promptMessage: Box
 --- !u!1001 &776796164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49979,6 +50052,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1153678218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153678210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2515ab04ccf008144b8ff5e086fe6553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useEvents: 0
+  promptMessage: Box
 --- !u!1001 &1153893662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85479,6 +85566,116 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4556778082520212, guid: c5a4987584a590d4f9ecbc4536bfcfef, type: 3}
   m_PrefabInstance: {fileID: 2125778736}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1788170150
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 338200936}
+    m_Modifications:
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703184, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogSystemObject
+      value: 
+      objectReference: {fileID: 1500244293}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[0]
+      value: 'Kurja: I think you can put a box in those pressure plates on the right.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[1]
+      value: "Kurja: I still need you, but even if I didn\xB4t I won\xB4t let you
+        go back to Bor and help your kind win the war."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[2]
+      value: "Nadji: I don\xB4t care about the war. I just want to be left alone."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[3]
+      value: "Kurja: Even if I believed you and didn\xB4t need you, your kind doesn\xB4t
+        deserve mercy."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[4]
+      value: "Nadji: Just\u2026 Please. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[5]
+      value: 'Kurja: As you said kid, you are trying to help our people against those
+        terrorists, what better reason can you have?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[6]
+      value: "Yuri: But what does the other side feel like? Isn\xB4t it possible
+        that they are also fighting to protect\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[7]
+      value: 'Kurja: ENOUGH!!!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[8]
+      value: "Kurja: They are horrific persons, terrorists, and you know that. We
+        won\xB4t discuss it no more."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703189, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_Name
+      value: DialogTriggerTip
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703189, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
 --- !u!1001 &1788211682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91984,6 +92181,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1930838546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930838538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2515ab04ccf008144b8ff5e086fe6553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useEvents: 0
+  promptMessage: Box
 --- !u!1001 &1933080167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97185,12 +97396,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e40b7c9d09df1547b05a18e06218acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 0
+  useEvents: 1
   promptMessage: Tablet
   textToUpdate: {fileID: 1533817722}
   gameUI: {fileID: 56300031}
   papers: {fileID: 30284989}
   Text: {fileID: 241409908}
+--- !u!114 &2075284964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075284957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9beeed2968bb588408016ad92040322d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 722665445}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &2075404618
 PrefabInstance:
   m_ObjectHideFlags: 0
