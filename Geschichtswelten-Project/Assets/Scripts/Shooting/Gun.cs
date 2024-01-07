@@ -37,6 +37,11 @@ public class Gun : MonoBehaviour
 
     #endregion
 
+    #region Sounds
+    [SerializeField] private AudioSource generalAudioSource;
+    [SerializeField] private AudioClip reloadSound;
+    [SerializeField] private AudioClip shootingSound;
+    #endregion
     #region OtherVariables
 
     [Header("Other Variables")] public bool isShooting;
@@ -47,6 +52,8 @@ public class Gun : MonoBehaviour
     public GameObject crosshair;
     [SerializeField] private PauseMenu PauseMenu;
     #endregion
+    
+    
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +92,7 @@ public class Gun : MonoBehaviour
             isShooting = true;
             ammo--;
             Invoke("ResetShot", timeBetweenShooting);
+            generalAudioSource.PlayOneShot(shootingSound, Random.Range(0.7f, 1.0f));
             flash.Play();
             StartCoroutine(Recoil());
 
@@ -110,8 +118,10 @@ public class Gun : MonoBehaviour
     IEnumerator Reloading()
     {
         _isReloading = true;
-
+    
         animator.SetBool("Reloading", true);
+        
+        generalAudioSource.PlayOneShot(reloadSound);
 
         yield return new WaitForSeconds(reloadTime - 0.25f);
 
