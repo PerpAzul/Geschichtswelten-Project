@@ -1,0 +1,45 @@
+{
+    "name": "KeypadInput",
+    "maps": [
+        {
+            "name": "KeypadExit",
+            "id": "2e6a6036-90cd-4bb2-9ca4-110f645b9eb5",
+            "actions": [
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "73c8a8c3-d7e9-49e7-97ba-1686b30f3fd3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1ef9fc6b-f1b9-4ffd-8c09-2605656f92df",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "54be59c1-3d43-4fb2-b841-17ddbe8bb3b6",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

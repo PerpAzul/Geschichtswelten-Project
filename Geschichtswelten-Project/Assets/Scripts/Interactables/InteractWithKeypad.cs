@@ -17,7 +17,7 @@ public class InteractWithKeypad : Interactable
 
     [SerializeField] private GameObject Text;
     //public GameObject UI;
-    private bool isInKeyPad;
+    public bool isInKeyPad;
 
     private void Awake()
     {
@@ -26,10 +26,10 @@ public class InteractWithKeypad : Interactable
 
     private void Update()
     {
-        if (Input.GetButton("Fire1") && isInKeyPad)
-        {
-            SwitchToMainCamera();
-        }
+        //if (Input.GetButton("Fire1") && isInKeyPad)
+        //{
+          //SwitchToMainCamera();
+        //}
     }
 
     public void SwitchToMainCamera()
@@ -67,5 +67,13 @@ public class InteractWithKeypad : Interactable
         Text.SetActive(false);
         isInKeyPad = true;
         //UI.gameObject.SetActive(false);
+    }
+    
+    public void Exit()
+    {
+        if(isInKeyPad)
+        {
+            SwitchToMainCamera();
+        }
     }
 }

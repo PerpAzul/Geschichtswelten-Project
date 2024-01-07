@@ -23,7 +23,7 @@ public class InputManager : MonoBehaviour
         player = GetComponent<Player>();
         look = GetComponent<PlayerLook>();
         flash = GetComponent<Flashlight>();
-        
+
         playerActions.Run.started += ctx => player.StartRun();
         playerActions.Run.canceled += ctx => player.EndRun();
         playerActions.Flashlight.performed += ctx => flash.Flash();
