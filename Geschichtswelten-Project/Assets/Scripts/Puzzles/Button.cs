@@ -27,4 +27,18 @@ public class Button : Interactable
         GetComponent<Renderer>().enabled = true;
         pressed = false;
     }
+
+    public void ApplyNewColor(Color color)
+    {
+        GetComponent<MeshRenderer>().material.color = color;
+    }
+
+    public void DeactivateRenderer()
+    {
+        GetComponent<Renderer>().enabled = false;
+    }
+    public void ActivateRenderer()
+    {
+        GetComponent<Renderer>().enabled = true;
+    }
 }

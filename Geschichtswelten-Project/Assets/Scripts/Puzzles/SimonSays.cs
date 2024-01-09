@@ -27,7 +27,7 @@ public class SimonSays : MonoBehaviour
     public int count = 0;
     public int maxnumber;
     private bool stop;
-    
+
 
     private void Start()
     {
@@ -43,13 +43,11 @@ public class SimonSays : MonoBehaviour
             stop = false;
             PickColors();
         }
-       
     }
 
 
     private void StartGame()
     {
-        
         StartCoroutine(StartRound());
     }
 
@@ -115,30 +113,30 @@ public class SimonSays : MonoBehaviour
             //flash color
             if (solutionList[j].Equals(0))
             {
-                RedButton.GetComponent<Renderer>().enabled = false;
+                RedButton.DeactivateRenderer();
                 yield return new WaitForSeconds(0.3f);
-                RedButton.GetComponent<Renderer>().enabled = true;
+                RedButton.ActivateRenderer();
                 yield return new WaitForSeconds(0.3f);
             }
             else if (solutionList[j].Equals(1))
             {
-                BlueButton.GetComponent<Renderer>().enabled = false;
+                BlueButton.DeactivateRenderer();
                 yield return new WaitForSeconds(0.3f);
-                BlueButton.GetComponent<Renderer>().enabled = true;
+                BlueButton.ActivateRenderer();
                 yield return new WaitForSeconds(0.3f);
             }
             else if (solutionList[j].Equals(2))
             {
-                YellowButton.GetComponent<Renderer>().enabled = false;
+                YellowButton.DeactivateRenderer();
                 yield return new WaitForSeconds(0.3f);
-                YellowButton.GetComponent<Renderer>().enabled = true;
+                YellowButton.ActivateRenderer();
                 yield return new WaitForSeconds(0.3f);
             }
             else if (solutionList[j].Equals(3))
             {
-                GreenButton.GetComponent<Renderer>().enabled = false;
+                GreenButton.DeactivateRenderer();
                 yield return new WaitForSeconds(0.3f);
-                GreenButton.GetComponent<Renderer>().enabled = true;
+                GreenButton.ActivateRenderer();
                 yield return new WaitForSeconds(0.3f);
             }
         }
@@ -163,50 +161,50 @@ public class SimonSays : MonoBehaviour
 
     private IEnumerator FlashFailureColors()
     {
-        RedButton.GetComponent<MeshRenderer>().material.color = new Color(255, 0, 0);
-        YellowButton.GetComponent<MeshRenderer>().material.color = new Color(255, 0, 0);
-        BlueButton.GetComponent<MeshRenderer>().material.color = new Color(255, 0, 0);
-        GreenButton.GetComponent<MeshRenderer>().material.color = new Color(255, 0, 0);
+        RedButton.ApplyNewColor(new Color(255, 0, 0));
+        YellowButton.ApplyNewColor(new Color(255, 0, 0));
+        BlueButton.ApplyNewColor(new Color(255, 0, 0));
+        GreenButton.ApplyNewColor(new Color(255, 0, 0));
 
         for (int i = 0; i < 2; i++)
         {
-            GreenButton.GetComponent<Renderer>().enabled = false;
-            RedButton.GetComponent<Renderer>().enabled = false;
-            BlueButton.GetComponent<Renderer>().enabled = false;
-            YellowButton.GetComponent<Renderer>().enabled = false;
+            GreenButton.DeactivateRenderer();
+            RedButton.DeactivateRenderer();
+            BlueButton.DeactivateRenderer();
+            YellowButton.DeactivateRenderer();
             yield return new WaitForSeconds(0.3f);
-            GreenButton.GetComponent<Renderer>().enabled = true;
-            RedButton.GetComponent<Renderer>().enabled = true;
-            BlueButton.GetComponent<Renderer>().enabled = true;
-            YellowButton.GetComponent<Renderer>().enabled = true;
+            GreenButton.ActivateRenderer();
+            RedButton.ActivateRenderer();
+            BlueButton.ActivateRenderer();
+            YellowButton.ActivateRenderer();
             yield return new WaitForSeconds(0.3f);
         }
 
-        RedButton.GetComponent<MeshRenderer>().material.color = new Color(255, 0, 0);
-        YellowButton.GetComponent<MeshRenderer>().material.color = new Color(255, 255, 0);
-        BlueButton.GetComponent<MeshRenderer>().material.color = new Color(0, 0, 255);
-        GreenButton.GetComponent<MeshRenderer>().material.color = new Color(0, 255, 0);
+        RedButton.ApplyNewColor(new Color(255, 0, 0));
+        YellowButton.ApplyNewColor(new Color(255, 255, 0));
+        BlueButton.ApplyNewColor(new Color(0, 0, 255));
+        GreenButton.ApplyNewColor(new Color(0, 255, 0));
     }
 
 
     private IEnumerator Victory()
     {
-        RedButton.GetComponent<MeshRenderer>().material.color = new Color(0, 255, 0);
-        YellowButton.GetComponent<MeshRenderer>().material.color = new Color(0, 255, 0);
-        BlueButton.GetComponent<MeshRenderer>().material.color = new Color(0, 255, 0);
-        GreenButton.GetComponent<MeshRenderer>().material.color = new Color(0, 255, 0);
+        RedButton.ApplyNewColor(new Color(0, 255, 0));
+        YellowButton.ApplyNewColor(new Color(0, 255, 0));
+        BlueButton.ApplyNewColor(new Color(0, 255, 0));
+        GreenButton.ApplyNewColor(new Color(0, 255, 0));
 
         for (int i = 0; i < 4; i++)
         {
-            GreenButton.GetComponent<Renderer>().enabled = false;
-            RedButton.GetComponent<Renderer>().enabled = false;
-            BlueButton.GetComponent<Renderer>().enabled = false;
-            YellowButton.GetComponent<Renderer>().enabled = false;
+            GreenButton.DeactivateRenderer();
+            RedButton.DeactivateRenderer();
+            BlueButton.DeactivateRenderer();
+            YellowButton.DeactivateRenderer();
             yield return new WaitForSeconds(0.2f);
-            GreenButton.GetComponent<Renderer>().enabled = true;
-            RedButton.GetComponent<Renderer>().enabled = true;
-            BlueButton.GetComponent<Renderer>().enabled = true;
-            YellowButton.GetComponent<Renderer>().enabled = true;
+            GreenButton.ActivateRenderer();
+            RedButton.ActivateRenderer();
+            BlueButton.ActivateRenderer();
+            YellowButton.ActivateRenderer();
             yield return new WaitForSeconds(0.2f);
         }
 

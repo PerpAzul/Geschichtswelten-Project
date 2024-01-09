@@ -1,0 +1,45 @@
+{
+    "name": "CutsceneInput",
+    "maps": [
+        {
+            "name": "Continue",
+            "id": "0278c9ea-9f8a-4f05-9fc2-301ad595e934",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "f7ae782e-3684-4e05-b7c5-8bcc3520f054",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0fe4447a-4bce-4361-ac4f-ff9d263f04a5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe27b496-9bb7-41e8-ae50-ff28c6726a39",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

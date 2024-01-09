@@ -18,12 +18,14 @@ public class PauseMenu : MonoBehaviour
 
     private void Awake()
     {
+        
         PlayerInput = new PlayerInput();
         playerActions = PlayerInput.PauseMenu;
         playerActions.OpenMenu.performed += _ => DeterminePause();
         pauseMenu.SetActive(false);
-        gameUI.SetActive(true);
+        //gameUI.SetActive(true);
         OptionsMenu.SetActive(false);
+        
     }
 
     private void OnEnable()
