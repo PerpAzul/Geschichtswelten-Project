@@ -51,7 +51,7 @@ public class PatrolState : BaseState
                waypointIndex = 0;
             }
 
-            Debug.Log("Moving to Location");
+            //Debug.Log("Moving to Location");
             enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
             waitTimer = 0;
          }

@@ -19,7 +19,6 @@ public class Gun : MonoBehaviour
     //Shooting Variables
     [Header("Shooting Variables")] public float damage;
     public float timeBetweenShooting;
-    public float spread;
     public float range;
     public float maxReload;
     public float ammo;
@@ -96,9 +95,8 @@ public class Gun : MonoBehaviour
             flash.Play();
             StartCoroutine(Recoil());
 
-            float x = Random.Range(-spread, spread);
-            float y = Random.Range(-spread, spread);
-            Vector3 direction = cam.transform.TransformDirection(Vector3.forward) + new Vector3(x, y, 0);
+            
+            Vector3 direction = cam.transform.TransformDirection(Vector3.forward);
 
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, direction, out hit, range))
