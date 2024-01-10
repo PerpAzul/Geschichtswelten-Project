@@ -10798,13 +10798,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 238909914}
+  - component: {fileID: 238909915}
   m_Layer: 5
   m_Name: Scene1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &238909914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10827,6 +10828,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &238909915
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238909913}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &241409908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6660688138692727441, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
@@ -19165,16 +19178,16 @@ RectTransform:
   m_GameObject: {fileID: 469362937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.090009004, y: 0.18691589, z: 0.08841733}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1709148205}
-  m_Father: {fileID: 1407826544}
-  m_RootOrder: 4
+  m_Father: {fileID: 691593681}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 365, y: -161}
+  m_AnchoredPosition: {x: -48.964905, y: 29.065414}
   m_SizeDelta: {x: 417.4, y: 264.1}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &469362939
@@ -22010,18 +22023,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547320140}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.64, y: 1.64, z: 1.64}
+  m_LocalScale: {x: 0.20838629, y: 0.13409649, z: 1.64}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 594201267}
-  m_Father: {fileID: 1535654275}
-  m_RootOrder: 3
+  m_Father: {fileID: 1082608120}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -113, y: 486}
+  m_AnchoredPosition: {x: 101.90599, y: -6.17334}
   m_SizeDelta: {x: 241.9, y: 214.4}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &547320142
@@ -23338,8 +23351,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ok I won\xB4t ask questions about it. It\xB4s just that, I thought you
-    trusted me"
+  m_text: Ok I won't ask questions about it. It's just that, I thought you trusted
+    me
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33189,6 +33202,7 @@ GameObject:
   - component: {fileID: 691593681}
   - component: {fileID: 691593683}
   - component: {fileID: 691593682}
+  - component: {fileID: 691593684}
   m_Layer: 5
   m_Name: Image2 (1)
   m_TagString: Untagged
@@ -33207,7 +33221,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 11.11, y: 5.35, z: 11.31}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 469362938}
+  - {fileID: 1827548358}
   m_Father: {fileID: 1407826544}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33254,6 +33270,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691593680}
   m_CullTransparentMesh: 1
+--- !u!225 &691593684
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691593680}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &692414116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48894,6 +48922,7 @@ GameObject:
   - component: {fileID: 1082608120}
   - component: {fileID: 1082608122}
   - component: {fileID: 1082608121}
+  - component: {fileID: 1082608123}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -48912,7 +48941,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 7.87, y: 12.23, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1383284587}
+  - {fileID: 547320141}
+  - {fileID: 1326011073}
   m_Father: {fileID: 1407826544}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48959,6 +48991,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082608119}
   m_CullTransparentMesh: 1
+--- !u!225 &1082608123
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082608119}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1082699007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64109,18 +64153,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326011072}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.3, y: 5.3, z: 5.3}
+  m_LocalScale: {x: 0.6734435, y: 0.4333606, z: 5.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 816058164}
-  m_Father: {fileID: 1535654275}
-  m_RootOrder: 4
+  m_Father: {fileID: 1082608120}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -867, y: -477}
+  m_AnchoredPosition: {x: 6.099182, y: 6.9092407}
   m_SizeDelta: {x: 101.3, y: 43.5}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1326011074
@@ -66629,18 +66673,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383284586}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.64, y: 1.64, z: 1.64}
+  m_LocalScale: {x: 0.20838629, y: 0.13409649, z: 1.64}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1064856717}
-  m_Father: {fileID: 1535654275}
-  m_RootOrder: 1
+  m_Father: {fileID: 1082608120}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -932, y: 486}
+  m_AnchoredPosition: {x: -2.1600952, y: -6.17334}
   m_SizeDelta: {x: 241.9, y: 254.4}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1383284588
@@ -67514,8 +67558,6 @@ RectTransform:
   - {fileID: 1529743319}
   - {fileID: 691593681}
   - {fileID: 1535654275}
-  - {fileID: 469362938}
-  - {fileID: 1827548358}
   m_Father: {fileID: 258677053}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -67587,8 +67629,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1545887243, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
-      value: "1 day ago\r\n\nWARNIG!!!\r\n\nThe subject GP160 from Loppu Project
-        got away and it is dangerous. Be careful\r.\n"
+      value: "1 day ago\r\n\nWARNING!!!\r\n\nSubject GP160 from the Loppu Project
+        escaped and is dangerous. Be careful\r.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 865420756977829316, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -67672,11 +67714,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1406604274599010487, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
-      value: "2 years ago.\r\n\n- Head Scientist: This facility will no longer be
-        used. The new one will be ready in a month and the Loppu Project will already
-        start being transported. This will be my last day working in this facility.
-        I know it didn\xB4t had the technology necessary to finish the project. It
-        just was where everything started, and I guess I will miss it.\r\n"
+      value: '2 years ago.
+
+
+        - Head Scientist: This facility will no longer
+        be used. The new one will be ready in a month and the Loppu Project will
+        already start being transported. This will be my last day working in this
+        facility. I know it didn''t had the technology necessary to finish the project.
+        It just was where everything started, and I guess I will miss it.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1406604274599010487, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_fontAsset
@@ -67692,7 +67739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2722531094761180416, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2722531095167437865, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_IsActive
@@ -67785,10 +67832,10 @@ PrefabInstance:
         the one with my favorite color, then the last one left.\r\n- Ep\xE4ill\xE4:
         You told me that when I was drunk last week, how would I remember. \r\n-
         \u0160arada: But you still remember how I tripped and fell in our boss.\r\n-
-        Ep\xE4ill\xE4: That I wouldn\xB4t forget.\r\n- \u0160arada: Fine. But don\xB4t
+        Ep\xE4ill\xE4: That I wouldn't forget.\r\n- \u0160arada: Fine. But don't
         you remember how I love the big planets that make the universe seem so huge?\r\n-
         Ep\xE4ill\xE4: Oh yeah that\u2019s right, and what about your favorite color.
-        I remember it, it is just to make sure.\r\n- \u0160arada: I can\xB4t believe
+        I remember it, it is just to make sure.\r\n- \u0160arada: I can't believe
         it, you forget everything! I like the bright colors the most.\r\n- Ep\xE4ill\xE4:
         Alright, now I got it.\r\n"
       objectReference: {fileID: 0}
@@ -73253,6 +73300,7 @@ GameObject:
   - component: {fileID: 1529743319}
   - component: {fileID: 1529743321}
   - component: {fileID: 1529743320}
+  - component: {fileID: 1529743322}
   m_Layer: 5
   m_Name: Image2
   m_TagString: Untagged
@@ -73271,7 +73319,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 11.11, y: 5.35, z: 11.31}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2079078166}
+  - {fileID: 1638628415}
   m_Father: {fileID: 1407826544}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73318,6 +73368,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529743318}
   m_CullTransparentMesh: 1
+--- !u!225 &1529743322
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529743318}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &1530564030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4227638746839032, guid: 7fd6a948288578541b257d2bf344c826, type: 3}
@@ -73620,12 +73682,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2079078166}
-  - {fileID: 1383284587}
-  - {fileID: 1638628415}
-  - {fileID: 547320141}
-  - {fileID: 1326011073}
+  m_Children: []
   m_Father: {fileID: 1407826544}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74586,23 +74643,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[0]
-      value: "Nadji: Wasn\xB4t the experiments enough. You already discovered how
-        to create the weapon you wanted, you can do it to yourself or all your soldiers.
-        Just leave me alone, please. I am begging you please."
+      value: 'Nadji: Wasn''t the experiments enough. You already discovered how to
+        create the weapon you wanted, you can do it to yourself or all your soldiers.
+        Just leave me alone, please. I am begging you please.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[1]
-      value: "Kurja: I still need you, but even if I didn\xB4t I won\xB4t let you
-        go back to Bor and help your kind win the war."
+      value: 'Kurja: I still need you, but even if I didn''t I won''t let you go
+        back to Bor and help your kind win the war.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[2]
-      value: "Nadji: I don\xB4t care about the war. I just want to be left alone."
+      value: 'Nadji: I don''t care about the war. I just want to be left alone.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[3]
-      value: "Kurja: Even if I believed you and didn\xB4t need you, your kind doesn\xB4t
-        deserve mercy."
+      value: 'Kurja: Even if I believed you and didn''t need you, your kind doesn''t
+        deserve mercy.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[4]
@@ -78776,16 +78833,16 @@ RectTransform:
   m_GameObject: {fileID: 1638628414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.2999997, y: 5.2999997, z: 5.2999997}
+  m_LocalScale: {x: 0.47704768, y: 0.9906542, z: 0.4686118}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 583183534}
-  m_Father: {fileID: 1535654275}
-  m_RootOrder: 2
+  m_Father: {fileID: 1529743319}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 802.00024, y: 76.899475}
+  m_AnchoredPosition: {x: -9.541077, y: -31.5141}
   m_SizeDelta: {x: 172.8, y: 51.8}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1638628416
@@ -80010,7 +80067,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scene1: {fileID: 238909913}
+  Scene1CanvasGroup: {fileID: 238909915}
   Scene2: {fileID: 1407826543}
+  Scene2Picture1CanvasGroup: {fileID: 1082608123}
+  Scene2Picture2CanvasGroup: {fileID: 1529743322}
+  Scene2Picture3CanvasGroup: {fileID: 691593684}
   gameUI: {fileID: 56300031}
   Cutscene: {fileID: 258677052}
 --- !u!114 &1662666319
@@ -92008,18 +92069,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827548357}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -3}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.265252}
+  m_LocalScale: {x: 0.1170117, y: 0.24299064, z: 0.11494252}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 568316525}
-  m_Father: {fileID: 1407826544}
-  m_RootOrder: 5
+  m_Father: {fileID: 691593681}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 432, y: -485}
+  m_AnchoredPosition: {x: -42.934296, y: 9.1588745}
   m_SizeDelta: {x: 359.21, y: 130}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1827548359
@@ -92936,7 +92997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[1]
-      value: "Kurja: I don\xB4t have time."
+      value: 'Kurja: I don''t have time.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[2]
@@ -92946,7 +93007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[3]
-      value: "Kurja: As I said I don\xB4t have time."
+      value: 'Kurja: As I said I don''t have time.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[4]
@@ -101541,16 +101602,16 @@ RectTransform:
   m_GameObject: {fileID: 2079078165}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.090009004, y: 0.18691589, z: 0.08841733}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1628069615}
-  m_Father: {fileID: 1535654275}
+  m_Father: {fileID: 1529743319}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 281.00024, y: 461.00015}
+  m_AnchoredPosition: {x: -56.435608, y: -0.3737793}
   m_SizeDelta: {x: 323.8, y: 170.2}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2079078167
@@ -102014,9 +102075,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[4]
-      value: "Yuri: Well, it\xB4s just that I dedicated my whole life trying to be
-        the best soldier possible and to help our people win the war and I don\xB4t
-        even know why we are fighting this war.  "
+      value: 'Yuri: Well, it''s just that I dedicated my whole life trying to be
+        the best soldier possible and to help our people win the war and I don''t
+        even know why we are fighting this war.  '
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[5]
@@ -102025,8 +102086,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[6]
-      value: "Yuri: But what does the other side feel like? Isn\xB4t it possible
-        that they are also fighting to protect\u2026"
+      value: "Yuri: But what does the other side feel like? Isn't it possible that
+        they are also fighting to protect\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[7]
@@ -102034,8 +102095,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[8]
-      value: "Kurja: They are horrific persons, terrorists, and you know that. We
-        won\xB4t discuss it no more."
+      value: 'Kurja: They are horrific persons, terrorists, and you know that. We
+        won''t discuss it anymore.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703189, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_Name
