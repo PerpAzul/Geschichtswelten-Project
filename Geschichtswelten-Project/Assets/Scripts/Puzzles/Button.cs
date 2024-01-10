@@ -5,6 +5,8 @@ using UnityEngine;
 public class Button : Interactable
 {
     [SerializeField] private SimonSays game;
+    [SerializeField] private AudioSource generalAudioSource;
+    [SerializeField] private AudioClip buttonSound;
     public SimonSays.Colors Colors;
     public bool pressed = false;
 
@@ -15,9 +17,10 @@ public class Button : Interactable
 
     IEnumerator DoInteract()
     {
-        game.playersInput.Add((int)Colors);
+        game.playersInput.Add(Colors);
         pressed = true;
         GetComponent<Renderer>().enabled = false;
+        generalAudioSource.PlayOneShot(buttonSound);
         yield return new WaitForSeconds(0.3f);
         for (int i = 0; i < game.playersInput.Count; i++)
         {

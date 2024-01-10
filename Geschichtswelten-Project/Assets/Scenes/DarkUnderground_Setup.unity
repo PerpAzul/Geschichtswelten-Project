@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1317670463}
-  m_IndirectSpecularColor: {r: 0.04365709, g: 0.044818856, b: 0.05955075, a: 1}
+  m_IndirectSpecularColor: {r: 0.04365543, g: 0.044817843, b: 0.059549738, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20537,6 +20537,8 @@ MonoBehaviour:
   useEvents: 0
   promptMessage: 
   game: {fileID: 1431027639}
+  generalAudioSource: {fileID: 579297954}
+  buttonSound: {fileID: 8300000, guid: cefda73b409344ea1b38274a919ff599, type: 3}
   Colors: 0
   pressed: 0
 --- !u!4 &496768265 stripped
@@ -50688,6 +50690,8 @@ MonoBehaviour:
   useEvents: 0
   promptMessage: 
   game: {fileID: 1431027639}
+  generalAudioSource: {fileID: 579297954}
+  buttonSound: {fileID: 8300000, guid: 74db39c00835b4b5bbbddf040b333be0, type: 3}
   Colors: 1
   pressed: 0
 --- !u!1001 &1120892134
@@ -68837,6 +68841,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b509425b38d673a4eb224ed3a52c399e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fail: {fileID: 8300000, guid: 232650618a01f4489acf443daaa0ed20, type: 3}
+  success: {fileID: 8300000, guid: a93ca24306f3f48c785b339faf23af38, type: 3}
+  redButton: {fileID: 8300000, guid: cefda73b409344ea1b38274a919ff599, type: 3}
+  greenButton: {fileID: 8300000, guid: f85246f83255945f6b5b5134ccfffbc3, type: 3}
+  yellowButton: {fileID: 8300000, guid: 434f39bd4301f401dbe636aff50a77bf, type: 3}
+  blueButton: {fileID: 8300000, guid: 74db39c00835b4b5bbbddf040b333be0, type: 3}
+  generalAudioSource: {fileID: 579297954}
   door: {fileID: 776365102}
   RedButton: {fileID: 496643309}
   BlueButton: {fileID: 1120158170}
@@ -76953,6 +76964,8 @@ MonoBehaviour:
   useEvents: 0
   promptMessage: 
   game: {fileID: 1431027639}
+  generalAudioSource: {fileID: 579297954}
+  buttonSound: {fileID: 8300000, guid: 434f39bd4301f401dbe636aff50a77bf, type: 3}
   Colors: 2
   pressed: 0
 --- !u!4 &1594868236 stripped
@@ -77642,7 +77655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1973121109280998, guid: 2e3770b7c8f6aef48a3dadb7a0575e0c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4197796739810096, guid: 2e3770b7c8f6aef48a3dadb7a0575e0c, type: 3}
       propertyPath: m_RootOrder
@@ -79352,6 +79365,8 @@ MonoBehaviour:
   useEvents: 0
   promptMessage: 
   game: {fileID: 1431027639}
+  generalAudioSource: {fileID: 579297954}
+  buttonSound: {fileID: 8300000, guid: f85246f83255945f6b5b5134ccfffbc3, type: 3}
   Colors: 3
   pressed: 0
 --- !u!65 &1652569704
@@ -91924,7 +91939,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1973121109280998, guid: 2e3770b7c8f6aef48a3dadb7a0575e0c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4197796739810096, guid: 2e3770b7c8f6aef48a3dadb7a0575e0c, type: 3}
       propertyPath: m_RootOrder

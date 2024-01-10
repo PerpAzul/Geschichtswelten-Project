@@ -16,13 +16,25 @@ public class SimonSays : MonoBehaviour
         Green
     }
 
+    #region Audio
+
+    [SerializeField] private AudioClip fail;
+    [SerializeField] private AudioClip success;
+    [SerializeField] private AudioClip redButton;
+    [SerializeField] private AudioClip greenButton;
+    [SerializeField] private AudioClip yellowButton;
+    [SerializeField] private AudioClip blueButton;
+    [SerializeField] private AudioSource generalAudioSource;
+
+    #endregion
+
     [SerializeField] private GameObject door;
     [SerializeField] private Button RedButton;
     [SerializeField] private Button BlueButton;
     [SerializeField] private Button YellowButton;
     [SerializeField] private Button GreenButton;
-    public List<int> solutionList = new List<int>();
-    public List<int> playersInput = new List<int>();
+    public List<Colors> solutionList = new List<Colors>();
+    public List<Colors> playersInput = new List<Colors>();
     private int counter = 0;
     public int count = 0;
     public int maxnumber;
@@ -85,8 +97,6 @@ public class SimonSays : MonoBehaviour
     {
         for (var j = 0; j <= count; j++)
         {
-            //Debug.Log("In CheckForRightButton");
-            //Debug.Log("J: " + j);
             if (playersInput[j] == solutionList[j])
             {
                 Debug.Log("Right Button");
@@ -99,7 +109,7 @@ public class SimonSays : MonoBehaviour
             }
         }
 
-        playersInput = new List<int>();
+        playersInput = new List<Colors>();
         count++;
     }
 
@@ -111,31 +121,35 @@ public class SimonSays : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             //Debug.Log("In For Loop");
             //flash color
-            if (solutionList[j].Equals(0))
+            if (solutionList[j].Equals(Colors.Red))
             {
                 RedButton.DeactivateRenderer();
                 yield return new WaitForSeconds(0.3f);
+                generalAudioSource.PlayOneShot(redButton);
                 RedButton.ActivateRenderer();
                 yield return new WaitForSeconds(0.3f);
             }
-            else if (solutionList[j].Equals(1))
+            else if (solutionList[j].Equals(Colors.Blue))
             {
                 BlueButton.DeactivateRenderer();
                 yield return new WaitForSeconds(0.3f);
+                generalAudioSource.PlayOneShot(blueButton);
                 BlueButton.ActivateRenderer();
                 yield return new WaitForSeconds(0.3f);
             }
-            else if (solutionList[j].Equals(2))
+            else if (solutionList[j].Equals(Colors.Yellow))
             {
                 YellowButton.DeactivateRenderer();
                 yield return new WaitForSeconds(0.3f);
+                generalAudioSource.PlayOneShot(yellowButton);
                 YellowButton.ActivateRenderer();
                 yield return new WaitForSeconds(0.3f);
             }
-            else if (solutionList[j].Equals(3))
+            else if (solutionList[j].Equals(Colors.Green))
             {
                 GreenButton.DeactivateRenderer();
                 yield return new WaitForSeconds(0.3f);
+                generalAudioSource.PlayOneShot(greenButton);
                 GreenButton.ActivateRenderer();
                 yield return new WaitForSeconds(0.3f);
             }
@@ -147,8 +161,8 @@ public class SimonSays : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(FlashFailureColors());
         //Debug.Log("In EndGame");
-        playersInput = new List<int>();
-        solutionList = new List<int>();
+        playersInput = new List<Colors>();
+        solutionList = new List<Colors>();
         counter = 0;
         count = 0;
         Invoke("BoxColliderOn", 2f);
@@ -173,6 +187,7 @@ public class SimonSays : MonoBehaviour
             BlueButton.DeactivateRenderer();
             YellowButton.DeactivateRenderer();
             yield return new WaitForSeconds(0.3f);
+            generalAudioSource.PlayOneShot(fail);
             GreenButton.ActivateRenderer();
             RedButton.ActivateRenderer();
             BlueButton.ActivateRenderer();
@@ -201,6 +216,7 @@ public class SimonSays : MonoBehaviour
             BlueButton.DeactivateRenderer();
             YellowButton.DeactivateRenderer();
             yield return new WaitForSeconds(0.2f);
+            generalAudioSource.PlayOneShot(success);
             GreenButton.ActivateRenderer();
             RedButton.ActivateRenderer();
             BlueButton.ActivateRenderer();
@@ -219,7 +235,7 @@ public class SimonSays : MonoBehaviour
             var values = Enum.GetValues(typeof(Colors));
             int random = Random.Range(0, values.Length);
             Colors temp = (Colors)random;
-            solutionList.Add(random);
+            solutionList.Add(temp);
             counter++;
         }
 
