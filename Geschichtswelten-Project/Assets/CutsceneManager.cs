@@ -29,16 +29,16 @@ public class CutsceneManager : MonoBehaviour
         switch (index)
         {
             case 0:
-                Scene1CanvasGroup.alpha += 0.01f / 2;
+                Scene1CanvasGroup.alpha += 0.01f;
                 break;
             case 1:
-                Scene2Picture1CanvasGroup.alpha += 0.01f / 2;
+                Scene2Picture1CanvasGroup.alpha += 0.01f;
                 break;
             case 2:
-                Scene2Picture2CanvasGroup.alpha += 0.01f / 2;
+                Scene2Picture2CanvasGroup.alpha += 0.01f;
                 break;
             case 3:
-                Scene2Picture3CanvasGroup.alpha += 0.01f / 2;
+                Scene2Picture3CanvasGroup.alpha += 0.01f;
                 break;
             default:
                 return;
