@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        
     }
 
     void Update()
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
         moveDirection.x = input.x;
         moveDirection.z = input.y;
         moveDirection = cameraTransform.forward * moveDirection.z + cameraTransform.right * moveDirection.x;
+        moveDirection.y = 0.013f;
         controller.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
 
         playerVelocity.y += gravity * Time.deltaTime;

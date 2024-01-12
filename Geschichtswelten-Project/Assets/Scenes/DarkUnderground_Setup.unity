@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1317670463}
-  m_IndirectSpecularColor: {r: 0.04365543, g: 0.044817843, b: 0.059549738, a: 1}
+  m_IndirectSpecularColor: {r: 0.04365709, g: 0.044818856, b: 0.05955075, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -104300,7 +104300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_VerticalAxis.m_MaxValue
-      value: 40
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_VerticalAxis.m_MinValue
@@ -104386,6 +104386,10 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1493005385}
+    - target: {fileID: 7435773726013582101, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: cutscene
+      value: 
+      objectReference: {fileID: 258677052}
     - target: {fileID: 7907457161505039525, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_IsActive
       value: 1

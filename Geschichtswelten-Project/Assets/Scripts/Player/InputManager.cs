@@ -8,7 +8,6 @@ public class InputManager : MonoBehaviour
     public PlayerInput.PlayerBasicsActions playerActions;
     private PlayerInput.PowersActions powersActions;
 
-
     private Player player;
     private PlayerLook look;
     private Flashlight flash;
