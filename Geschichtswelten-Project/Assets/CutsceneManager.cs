@@ -78,6 +78,8 @@ public class CutsceneManager : MonoBehaviour
                 Scene4Picture2CanvasGroup.alpha += 0.05f;
                 break;
             case 9:
+                Scene4Picture1CanvasGroup.alpha = 0f;
+                Scene4Picture2CanvasGroup.alpha = 0f;
                 Scene4Picture3CanvasGroup.alpha += 0.05f;
                 break;
             default:

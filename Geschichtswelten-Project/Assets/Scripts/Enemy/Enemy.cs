@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject player;
     private Vector3 lastKnownPos;
+    
 
     public NavMeshAgent Agent {get => agent;}
     public GameObject Player {get => player;}
@@ -58,6 +59,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        transform.LookAt(player.transform.position);
         health -= amount;
         if (health <= 0f)
         {

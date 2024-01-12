@@ -68,7 +68,7 @@ public class SimonSays : MonoBehaviour
         for (int i = 0; i < maxnumber; i++)
         {
             StartCoroutine(FlashColors());
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2 * (count + 1));
             CheckPlayerCount();
             if (stop)
             {
