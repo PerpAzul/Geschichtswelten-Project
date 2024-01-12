@@ -10,9 +10,13 @@ public class Activate : MonoBehaviour
     [SerializeField] private GameObject levelEnd2;
     [SerializeField] private GameObject alien;
     [SerializeField] private GameObject thisObject;
+    [SerializeField] private GameObject Nadji;
+    [SerializeField] private GameObject cutsceneUI;
 
     private void OnTriggerEnter(Collider other)
     {
+        Nadji.gameObject.SetActive(false);
+        cutsceneUI.SetActive(true);
         dialogue.SetActive(true);
         levelEnd.SetActive(true);
         levelEnd2.SetActive(true);

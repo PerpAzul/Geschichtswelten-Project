@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject OptionsMenu;
     [SerializeField] private GameObject PapersUI;
+    [SerializeField] private GameObject cutscene;
     private PlayerInput.PauseMenuActions playerActions;
     private PlayerInput PlayerInput;
     public bool isPaused = false;
@@ -71,8 +72,15 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         OptionsMenu.SetActive(false);
-        gameUI.SetActive(true);
-        isPaused = false;
+        if (cutscene.gameObject.GetComponent<CutsceneManager>().isActiveAndEnabled)
+        {
+            isPaused = false;
+        }
+        else
+        {
+            isPaused = false;
+            gameUI.SetActive(true);
+        }
     }
 
     private void Pause()

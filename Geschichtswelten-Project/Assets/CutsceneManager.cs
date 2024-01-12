@@ -5,14 +5,34 @@ using UnityEngine;
 
 public class CutsceneManager : MonoBehaviour
 {
+    #region Scenes
+
     [SerializeField] private GameObject Scene1;
-    [SerializeField] private CanvasGroup Scene1CanvasGroup;
     [SerializeField] private GameObject Scene2;
+    [SerializeField] private GameObject Scene3;
+    [SerializeField] private GameObject Scene4;
+
+    #endregion
+
+    #region CanvasGroups
+
+    [SerializeField] private CanvasGroup Scene1CanvasGroup;
     [SerializeField] private CanvasGroup Scene2Picture1CanvasGroup;
     [SerializeField] private CanvasGroup Scene2Picture2CanvasGroup;
     [SerializeField] private CanvasGroup Scene2Picture3CanvasGroup;
+    [SerializeField] private CanvasGroup Scene3Picture1CanvasGroup;
+    [SerializeField] private CanvasGroup Scene3Picture2CanvasGroup;
+    [SerializeField] private CanvasGroup Scene3Picture3CanvasGroup;
+    [SerializeField] private CanvasGroup Scene4Picture1CanvasGroup;
+    [SerializeField] private CanvasGroup Scene4Picture2CanvasGroup;
+    [SerializeField] private CanvasGroup Scene4Picture3CanvasGroup;
+
+    #endregion
+
+
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject Cutscene;
+    [SerializeField] private GameObject weaponHolder;
     private int index = 0;
 
     private void Awake()
@@ -21,24 +41,46 @@ public class CutsceneManager : MonoBehaviour
         gameUI.gameObject.SetActive(false);
         Cutscene.gameObject.SetActive(true);
         Scene1.gameObject.SetActive(true);
-        Scene2.gameObject.SetActive(false);
+        weaponHolder.SetActive(false);
     }
 
-    private void LateUpdate()
+    private void Update()
     {
+        Debug.Log(index);
         switch (index)
         {
             case 0:
-                Scene1CanvasGroup.alpha += 0.01f / 2;
+                Scene1CanvasGroup.alpha += 0.05f;
                 break;
             case 1:
-                Scene2Picture1CanvasGroup.alpha += 0.01f / 2;
+                Scene2Picture1CanvasGroup.alpha += 0.05f;
                 break;
             case 2:
-                Scene2Picture2CanvasGroup.alpha += 0.01f / 2;
+                Scene2Picture2CanvasGroup.alpha += 0.05f;
                 break;
             case 3:
-                Scene2Picture3CanvasGroup.alpha += 0.01f / 2;
+                Scene2Picture3CanvasGroup.alpha += 0.05f;
+                break;
+            case 4:
+                Scene3Picture1CanvasGroup.alpha += 0.05f;
+                break;
+            case 5:
+                Scene3Picture1CanvasGroup.alpha = 0f;
+                Scene3Picture2CanvasGroup.alpha += 0.05f;
+                break;
+            case 6:
+                Scene3Picture3CanvasGroup.alpha += 0.05f;
+                break;
+            case 7:
+                Scene4Picture1CanvasGroup.alpha += 0.05f;
+                break;
+            case 8:
+                Scene4Picture2CanvasGroup.alpha += 0.05f;
+                break;
+            case 9:
+                Scene4Picture1CanvasGroup.alpha = 0f;
+                Scene4Picture2CanvasGroup.alpha = 0f;
+                Scene4Picture3CanvasGroup.alpha += 0.05f;
                 break;
             default:
                 return;
@@ -65,7 +107,40 @@ public class CutsceneManager : MonoBehaviour
                 Scene2.gameObject.SetActive(false);
                 Cutscene.gameObject.SetActive(false);
                 gameUI.SetActive(true);
+                weaponHolder.SetActive(true);
                 Time.timeScale = 1;
+                index++;
+                break;
+            //Nadji room Scene
+            case 4:
+                Scene3.gameObject.SetActive(true);
+                gameUI.gameObject.SetActive(false);
+                weaponHolder.gameObject.SetActive(false);
+                Time.timeScale = 0;
+                index++;
+                break;
+            case 5:
+                index++;
+                break;
+            case 6:
+                Scene3.gameObject.SetActive(false);
+                Cutscene.gameObject.SetActive(false);
+                gameUI.SetActive(true);
+                weaponHolder.SetActive(true);
+                Time.timeScale = 1;
+                index++;
+                break;
+            case 7:
+                Scene4.gameObject.SetActive(true);
+                gameUI.SetActive(false);
+                weaponHolder.SetActive(false);
+                Time.timeScale = 0;
+                index++;
+                break;
+            case 8:
+                index++;
+                break;
+            case 9:
                 index++;
                 break;
             default:

@@ -12,6 +12,7 @@ public class InputManagerGun : MonoBehaviour
     //private Shooting shoot;
     private WeaponSwitching switching;
 
+    
     private Gun _gun;
     //private Aim aiming;
 
