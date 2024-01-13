@@ -15,12 +15,14 @@ public class Activate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Nadji.gameObject.SetActive(false);
-        cutsceneUI.SetActive(true);
-        dialogue.SetActive(true);
-        levelEnd.SetActive(true);
-        levelEnd2.SetActive(true);
-        alien.SetActive(true);
-        thisObject.SetActive(false);
+        if(other.gameObject.CompareTag("Player")){
+            Nadji.gameObject.SetActive(false);
+            cutsceneUI.SetActive(true);
+            dialogue.SetActive(true);
+            levelEnd.SetActive(true);
+            levelEnd2.SetActive(true);
+            alien.SetActive(true);
+            thisObject.SetActive(false);
+        }
     }
 }
