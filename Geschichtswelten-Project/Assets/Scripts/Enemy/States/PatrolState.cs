@@ -6,10 +6,13 @@ public class PatrolState : BaseState
 {
    public int waypointIndex;
    public float waitTimer;
+
+   private bool isIdle; //set to true while the Enemy is waiting at a Patrol point
    
    public override void Enter()
    {
-      
+      //stateMachine.GetAnimator().SetTrigger("Move");
+      isIdle = false;
    }
    
    public override void Perform()
@@ -39,6 +42,11 @@ public class PatrolState : BaseState
       if (enemy.Agent.remainingDistance < 0.2f)
       {
          waitTimer += Time.deltaTime;
+         if (isIdle == false)
+         {
+            isIdle = true;
+            stateMachine.GetAnimator().SetTrigger("Idle");
+         }
 
          if (waitTimer > 3)
          {
@@ -54,6 +62,11 @@ public class PatrolState : BaseState
             //Debug.Log("Moving to Location");
             enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
             waitTimer = 0;
+            if (isIdle == true)
+            {
+               isIdle = false;
+               stateMachine.GetAnimator().SetTrigger("Move");
+            }
          }
       }
    }
