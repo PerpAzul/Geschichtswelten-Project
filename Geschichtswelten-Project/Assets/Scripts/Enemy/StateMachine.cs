@@ -9,11 +9,18 @@ public class StateMachine : MonoBehaviour
     private PlayerLook Look;
     public GameObject player;
     public bool inAir = false;
+    private Animator animator;
+
+    public Animator GetAnimator()
+    {
+        return animator;
+    }
     
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         Look = player.GetComponent<PlayerLook>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
