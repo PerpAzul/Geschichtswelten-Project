@@ -32,8 +32,6 @@ public class AttackState : BaseState
             
             if (moveTimer > Random.Range(3, 7))
             {
-                stateMachine.GetAnimator().SetTrigger("LowerGun");
-                stateMachine.GetAnimator().SetTrigger("Move");
                 enemy.Agent.SetDestination(enemy.transform.position + (Random.insideUnitSphere * 5));
                 moveTimer = 0;
             }
@@ -53,10 +51,6 @@ public class AttackState : BaseState
 
     public void Shoot()
     {
-        if(stateMachine.GetAnimator().GetCurrentAnimatorStateInfo(0).IsName("idle pose with a gun") == false)
-        {
-            stateMachine.GetAnimator().SetTrigger("RaiseGun");
-        }
         stateMachine.GetAnimator().SetTrigger("Shoot");
         Debug.Log("Shoot");
         enemy.flash.Play();
