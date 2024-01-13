@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject OptionsMenu;
     [SerializeField] private GameObject PapersUI;
+    [SerializeField] private GameObject keypad;
     [SerializeField] private GameObject cutscene;
     private PlayerInput.PauseMenuActions playerActions;
     private PlayerInput PlayerInput;
@@ -64,6 +65,15 @@ public class PauseMenu : MonoBehaviour
             pauseMenu.SetActive(false);
             OptionsMenu.SetActive(false);
             isPaused = false;
+            return;
+        }
+        
+        if (keypad.gameObject.activeSelf)
+        {
+            pauseMenu.SetActive(false);
+            OptionsMenu.SetActive(false);
+            isPaused = false;
+            Time.timeScale = 1;
             return;
         }
 

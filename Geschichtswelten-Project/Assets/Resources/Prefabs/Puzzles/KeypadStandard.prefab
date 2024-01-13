@@ -728,8 +728,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01708266, y: 0.02, z: 0.00271043}
-  m_Center: {x: 0, y: -6.81105e-18, z: 0.00047928502}
+  m_Size: {x: 0.01708266, y: 0.02, z: 0.0032636302}
+  m_Center: {x: -7.052752e-18, y: -3.5042263e-17, z: 0.0015950907}
 --- !u!1 &2819367520801621977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1004,7 @@ GameObject:
   - component: {fileID: 2440368641263889296}
   - component: {fileID: 1563828677137395904}
   - component: {fileID: 1367207451086249214}
+  - component: {fileID: 1308656630}
   m_Layer: 6
   m_Name: KeypadStandard
   m_TagString: Untagged
@@ -1067,48 +1068,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1367207451086249214}
-        m_TargetAssemblyTypeName: InteractWithKeypad, Assembly-CSharp
-        m_MethodName: ReeenableBoxCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   onAccessDenied:
     m_PersistentCalls:
       m_Calls: []
   _Quit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1367207451086249214}
-        m_TargetAssemblyTypeName: InteractWithKeypad, Assembly-CSharp
-        m_MethodName: SwitchToMainCamera
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1367207451086249214}
-        m_TargetAssemblyTypeName: InteractWithKeypad, Assembly-CSharp
-        m_MethodName: ReeenableBoxCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   keypadCombo: 312
   accessGrantedText: Granted
   accessDeniedText: Denied
@@ -1247,8 +1212,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33167267, y: 0.32430673, z: 0.11378609}
-  m_Center: {x: 0.029273987, y: -0.004951179, z: 0.015983885}
+  m_Size: {x: 0.33167267, y: 0.32430673, z: 0.16132101}
+  m_Center: {x: 0.029273987, y: -0.004951179, z: -0.0077835843}
 --- !u!114 &1367207451086249214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,6 +1234,19 @@ MonoBehaviour:
   hitMarker: {fileID: 0}
   player: {fileID: 0}
   Text: {fileID: 0}
+  isInKeyPad: 0
+--- !u!114 &1308656630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2819367522260345507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984e9710d0d318e469c17ac5e169873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3161823819457644882
 GameObject:
   m_ObjectHideFlags: 0

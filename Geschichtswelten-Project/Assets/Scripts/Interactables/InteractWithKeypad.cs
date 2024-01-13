@@ -14,6 +14,7 @@ public class InteractWithKeypad : Interactable
     public GameObject Weapons;
     public GameObject hitMarker;
     public GameObject player;
+    public GameObject light;
 
     [SerializeField] private GameObject Text;
     //public GameObject UI;
@@ -22,6 +23,7 @@ public class InteractWithKeypad : Interactable
     private void Awake()
     {
         _KeypadCam.enabled = false;
+        light.SetActive(false);
     }
 
     private void Update()
@@ -47,6 +49,7 @@ public class InteractWithKeypad : Interactable
         promptMessage = "Keypad";
         Text.SetActive(true);
         isInKeyPad = false;
+        light.SetActive(false);
         GetComponent<BoxCollider>().enabled = true;
     }
 
@@ -66,6 +69,7 @@ public class InteractWithKeypad : Interactable
         promptMessage = "";
         Text.SetActive(false);
         isInKeyPad = true;
+        light.SetActive(true);
         //UI.gameObject.SetActive(false);
     }
     
