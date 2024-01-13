@@ -113,7 +113,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BaseDirtAmount: 0.001
-    - _BaseDirtStrength: 0.25
+    - _BaseDirtStrength: 0.6
     - _BaseMetallic: 0
     - _BaseMetalness: 1
     - _BaseNormalStrength: 0.318

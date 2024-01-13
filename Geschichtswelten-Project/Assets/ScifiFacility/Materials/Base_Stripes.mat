@@ -79,7 +79,7 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.9
     - _DetailNormalMapScale: 1
-    - _DirtAmount: 0.118
+    - _DirtAmount: 0.6
     - _DirtLevel: 0.098
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -90,13 +90,13 @@ Material:
     - _Mode: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ScratchesAmount: 0.1
+    - _ScratchesAmount: 0.75
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _TransparencyStrength: 1
     - _UVSec: 0
-    - _WearAmount: 0.08
+    - _WearAmount: 0.5
     - _WearLevel: 0.391
     - _ZWrite: 1
     - __dirty: 0
