@@ -2612,6 +2612,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4792628554487810, guid: 2709b9e40af2c2041acd463e5711ee4c, type: 3}
   m_PrefabInstance: {fileID: 61281798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &62560830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3122256404153703189, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+  m_PrefabInstance: {fileID: 1788170150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &62948544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4839601215451756, guid: dec0f61f79923ad4a8c8ccc103c4bf2f, type: 3}
@@ -3080,7 +3085,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &68118342
 PrefabInstance:
@@ -17797,7 +17802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 437920, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.634
+      value: -0.648
       objectReference: {fileID: 0}
     - target: {fileID: 437920, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19530,6 +19535,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4227638746839032, guid: 7fd6a948288578541b257d2bf344c826, type: 3}
   m_PrefabInstance: {fileID: 477337078}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &478501758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 436118952035059825, guid: 6fc10374792d5a745bcc1a2747261d66, type: 3}
+  m_PrefabInstance: {fileID: 434913696317300906}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &478530867
 GameObject:
@@ -30652,7 +30662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 485272, guid: 3831309e491dd814d9313ff728ddb0f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.4
+      value: 5.351
       objectReference: {fileID: 0}
     - target: {fileID: 485272, guid: 3831309e491dd814d9313ff728ddb0f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51024,7 +51034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 485272, guid: 3831309e491dd814d9313ff728ddb0f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.634
+      value: -0.645
       objectReference: {fileID: 0}
     - target: {fileID: 485272, guid: 3831309e491dd814d9313ff728ddb0f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51432,7 +51442,7 @@ Transform:
   - {fileID: 338200936}
   - {fileID: 1038584394}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1165050700
 PrefabInstance:
@@ -60875,6 +60885,18 @@ PrefabInstance:
       propertyPath: weaponHolder
       value: 
       objectReference: {fileID: 1188339358}
+    - target: {fileID: 1406604274599010487, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_text
+      value: '2 years ago.
+
+        - Head Scientist: This facility will no longer
+        be used. The new one will be ready in a month and the Loppu Project will
+        already start being transported. This will be my last day working in this
+        facility. I know it didn''t had the technology necessary to finish the project.
+        It just was where everything started, and I guess I will miss it.
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2722531095538110261, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -60922,6 +60944,21 @@ PrefabInstance:
     - target: {fileID: 2722531095538110266, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412534399314919358, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_text
+      value: '1 month ago.
+
+        - Head Scientist: It is done. The Loppu Project
+        was a success. This is the biggest technology discovery of all time chief.
+
+        -
+        Kurja: Our dreams will finally become true.
+
+        - Head Scientist: They
+        already are.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6660688140283708474, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
@@ -94102,7 +94139,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 62560830}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &2075404618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96484,6 +96533,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 434913695308406739, guid: 6fc10374792d5a745bcc1a2747261d66, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 478501758}
     - target: {fileID: 436118952035059825, guid: 6fc10374792d5a745bcc1a2747261d66, type: 3}
       propertyPath: m_Name
       value: OpenDoorButton
