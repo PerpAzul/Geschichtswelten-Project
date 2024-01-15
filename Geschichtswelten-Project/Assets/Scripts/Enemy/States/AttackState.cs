@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 public class AttackState : BaseState
@@ -14,11 +15,12 @@ public class AttackState : BaseState
 
     public override void Perform()
     {
-        //Debug.Log("AttackState");
+        Debug.Log("AttackState");
         if (Look.navMeshisDeactivated)
         {
             return;
         }
+
         if (enemy.CanSeePlayer())
         {
             moveTimer += Time.deltaTime;
@@ -29,7 +31,7 @@ public class AttackState : BaseState
             {
                 Shoot();
             }
-            
+
             if (moveTimer > Random.Range(3, 7))
             {
                 enemy.Agent.SetDestination(enemy.transform.position + (Random.insideUnitSphere * 5));
@@ -39,7 +41,7 @@ public class AttackState : BaseState
             enemy.LastknowPos = enemy.Player.transform.position;
         }
         else
-        { 
+        {
             stateMachine.ChangeState(new SearchState());
         }
     }
@@ -51,13 +53,22 @@ public class AttackState : BaseState
 
     public void Shoot()
     {
-        stateMachine.GetAnimator().SetTrigger("Shoot");
-        Debug.Log("Shoot");
-        enemy.flash.Play();
-        Transform gunBarrel = enemy.gunBarrel;
-        GameObject bullet = GameObject.Instantiate(Resources.Load("Prefabs/Bullet") as GameObject, gunBarrel.position, enemy.transform.rotation);
-        Vector3 shootDirection = (enemy.Player.transform.position - gunBarrel.transform.position).normalized;
-        bullet.GetComponent<Rigidbody>().velocity = Quaternion.AngleAxis(Random.Range(-2f, 2f), Vector3.up) * shootDirection * 40;
-        shotTimer = 0;
+        if (stateMachine.GetAnimator().GetCurrentAnimatorStateInfo(0).IsName("idle pose with a gun"))
+        {
+            stateMachine.GetAnimator().SetTrigger("Shoot");
+            Debug.Log("Shoot");
+            enemy.flash.Play();
+            Transform gunBarrel = enemy.gunBarrel;
+            GameObject bullet = GameObject.Instantiate(Resources.Load("Prefabs/Bullet") as GameObject,
+                gunBarrel.position, enemy.transform.rotation);
+            Vector3 shootDirection = (enemy.Player.transform.position - gunBarrel.transform.position).normalized;
+            bullet.GetComponent<Rigidbody>().velocity =
+                Quaternion.AngleAxis(Random.Range(-2f, 2f), Vector3.up) * shootDirection * 40;
+            shotTimer = 0;
+        }
+        else
+        {
+            stateMachine.GetAnimator().SetTrigger("RaiseGun");
+        }
     }
 }

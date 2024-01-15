@@ -16,21 +16,20 @@ public class InteractTubes : Interactable
 
     protected override void Interact()
     {
-        if (index == 2)
+        switch (index)
         {
-            Change2Tubes();
-        }
-        else if (index == 3)
-        {
-            Change3Tubes();
-        }
-        else if (index == 4)
-        {
-            Change4Tubes();
-        }
-        else if (index == 7)
-        {
-            Reset();
+            case 2:
+                Change2Tubes();
+                break;
+            case 3:
+                Change3Tubes();
+                break;
+            case 4:
+                Change4Tubes();
+                break;
+            case 7:
+                Reset();
+                break;
         }
     }
 
