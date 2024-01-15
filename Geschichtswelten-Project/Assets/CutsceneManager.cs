@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CutsceneManager : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject Cutscene;
     [SerializeField] private GameObject weaponHolder;
+    [SerializeField] private GameObject _player;
     private int index = 0;
 
     private void Awake()
@@ -42,6 +44,7 @@ public class CutsceneManager : MonoBehaviour
         Cutscene.gameObject.SetActive(true);
         Scene1.gameObject.SetActive(true);
         weaponHolder.SetActive(false);
+        _player.GetComponent<Flashlight>().inCutscene = true;
     }
 
     private void Update()
@@ -62,6 +65,8 @@ public class CutsceneManager : MonoBehaviour
                 Scene2Picture3CanvasGroup.alpha += 0.05f;
                 break;
             case 4:
+                weaponHolder.SetActive(false);
+                _player.GetComponent<Flashlight>().inCutscene = true;
                 Scene3Picture1CanvasGroup.alpha += 0.05f;
                 break;
             case 5:
@@ -72,6 +77,8 @@ public class CutsceneManager : MonoBehaviour
                 Scene3Picture3CanvasGroup.alpha += 0.05f;
                 break;
             case 7:
+                _player.GetComponent<Flashlight>().inCutscene = true;
+                weaponHolder.SetActive(false);
                 Scene4Picture1CanvasGroup.alpha += 0.05f;
                 break;
             case 8:
@@ -107,6 +114,7 @@ public class CutsceneManager : MonoBehaviour
                 Scene2.gameObject.SetActive(false);
                 Cutscene.gameObject.SetActive(false);
                 gameUI.SetActive(true);
+                _player.GetComponent<Flashlight>().inCutscene = false;
                 weaponHolder.SetActive(true);
                 Time.timeScale = 1;
                 index++;
@@ -114,8 +122,7 @@ public class CutsceneManager : MonoBehaviour
             //Nadji room Scene
             case 4:
                 Scene3.gameObject.SetActive(true);
-                gameUI.gameObject.SetActive(false);
-                weaponHolder.gameObject.SetActive(false);
+                gameUI.SetActive(false);
                 Time.timeScale = 0;
                 index++;
                 break;
@@ -126,6 +133,7 @@ public class CutsceneManager : MonoBehaviour
                 Scene3.gameObject.SetActive(false);
                 Cutscene.gameObject.SetActive(false);
                 gameUI.SetActive(true);
+                _player.GetComponent<Flashlight>().inCutscene = false;
                 weaponHolder.SetActive(true);
                 Time.timeScale = 1;
                 index++;
@@ -133,7 +141,7 @@ public class CutsceneManager : MonoBehaviour
             case 7:
                 Scene4.gameObject.SetActive(true);
                 gameUI.SetActive(false);
-                weaponHolder.SetActive(false);
+
                 Time.timeScale = 0;
                 index++;
                 break;

@@ -7,7 +7,8 @@ public class Flashlight : MonoBehaviour
     public GameObject flashlight;
     public bool on;
     public bool off;
-    
+    public bool inCutscene;
+
     void Start()
     {
         off = true;
@@ -17,18 +18,21 @@ public class Flashlight : MonoBehaviour
 
     public void Flash()
     {
-        if (off)
+        if (!inCutscene)
         {
-            flashlight.SetActive(true);
-            off = false;
-            on = true;
-            return;
-        } 
-        else if (on)
-        {
-            flashlight.SetActive(false);
-            off = true;
-            on = false;
+            if (off)
+            {
+                flashlight.SetActive(true);
+                off = false;
+                on = true;
+                return;
+            }
+            else if (on)
+            {
+                flashlight.SetActive(false);
+                off = true;
+                on = false;
+            }
         }
     }
 }

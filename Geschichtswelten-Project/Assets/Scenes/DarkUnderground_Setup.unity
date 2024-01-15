@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1317670463}
-  m_IndirectSpecularColor: {r: 0.04365543, g: 0.044817843, b: 0.059549738, a: 1}
+  m_IndirectSpecularColor: {r: 0.04365709, g: 0.044818856, b: 0.05955075, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14370,7 +14370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &324165326
 Transform:
   m_ObjectHideFlags: 0
@@ -32588,6 +32588,11 @@ Transform:
   m_Father: {fileID: 1921348458}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &690671793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1966778819888115443, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+  m_PrefabInstance: {fileID: 7563542983183904861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &692414116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60882,6 +60887,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1662666318, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1955284624}
+    - target: {fileID: 1662666318, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: _flashlight
+      value: 
+      objectReference: {fileID: 690671793}
+    - target: {fileID: 1662666318, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: weaponHolder
       value: 
       objectReference: {fileID: 1188339358}
@@ -60897,6 +60910,10 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 2722531095531035817, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: keypad
+      value: 
+      objectReference: {fileID: 324165325}
     - target: {fileID: 2722531095538110261, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -84386,7 +84403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
@@ -101774,6 +101791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1051077051376489652, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1465349730479999960, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -101822,6 +101843,10 @@ PrefabInstance:
       propertyPath: promptText
       value: 
       objectReference: {fileID: 1073819014}
+    - target: {fileID: 4482513886754501026, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5008036652616992547, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: PauseMenu
       value: 
@@ -101882,6 +101907,18 @@ PrefabInstance:
       propertyPath: overlay
       value: 
       objectReference: {fileID: 559389971}
+    - target: {fileID: 7083522273317921439, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435773726013582101, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113111924216423823, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
 --- !u!1001 &8155011302002224753
