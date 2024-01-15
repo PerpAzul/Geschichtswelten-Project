@@ -9,6 +9,7 @@ TagManager:
   - Asset
   - Box
   - Panel
+  - Badge
   layers:
   - Default
   - TransparentFX

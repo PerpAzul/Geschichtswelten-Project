@@ -6,10 +6,9 @@ using UnityEngine;
 public class Table : Interactable
 {
     public string name;
-    public bool isTriggered;
-    public GameObject badge;
     private bool isActive;
-    public int count = 0;
+    public GameObject badge;
+    [SerializeField] private BadgePuzzle _badgePuzzle;
 
     private void Awake()
     {
@@ -37,7 +36,40 @@ public class Table : Interactable
             case "G":
                 badge.SetActive(true);
                 break;
-            
+
+            default:
+                badge.SetActive(false);
+                break;
+        }
+    }
+
+    public void DisableBadge()
+    {
+        switch (name)
+        {
+            case "A":
+                badge.SetActive(false);
+                break;
+
+            case "B":
+                badge.SetActive(false);
+                break;
+
+            case "D":
+                badge.SetActive(false);
+                break;
+
+            case "E":
+                badge.SetActive(false);
+                break;
+            case "F":
+                badge.SetActive(false);
+                break;
+
+            case "G":
+                badge.SetActive(true);
+                break;
+
             default:
                 badge.SetActive(false);
                 break;
@@ -46,24 +78,18 @@ public class Table : Interactable
 
     protected override void Interact()
     {
-        if (!isActive)
+        if (_badgePuzzle.count != 0)
         {
             badge.gameObject.SetActive(true);
+            _badgePuzzle.count--;
             isActive = true;
         }
         else
         {
             badge.gameObject.SetActive(false);
+            _badgePuzzle.count++;
             isActive = false;
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Badge"))
-        {
-            Debug.Log(other + "hit");
-            isTriggered = true;
-        }
-    }
+    
 }

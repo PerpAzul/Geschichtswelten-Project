@@ -7,43 +7,62 @@ public class BadgePuzzle : Interactable
     public List<string> solution = new List<string>();
     public List<string> input = new List<string>();
     public List<Table> tables = new List<Table>();
-    private int count = 0;
+    private List<Table> trash = new List<Table>();
+    [SerializeField] private GameObject box;
+    public int count = 0;
+    public int count2 = 0;
 
     protected override void Interact()
     {
         GetBadges();
-        CheckInput();
     }
 
     private void GetBadges()
     {
-        foreach (var table in tables)
+       
+        for (int i = 0; i < tables.Count; i++)
         {
-            if (table.isTriggered)
             {
-                input[count] = table.name;
-                count++;
+                if (tables[i].badge.activeSelf)
+                {
+                    input[i] = tables[i].name;
+                }
             }
         }
+
+        CheckInput();
     }
 
     private void CheckInput()
     {
         for (var i = 0; i < solution.Count; i++)
         {
-            if (input[i].Equals(solution[i]))
+            if (!input[i].Equals(solution[i]))
             {
-                Debug.Log("Correct");
-            }
-            else
-            {
+                ResetList();
                 return;
             }
         }
 
-        foreach (var table in tables)
+        Winner();
+    }
+
+    private void Winner()
+    {
+        box.GetComponent<Animation>().Play("Crate_Open");
+    }
+
+    private void ResetList()
+    {
+        count = count2;
+        for (int i = 0; i < input.Count; i++)
         {
-            table.badge.SetActive(false);
+            input[i] = "";
+        }
+
+        for (int i = 0; i < tables.Count; i++)
+        {
+            tables[i].DisableBadge();
         }
     }
 }
