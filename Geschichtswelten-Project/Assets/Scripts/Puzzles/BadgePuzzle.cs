@@ -29,12 +29,21 @@ public class BadgePuzzle : Interactable
 
     private void CheckInput()
     {
-        for (int i = 0; i < solution.Count; i++)
+        for (var i = 0; i < solution.Count; i++)
         {
             if (input[i].Equals(solution[i]))
             {
                 Debug.Log("Correct");
             }
+            else
+            {
+                return;
+            }
+        }
+
+        foreach (var table in tables)
+        {
+            table.badge.SetActive(false);
         }
     }
 }

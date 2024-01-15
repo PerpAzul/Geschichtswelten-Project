@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: fca3d8eb4cdecb041aa058c6940c6821
+  m_OcclusionCullingData: {fileID: 36300000, guid: af41fee4e77194a3d8b5b7954b8e424c, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1317670463}
-  m_IndirectSpecularColor: {r: 0.04365709, g: 0.044818856, b: 0.05955075, a: 1}
+  m_IndirectSpecularColor: {r: 0.04365543, g: 0.044817843, b: 0.059549738, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -101846,6 +101846,10 @@ PrefabInstance:
       propertyPath: generalAudioSource
       value: 
       objectReference: {fileID: 579297954}
+    - target: {fileID: 5008036653556056701, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.15999985
+      objectReference: {fileID: 0}
     - target: {fileID: 5008036653556056702, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: near clip plane
       value: 0.002
