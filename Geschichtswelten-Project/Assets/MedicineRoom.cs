@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class MedicineRoom : Interactable
 {
-    public List<string> Beds = new List<string>();
+    public string _bed1;
+    public string _bed2;
+    public string _bed3;
 
-    public List<string> solution = new List<string>();
+    public string solution1;
+    public string solution2;
+    public string solution3;
     // Start is called before the first frame update
 
     protected override void Interact()
@@ -17,19 +21,17 @@ public class MedicineRoom : Interactable
 
     private void CheckBeds()
     {
-        for (int i = 0; i < solution.Count; i++)
+        if (_bed1.Equals(solution1) && _bed2.Equals(solution2) && _bed3.Equals(solution3))
         {
-            if (!Beds[i].Equals(solution[i]))
-            {
-                Reset();
-                return;
-            }
+            //Upgrade
+            Debug.Log("Upgrade");
         }
-        //Upgrade Card
     }
 
     private void Reset()
     {
-        solution = new List<string>();
+        _bed1 = "";
+        _bed2 = "";
+        _bed3 = "";
     }
 }

@@ -6,19 +6,22 @@ using UnityEngine;
 public class Bed : MonoBehaviour
 {
     public MedicineRoom MedicineRoom;
+    public string name;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Box>().promptMessage.Equals("Medicine"))
+        switch (name)
         {
-            MedicineRoom.Beds.Add("Medicine");
-        }
-        else if (other.gameObject.GetComponent<Box>().promptMessage.Equals("Hazard Medicine"))
-        {
-            MedicineRoom.Beds.Add("Hazard Medicine");
-        }
-        else if (other.gameObject.GetComponent<Box>().promptMessage.Equals("First Aid Medicine"))
-        {
-            MedicineRoom.Beds.Add("First Aid Medicine");
+            case "Subject A":
+                MedicineRoom._bed1 = other.gameObject.GetComponent<Box>().promptMessage;
+                break;
+            case "Subject B":
+                MedicineRoom._bed2 = other.gameObject.GetComponent<Box>().promptMessage;
+                break;
+            case "Subject C":
+                MedicineRoom._bed3 = other.gameObject.GetComponent<Box>().promptMessage;
+                break;
+            default:
+                break;
         }
     }
 }
