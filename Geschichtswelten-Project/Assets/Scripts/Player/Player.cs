@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -17,11 +19,13 @@ public class Player : MonoBehaviour
     public Camera mainCamera;
     [SerializeField]
     private Transform cameraTransform;
+
+    private CameraShakeController cameraShakeScript;
     
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        
+        cameraShakeScript = GetComponent<CameraShakeController>();
     }
 
     void Update()
@@ -37,7 +41,7 @@ public class Player : MonoBehaviour
         moveDirection.z = input.y;
         moveDirection = cameraTransform.forward * moveDirection.z + cameraTransform.right * moveDirection.x;
         moveDirection.y = 0.013f;
-        controller.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
+        controller.Move(transform.TransformDirection(moveDirection) * (speed * Time.deltaTime));
 
         playerVelocity.y += gravity * Time.deltaTime;
         
@@ -51,10 +55,12 @@ public class Player : MonoBehaviour
     public void StartRun()
     {
         speed *= 1.5f;
+        cameraShakeScript.StartRunning();
     }
 
     public void EndRun()
     {
         speed = baseSpeed;
+        cameraShakeScript.StopRunning();
     }
 }

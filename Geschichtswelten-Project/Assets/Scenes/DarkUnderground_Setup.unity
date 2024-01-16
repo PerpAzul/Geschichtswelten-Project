@@ -89090,6 +89090,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1051077051376489652, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
   m_PrefabInstance: {fileID: 7563542983183904861}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1955284636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955284624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c023b0f0ea2e148ae35f5a140914e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _virtualCamera: {fileID: 1766635199}
+  cameraShakeRunning: 3
+  cameraShakeAiming: 0.1
+  cameraShakeWalking: 1
+  cameraShakeWhenHit: 10
+  increaseTimeHitShake: 0.1
+  smoothingTime: 0.5
 --- !u!1001 &1957486544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101875,6 +101894,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.15999985
       objectReference: {fileID: 0}
+    - target: {fileID: 5008036653556056701, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.30999947
+      objectReference: {fileID: 0}
     - target: {fileID: 5008036653556056702, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: near clip plane
       value: 0.002
@@ -101911,6 +101934,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7083522273317921439, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: _virtualCamera
+      value: 
+      objectReference: {fileID: 1766635199}
     - target: {fileID: 7435773726013582101, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -101919,7 +101946,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7151628117143318207, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
 --- !u!1001 &8155011302002224753
 PrefabInstance:

@@ -16,10 +16,13 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private bool isHealing;
     private bool cannotHealHealth;
 
+    private CameraShakeController cameraShakeScript;
+
     void Start()
     {
         currentHealth = maxHealth;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
+        cameraShakeScript = GetComponent<CameraShakeController>();
     }
 
     void Update()
@@ -72,6 +75,7 @@ public class PlayerHealth : MonoBehaviour
             cannotHealHealth = true;
             Invoke("HealHealth", 20f);
         }
+        cameraShakeScript.TakeDamage();
     }
 
 

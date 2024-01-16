@@ -50,6 +50,7 @@ public class Gun : MonoBehaviour
     public CinemachineVirtualCamera POV_cam;
     public GameObject crosshair;
     [SerializeField] private PauseMenu PauseMenu;
+    private CameraShakeController cameraShakeScript;
     #endregion
     
     
@@ -60,6 +61,7 @@ public class Gun : MonoBehaviour
         ammoCount.text = ammo + "/10";
         hitMarkerUI.gameObject.SetActive(false);
         crosshairUI.gameObject.SetActive(true);
+        cameraShakeScript = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraShakeController>();
     }
 
     // Update is called once per frame
@@ -209,6 +211,7 @@ public class Gun : MonoBehaviour
         POV_cam.m_Lens.FieldOfView -= 200 * Time.deltaTime;
         POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 30, 60);
         crosshair.SetActive(false);
+        cameraShakeScript.StartAiming();
     }
 
     public void StopAiming()
@@ -218,6 +221,7 @@ public class Gun : MonoBehaviour
         POV_cam.m_Lens.FieldOfView += 200 * Time.deltaTime;
         POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 30, 60);
         crosshair.SetActive(true);
+        cameraShakeScript.StopAiming();
     }
 
     #endregion
