@@ -51302,7 +51302,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1161090590
@@ -51317,6 +51317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e710e490abef5a34db2e973f2298e824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dying: 0
   path: {fileID: 1268216401}
   health: 60
   sightDistance: 20
@@ -64549,7 +64550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.31
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_LocalPosition.z
@@ -90121,6 +90122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e710e490abef5a34db2e973f2298e824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dying: 0
   path: {fileID: 292607143}
   health: 60
   sightDistance: 20
@@ -90150,7 +90152,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!23 &1977983422
@@ -96759,6 +96761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e710e490abef5a34db2e973f2298e824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dying: 0
   path: {fileID: 1105219909}
   health: 60
   sightDistance: 20
@@ -96795,28 +96798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ab8ebb71615a640aeb055e42d59650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!195 &3453833571088512860
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490990155}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.86
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.1
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2.74
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!23 &3453833571088512862
 MeshRenderer:
   m_ObjectHideFlags: 0

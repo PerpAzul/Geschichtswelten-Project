@@ -5089,6 +5089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e710e490abef5a34db2e973f2298e824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dying: 0
   path: {fileID: 0}
   health: 60
   sightDistance: 20
@@ -5118,6 +5119,6 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2.74
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
