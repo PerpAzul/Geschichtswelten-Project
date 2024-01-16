@@ -41,7 +41,7 @@ public class PlayerLook : MonoBehaviour
                     15f))
             {
                 var hitGameObject = hit.collider.gameObject;
-                if (hitGameObject.CompareTag("Enemy"))
+                if (hitGameObject.CompareTag("Box"))
                 {
                     //Debug.Log("Push Hit");
                     var rigidbody = hitGameObject.GetComponent<Rigidbody>();
@@ -164,7 +164,7 @@ public class PlayerLook : MonoBehaviour
                     Mathf.Infinity))
             {
                 var hitGameObject = hit.collider.gameObject;
-                if (hitGameObject.CompareTag("Enemy"))
+                if (hitGameObject.CompareTag("Box"))
                 {
                     Debug.Log("Pull Hit");
 
@@ -175,7 +175,7 @@ public class PlayerLook : MonoBehaviour
                         distance * 75.75f,
                         ForceMode.Force);
                         
-                    StartCoroutine(StartCountdown(5));
+                    StartCoroutine(StartCountdown(1));
                 }
             }
             else
