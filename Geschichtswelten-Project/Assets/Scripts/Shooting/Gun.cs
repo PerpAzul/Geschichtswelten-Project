@@ -207,20 +207,16 @@ public class Gun : MonoBehaviour
     public void StartAiming()
     {
         isAiming = true;
-        transform.localPosition = Vector3.Slerp(transform.localPosition, aimPose, aimSpeed * Time.deltaTime);
         POV_cam.m_Lens.FieldOfView -= 200 * Time.deltaTime;
-        POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 30, 60);
-        crosshair.SetActive(false);
+        POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 40, 60);
         cameraShakeScript.StartAiming();
     }
 
     public void StopAiming()
     {
         isAiming = false;
-        transform.localPosition = Vector3.Slerp(transform.localPosition, normalPose, aimSpeed * Time.deltaTime);
         POV_cam.m_Lens.FieldOfView += 200 * Time.deltaTime;
-        POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 30, 60);
-        crosshair.SetActive(true);
+        POV_cam.m_Lens.FieldOfView = Mathf.Clamp(POV_cam.m_Lens.FieldOfView, 40, 60);
         cameraShakeScript.StopAiming();
     }
 
