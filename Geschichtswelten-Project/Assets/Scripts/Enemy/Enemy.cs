@@ -65,16 +65,6 @@ public class Enemy : MonoBehaviour
         if (health <= 0f)
         {
             Die();
-            return;
-        }
-
-        if (UnityEngine.Random.Range(0.01f, 0.99f) <0.5)
-        {
-            stateMachine.GetAnimator().SetTrigger("LeftHit");
-        }
-        else
-        {
-            stateMachine.GetAnimator().SetTrigger("RightHit");
         }
     }
 
@@ -88,6 +78,7 @@ public class Enemy : MonoBehaviour
         stateMachine.GetAnimator().SetTrigger("Death");
         agent.destination = gameObject.transform.position; // to avoid the enemy getting moved while dying
         agent.speed = 0;
+        gameObject.tag = "Untagged";
         StartCoroutine(DestroyOnceAnimationIsOver());
     }
 
