@@ -20,7 +20,7 @@ public class BoxOpen : Interactable
         }
         else
         {
-            promptMessage = "I might need a Keycard for this";
+            promptMessage = "I might need a Keycard...";
         }
     }
 }

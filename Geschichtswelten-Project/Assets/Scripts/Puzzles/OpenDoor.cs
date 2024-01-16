@@ -10,7 +10,6 @@ public class OpenDoor : Interactable
 
     protected override void Interact()
     {
-        
         if (Keycard.hasKey)
         {
             GetComponent<Animation>().Play("HangarDoor1Open");
@@ -18,7 +17,7 @@ public class OpenDoor : Interactable
         }
         else
         {
-            promptMessage = "I might need a Keycard for this...";
+            promptMessage = "I might need a Keycard...";
         }
     }
 }
