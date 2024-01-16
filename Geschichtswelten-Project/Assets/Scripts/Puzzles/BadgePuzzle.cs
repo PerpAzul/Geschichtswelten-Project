@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,14 @@ public class BadgePuzzle : Interactable
     public List<string> solution = new List<string>();
     public List<string> input = new List<string>();
     public List<Table> tables = new List<Table>();
-    private List<Table> trash = new List<Table>();
     [SerializeField] private GameObject box;
+    [SerializeField] private GameObject letter;
     public int count = 0;
-    public int count2 = 0;
+
+    private void Awake()
+    {
+        letter.SetActive(false);
+    }
 
     protected override void Interact()
     {
@@ -19,13 +24,12 @@ public class BadgePuzzle : Interactable
 
     private void GetBadges()
     {
-       
-        for (int i = 0; i < tables.Count; i++)
+        for (var i = 0; i < tables.Count; i++)
         {
             {
                 if (tables[i].badge.activeSelf)
                 {
-                    input[i] = tables[i].name;
+                    input.Add(tables[i].name);
                 }
             }
         }
@@ -50,19 +54,18 @@ public class BadgePuzzle : Interactable
     private void Winner()
     {
         box.GetComponent<Animation>().Play("Crate_Open");
+        GetComponent<BoxCollider>().enabled = false;
+        foreach (var table in tables)
+        {
+            letter.SetActive(true);
+            box.GetComponent<BoxCollider>().enabled = false;
+            table.GetComponent<BoxCollider>().enabled = false;
+        }
     }
 
     private void ResetList()
     {
-        count = count2;
-        for (int i = 0; i < input.Count; i++)
-        {
-            input[i] = "";
-        }
+        input = new List<string>();
 
-        for (int i = 0; i < tables.Count; i++)
-        {
-            tables[i].DisableBadge();
-        }
     }
 }

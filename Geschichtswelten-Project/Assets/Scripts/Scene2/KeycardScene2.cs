@@ -22,6 +22,9 @@ public class KeycardScene2 : Interactable
 
     public void UpgradeKeycard()
     {
-        upgradeIndex++;
+        if (hasKey)
+        {
+            upgradeIndex++;
+        }
     }
 }

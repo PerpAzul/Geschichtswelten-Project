@@ -36,6 +36,16 @@ public class Button : Interactable
         GetComponent<MeshRenderer>().material.color = color;
     }
 
+    public void DisableBoxCollider()
+    {
+        GetComponent<BoxCollider>().enabled = false;
+    }
+
+    public void EnableBoxCollider2()
+    {
+        GetComponent<BoxCollider>().enabled = true;
+    }
+
     public void DeactivateRenderer()
     {
         GetComponent<Renderer>().enabled = false;

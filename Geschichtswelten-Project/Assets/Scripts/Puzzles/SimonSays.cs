@@ -175,6 +175,10 @@ public class SimonSays : MonoBehaviour
 
     private IEnumerator FlashFailureColors()
     {
+        RedButton.DisableBoxCollider();
+        YellowButton.DisableBoxCollider();
+        BlueButton.DisableBoxCollider();
+        GreenButton.DisableBoxCollider();
         RedButton.ApplyNewColor(new Color(255, 0, 0));
         YellowButton.ApplyNewColor(new Color(255, 0, 0));
         BlueButton.ApplyNewColor(new Color(255, 0, 0));
@@ -199,6 +203,10 @@ public class SimonSays : MonoBehaviour
         YellowButton.ApplyNewColor(new Color(255, 255, 0));
         BlueButton.ApplyNewColor(new Color(0, 0, 255));
         GreenButton.ApplyNewColor(new Color(0, 255, 0));
+        RedButton.EnableBoxCollider2();
+        YellowButton.EnableBoxCollider2();
+        BlueButton.EnableBoxCollider2();
+        GreenButton.EnableBoxCollider2();
     }
 
 
@@ -223,7 +231,10 @@ public class SimonSays : MonoBehaviour
             YellowButton.ActivateRenderer();
             yield return new WaitForSeconds(0.2f);
         }
-
+        RedButton.DisableBoxCollider();
+        YellowButton.DisableBoxCollider();
+        BlueButton.DisableBoxCollider();
+        GreenButton.DisableBoxCollider();
         door.GetComponent<Animation>().Play("HangarDoor1Open");
     }
 

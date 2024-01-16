@@ -12,6 +12,7 @@ public class BoxOpenScene2 : MonoBehaviour
     {
         index = 0;
     }
+    
 
     public void IncrementIndex()
     {

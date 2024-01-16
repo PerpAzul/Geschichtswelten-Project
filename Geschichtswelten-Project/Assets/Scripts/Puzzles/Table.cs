@@ -2,94 +2,100 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Table : Interactable
 {
     public string name;
-    private bool isActive;
     public GameObject badge;
     [SerializeField] private BadgePuzzle _badgePuzzle;
+    [SerializeField] private MiniBadgePuzzle _badgeMiniPuzzle;
+    private bool hasBadge;
+    private bool minihasBadge;
+    public int puzzle = 0;
 
     private void Awake()
     {
-        switch (name)
+        if (puzzle == 0)
         {
-            case "A":
-                badge.SetActive(false);
-                break;
+            switch (name)
+            {
+                case "A":
+                    badge.SetActive(false);
+                    break;
 
-            case "B":
-                badge.SetActive(false);
-                break;
+                case "B":
+                    badge.SetActive(false);
+                    break;
 
-            case "D":
-                badge.SetActive(false);
-                break;
+                case "D":
+                    badge.SetActive(false);
+                    break;
 
-            case "E":
-                badge.SetActive(false);
-                break;
-            case "F":
-                badge.SetActive(false);
-                break;
+                case "E":
+                    badge.SetActive(false);
+                    break;
+                case "F":
+                    badge.SetActive(false);
+                    break;
 
-            case "G":
-                badge.SetActive(true);
-                break;
+                case "G":
+                    badge.SetActive(true);
+                    break;
 
-            default:
-                badge.SetActive(false);
-                break;
+                default:
+                    badge.SetActive(false);
+                    break;
+            }
         }
-    }
-
-    public void DisableBadge()
-    {
-        switch (name)
+        else
         {
-            case "A":
-                badge.SetActive(false);
-                break;
-
-            case "B":
-                badge.SetActive(false);
-                break;
-
-            case "D":
-                badge.SetActive(false);
-                break;
-
-            case "E":
-                badge.SetActive(false);
-                break;
-            case "F":
-                badge.SetActive(false);
-                break;
-
-            case "G":
-                badge.SetActive(true);
-                break;
-
-            default:
-                badge.SetActive(false);
-                break;
+            badge.SetActive(false);
         }
     }
 
     protected override void Interact()
     {
-        if (_badgePuzzle.count != 0)
+        if (puzzle == 0)
         {
-            badge.gameObject.SetActive(true);
-            _badgePuzzle.count--;
-            isActive = true;
+            if (!hasBadge)
+            {
+                if (_badgePuzzle.count != 0)
+                {
+                    promptMessage = "Take Badge";
+                    badge.SetActive(true);
+                    hasBadge = true;
+                    _badgePuzzle.count--;
+                }
+            }
+            else
+            {
+                promptMessage = "Place Badge";
+                badge.SetActive(false);
+                hasBadge = false;
+                _badgePuzzle.count++;
+            }
         }
-        else
+        else if (puzzle == 1)
         {
-            badge.gameObject.SetActive(false);
-            _badgePuzzle.count++;
-            isActive = false;
+            if (!minihasBadge)
+            {
+                if (_badgeMiniPuzzle.count != 0)
+                {
+                    promptMessage = "Take Badge";
+                    badge.SetActive(true);
+                    minihasBadge = true;
+                    _badgeMiniPuzzle.count--;
+                }
+            }
+            else
+            {
+                promptMessage = "Place Badge";
+                badge.SetActive(false);
+                minihasBadge = false;
+                _badgeMiniPuzzle.count++;
+            }
+            
         }
     }
-    
 }
