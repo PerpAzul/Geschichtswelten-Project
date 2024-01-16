@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject player;
     private Vector3 lastKnownPos;
-    
+
+   [HideInInspector] public bool dying = false;
 
     public NavMeshAgent Agent {get => agent;}
     public GameObject Player {get => player;}
@@ -64,14 +65,38 @@ public class Enemy : MonoBehaviour
         if (health <= 0f)
         {
             Die();
+            return;
+        }
+
+        if (UnityEngine.Random.Range(0.01f, 0.99f) <0.5)
+        {
+            stateMachine.GetAnimator().SetTrigger("LeftHit");
+        }
+        else
+        {
+            stateMachine.GetAnimator().SetTrigger("RightHit");
         }
     }
 
     private void Die()
     {
-        Destroy(gameObject);
+        if (dying)
+        {
+            return;
+        }
+        dying = true;
+        stateMachine.GetAnimator().SetTrigger("Death");
+        agent.destination = gameObject.transform.position; // to avoid the enemy getting moved while dying
+        agent.speed = 0;
+        StartCoroutine(DestroyOnceAnimationIsOver());
     }
 
+    private IEnumerator DestroyOnceAnimationIsOver()
+    {
+        yield return new WaitForSeconds(0.5f); //wait a bit so the animation can start to play
+        yield return new WaitUntil(() => stateMachine.GetAnimator().GetCurrentAnimatorStateInfo(0).IsName("dead") == false); // wait until the animation is done playing
+        Destroy(gameObject);
+    }
     public bool CanSeePlayer()
     {
         if (player != null)
