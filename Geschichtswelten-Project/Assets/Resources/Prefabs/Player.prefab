@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 9113111924216423823}
   - component: {fileID: 6398357481623291102}
   - component: {fileID: 8854784133178291727}
+  - component: {fileID: 7151628117143318207}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -191,6 +192,7 @@ MonoBehaviour:
   flashlight: {fileID: 1966778819888115443}
   on: 0
   off: 0
+  inCutscene: 0
 --- !u!114 &6398357481623291102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +228,25 @@ MonoBehaviour:
   ySensitivity: 200
   hold: {fileID: 4007848511095130089}
   navMeshisDeactivated: 0
+--- !u!114 &7151628117143318207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051077051376489652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c023b0f0ea2e148ae35f5a140914e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _virtualCamera: {fileID: 1045575921915061532}
+  cameraShakeRunning: 3
+  cameraShakeAiming: 0.1
+  cameraShakeWalking: 1
+  cameraShakeWhenHit: 10
+  increaseTimeHitShake: 0.1
+  smoothingTime: 0.8
 --- !u!1 &2329945360964773974
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6276911937453893845, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.30999947
+      value: 1.1223269
       objectReference: {fileID: 0}
     - target: {fileID: 6276911937453893845, guid: d87134f79b0efaf4eaef874b6fbcdcf3, type: 3}
       propertyPath: m_LocalRotation.w
