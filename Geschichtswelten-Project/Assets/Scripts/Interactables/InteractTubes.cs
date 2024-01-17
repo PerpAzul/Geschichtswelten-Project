@@ -13,11 +13,16 @@ public class InteractTubes : Interactable
     [SerializeField] private GameObject tube5;
     [SerializeField] private GameObject tube6;
     [SerializeField] private int index;
+    [SerializeField] private GameObject monitor;
+    [SerializeField] private GameObject upgrade;
 
     protected override void Interact()
     {
         switch (index)
         {
+            case 0:
+                TestSolution();
+                break;
             case 2:
                 Change2Tubes();
                 break;
@@ -30,6 +35,17 @@ public class InteractTubes : Interactable
             case 7:
                 Reset();
                 break;
+            default:
+                break;
+        }
+    }
+
+    public void TestSolution()
+    {
+        if (tube1.activeSelf == true && tube2.activeSelf == true && tube3.activeSelf == true && tube4.activeSelf == true && tube5.activeSelf == true && tube6.activeSelf == true)
+        {
+            monitor.GetComponent<BoxCollider>().enabled = false;
+            upgrade.GetComponent<BoxCollider>().enabled = true;
         }
     }
 

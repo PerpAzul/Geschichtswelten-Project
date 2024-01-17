@@ -37,6 +37,9 @@ public class MiniBadgePuzzle : Interactable
     {
         for (var i = 0; i < solution.Count; i++)
         {
+            
+            Debug.Log(input[i]);
+            Debug.Log(solution[i]);
             if (!input[i].Equals(solution[i]))
             {
                 input = new List<string>();

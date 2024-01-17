@@ -16,7 +16,6 @@ public class MonitorUpgradeCard : Interactable
     {
         if (_keycardScene2.hasKey)
         {
-            
             GetComponent<BoxCollider>().enabled = false;
         }
         else
@@ -24,6 +23,7 @@ public class MonitorUpgradeCard : Interactable
             promptMessage = "I need a Keycard for this";
         }
     }
+    
 
     public void EnableBoxCollider()
     {

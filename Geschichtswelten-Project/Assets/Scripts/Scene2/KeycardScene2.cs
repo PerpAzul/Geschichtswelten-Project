@@ -12,6 +12,7 @@ public class KeycardScene2 : Interactable
     {
         hasKey = false;
         upgradeIndex = 0;
+        
     }
 
     protected override void Interact()

@@ -12,7 +12,9 @@ public class MedicineRoom : Interactable
     public string solution1;
     public string solution2;
     public string solution3;
-    // Start is called before the first frame update
+
+    public GameObject monitor;
+    public GameObject upgrade;
 
     protected override void Interact()
     {
@@ -23,8 +25,10 @@ public class MedicineRoom : Interactable
     {
         if (_bed1.Equals(solution1) && _bed2.Equals(solution2) && _bed3.Equals(solution3))
         {
-            //Upgrade
-            Debug.Log("Upgrade");
+            
+            Debug.Log("solved");
+            monitor.GetComponent<BoxCollider>().enabled = false;
+            upgrade.GetComponent<BoxCollider>().enabled = true;
         }
     }
 
