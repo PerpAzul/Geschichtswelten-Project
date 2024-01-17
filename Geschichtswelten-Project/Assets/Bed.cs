@@ -7,7 +7,7 @@ public class Bed : MonoBehaviour
 {
     public MedicineRoom MedicineRoom;
     public string name;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         switch (name)
         {
@@ -19,6 +19,24 @@ public class Bed : MonoBehaviour
                 break;
             case "Subject C":
                 MedicineRoom._bed3 = other.gameObject.GetComponent<Box>().promptMessage;
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        switch (name)
+        {
+            case "Subject A":
+                MedicineRoom._bed1 = "";
+                break;
+            case "Subject B":
+                MedicineRoom._bed2 = "";
+                break;
+            case "Subject C":
+                MedicineRoom._bed3 = "";
                 break;
             default:
                 break;

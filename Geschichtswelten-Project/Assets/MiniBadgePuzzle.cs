@@ -9,9 +9,9 @@ public class MiniBadgePuzzle : Interactable
     public List<Table> tables = new List<Table>();
     public List<string> input = new List<string>();
     public int count = 0;
-
-
-   
+    [SerializeField] private GameObject monitoron;
+    [SerializeField] private GameObject monitoroff;
+    [SerializeField] private GameObject monitorbox;
 
     protected override void Interact()
     {
@@ -35,11 +35,14 @@ public class MiniBadgePuzzle : Interactable
 
     private void CheckInput()
     {
+        if (input.Count == 0)
+        {
+            input = new List<string>();
+            return;
+        }
+        
         for (var i = 0; i < solution.Count; i++)
         {
-            
-            Debug.Log(input[i]);
-            Debug.Log(solution[i]);
             if (!input[i].Equals(solution[i]))
             {
                 input = new List<string>();
@@ -53,6 +56,9 @@ public class MiniBadgePuzzle : Interactable
     private void Winner()
     {
         GetComponent<BoxCollider>().enabled = false;
+        monitorbox.GetComponent<BoxCollider>().enabled = true;
+        monitoroff.SetActive(false);
+        monitoron.SetActive(true);
         foreach (var table in tables)
         {
             table.GetComponent<BoxCollider>().enabled = false;

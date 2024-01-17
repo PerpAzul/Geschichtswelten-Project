@@ -6,12 +6,7 @@ using UnityEngine;
 public class MonitorUpgradeCard : Interactable
 {
     [SerializeField] private KeycardScene2 _keycardScene2;
-
-    private void Awake()
-    {
-        GetComponent<BoxCollider>().enabled = false;
-    }
-
+    
     protected override void Interact()
     {
         if (_keycardScene2.hasKey)

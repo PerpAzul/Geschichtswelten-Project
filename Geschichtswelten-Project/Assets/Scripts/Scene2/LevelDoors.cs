@@ -21,4 +21,14 @@ public class LevelDoors : Interactable
             promptMessage = "I need a " + color + " level Keycard";
         }
     }
+
+    public void OpenDoor()
+    {
+        GetComponent<Animation>().Play("HangarDoor1Open");
+    }
+    
+    public void CloseDoor()
+    {
+        GetComponent<Animation>().Play("HangarDoor1Close");
+    }
 }

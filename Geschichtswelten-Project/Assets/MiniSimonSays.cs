@@ -16,6 +16,10 @@ public class MiniSimonSays : MonoBehaviour
     [SerializeField] private AudioClip success;
     private bool hasInput;
 
+    [SerializeField] private GameObject monitorbox;
+    [SerializeField] private GameObject monitoroff;
+    [SerializeField] private GameObject monitoron;
+
     private void Update()
     {
         if (input.Count == 4)
@@ -99,6 +103,9 @@ public class MiniSimonSays : MonoBehaviour
     
     private IEnumerator Victory()
     {
+        monitorbox.GetComponent<BoxCollider>().enabled = true;
+        monitoroff.SetActive(false);
+        monitoron.SetActive(true);
         _greenButton.RemoveInteractText();
         _redButton.RemoveInteractText();
         _purpleButton.RemoveInteractText();
