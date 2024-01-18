@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class CutsceneManager : MonoBehaviour
@@ -150,6 +151,9 @@ public class CutsceneManager : MonoBehaviour
                 break;
             case 9:
                 index++;
+                break;
+            case 10:
+                SceneManager.LoadScene("scene_lightsOff");
                 break;
             default:
                 return;

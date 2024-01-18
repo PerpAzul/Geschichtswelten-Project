@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DarkUnderground_Setup.unity
     guid: fca3d8eb4cdecb041aa058c6940c6821
-  - enabled: 0
-    path: Assets/Scenes/Jorge Scene.unity
-    guid: 83ca5c157e4e1ba499347f1ad871e422
+  - enabled: 1
+    path: Assets/Scenes/scene_lightsOff.unity
+    guid: dee719ff15f63d94482a2d0ebafd425d
   - enabled: 1
     path: Assets/Scenes/Death Screen.unity
     guid: d8cda9f5d953beb4d9b47112c1e83369

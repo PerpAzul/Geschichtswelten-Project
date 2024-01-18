@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject PapersUI;
     [SerializeField] private GameObject keypad;
     [SerializeField] private GameObject cutscene;
+    [SerializeField] private GameObject advancedOptions;
     private PlayerInput.PauseMenuActions playerActions;
     private PlayerInput PlayerInput;
     public bool isPaused = false;
@@ -62,6 +63,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (PapersUI.gameObject.activeSelf)
         {
+            advancedOptions.SetActive(false);
             pauseMenu.SetActive(false);
             OptionsMenu.SetActive(false);
             isPaused = false;
@@ -70,6 +72,7 @@ public class PauseMenu : MonoBehaviour
         
         if (keypad.gameObject.activeSelf)
         {
+            advancedOptions.SetActive(false);
             pauseMenu.SetActive(false);
             OptionsMenu.SetActive(false);
             isPaused = false;
@@ -82,6 +85,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         OptionsMenu.SetActive(false);
+        advancedOptions.SetActive(false);
         if (cutscene.gameObject.GetComponent<CutsceneManager>().isActiveAndEnabled)
         {
             isPaused = false;
@@ -115,5 +119,23 @@ public class PauseMenu : MonoBehaviour
         //gameUI.SetActive(false);
         pauseMenu.SetActive(false);
         OptionsMenu.SetActive(true);
+    }
+
+    public void CloseAdvancedOptions()
+    {
+        if (advancedOptions.activeSelf)
+        {
+            advancedOptions.SetActive(false);
+            OptionsMenu.SetActive(true);
+        }
+    }
+
+    public void OpenAdvancedOptions()
+    {
+        if (OptionsMenu.activeSelf)
+        {
+            OptionsMenu.SetActive(false);
+            advancedOptions.SetActive(true);
+        }
     }
 }
