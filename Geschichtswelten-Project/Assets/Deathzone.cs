@@ -6,7 +6,6 @@ using UnityEngine;
 public class Deathzone : MonoBehaviour
 {
     public List<GameObject> Objects = new List<GameObject>();
-
     public List<GameObject> locationsToRespawn = new List<GameObject>();
     private int count = 0;
 
@@ -21,6 +20,10 @@ public class Deathzone : MonoBehaviour
             }
         }
 
+        if (Objects[count].GetComponent<Box>().Stop)
+        {
+            return;
+        }
         Objects[count].transform.position = locationsToRespawn[count].transform.position;
         Objects[count].transform.rotation = new Quaternion(0, 0, 0, 0);
         Objects[count].transform.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);

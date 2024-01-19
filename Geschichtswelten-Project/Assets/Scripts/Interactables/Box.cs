@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Box : Interactable
 {
-    private bool Stop;
+    public bool Stop;
     public Camera cam;
 
     protected override void Interact()
