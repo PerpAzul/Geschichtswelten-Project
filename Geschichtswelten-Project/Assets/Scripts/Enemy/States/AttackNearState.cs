@@ -13,7 +13,7 @@ public class AttackNearState : BaseState
 
     public override void Perform()
     {
-        Debug.Log("AttackNearState");
+        //Debug.Log("AttackNearState");
         if (Look.navMeshisDeactivated)
         {
             return;

@@ -15,7 +15,7 @@ public class SearchState : BaseState
 
     public override void Perform()
     {
-        Debug.Log("Search State");
+        //Debug.Log("Search State");
         if (enemy.CanSeePlayer())
         {
             if (enemy.index == 0)

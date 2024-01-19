@@ -38,7 +38,7 @@ public class PlayerLook : MonoBehaviour
         {
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
-                    15f))
+                    Mathf.Infinity))
             {
                 var hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Box"))
@@ -50,15 +50,15 @@ public class PlayerLook : MonoBehaviour
                     switch (distance)
                     {
                         case <= 5f:
-                            rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 1500f,
+                            rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 3500f,
                                 ForceMode.Force);
                             break;
                         case > 5f and <= 10f:
-                            rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 1000f,
+                            rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 2000f,
                                 ForceMode.Force);
                             break;
                         case > 10f and < 15f:
-                            rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 750f,
+                            rigidbody.AddForce((rigidbody.transform.position - transform.position).normalized * 1750f,
                                 ForceMode.Force);
                             break;
                     }
