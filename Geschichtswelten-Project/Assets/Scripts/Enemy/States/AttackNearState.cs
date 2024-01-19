@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackNearState : BaseState
 {
     private float attackTimer;
+    private float changeTimer;
 
     public override void Enter()
     {
@@ -13,17 +14,13 @@ public class AttackNearState : BaseState
 
     public override void Perform()
     {
-        //Debug.Log("AttackNearState");
-        if (Look.navMeshisDeactivated)
-        {
-            return;
-        }
+        enemy.Agent.SetDestination(enemy.Player.transform.position);
+        
         if (enemy.CanSeePlayer())
         {
+            changeTimer = 0;
             float targetDistance = Mathf.Abs(Vector3.Distance(enemy.Player.transform.position, enemy.transform.position));
-            enemy.transform.LookAt(enemy.Player.transform);
-            enemy.Agent.SetDestination(enemy.Player.transform.position);
-            if (targetDistance < enemy.Agent.stoppingDistance + 1.2f)
+            if (targetDistance < enemy.Agent.stoppingDistance)
             {
                 attackTimer += Time.deltaTime;
                 if (attackTimer > 1f)
@@ -37,7 +34,11 @@ public class AttackNearState : BaseState
         }
         else
         { 
-            stateMachine.ChangeState(new SearchState());
+            changeTimer += Time.deltaTime;
+            if (changeTimer > 5f)
+            {
+                stateMachine.ChangeState(new SearchState());
+            }
         }
     }
 
@@ -48,7 +49,7 @@ public class AttackNearState : BaseState
 
     public void Attack()
     {
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
         enemy.Player.GetComponent<PlayerHealth>().TakeDamage();
     }
 }

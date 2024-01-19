@@ -10,6 +10,7 @@ public class BadgePuzzle : Interactable
     public List<Table> tables = new List<Table>();
     [SerializeField] private GameObject box;
     [SerializeField] private GameObject letter;
+    [SerializeField] private GameObject zombie;
     public int count = 0;
 
     private void Awake()
@@ -55,6 +56,7 @@ public class BadgePuzzle : Interactable
     {
         box.GetComponent<Animation>().Play("Crate_Open");
         GetComponent<BoxCollider>().enabled = false;
+        zombie.SetActive(true);
         foreach (var table in tables)
         {
             letter.SetActive(true);

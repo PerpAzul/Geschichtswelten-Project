@@ -25,10 +25,10 @@ public class Enemy : MonoBehaviour
     public Way path;
     
     //Health
-    public float health = 50f;
+    public float health = 60f;
     
     //Sight Values
-    public float sightDistance = 100f;
+    public float sightDistance = 20f;
     public float fieldOfView = 90f;
     public float eyeHeight;
     

@@ -9,9 +9,6 @@ public class Door_02 : MonoBehaviour {
 
 	public Animation Wing;
 
-
-
-
 	void OnTriggerEnter(Collider c) {
 		
 		if (c.tag.Equals("Player")) {
@@ -19,7 +16,13 @@ public class Door_02 : MonoBehaviour {
 			Wing ["door_02_wing"].speed = 1;
 			Wing.Play ();
 		}
-
+		
+		if (c.tag.Equals("Enemy")) {
+			Debug.Log("enemy");
+			GetComponent<AudioSource> ().Play ();
+			Wing ["door_02_wing"].speed = 1;
+			Wing.Play ();
+		}
 	}
 
 	void OnTriggerExit(Collider c) {
@@ -30,7 +33,13 @@ public class Door_02 : MonoBehaviour {
 			Wing ["door_02_wing"].speed = -1;
 			Wing.Play ();
 		}
-
+		
+		if (c.tag.Equals("Enemy")) {
+			GetComponent<AudioSource> ().Play ();
+			Wing ["door_02_wing"].time = Wing ["door_02_wing"].length;
+			Wing ["door_02_wing"].speed = -1;
+			Wing.Play ();
+		}
 	}
 
 
