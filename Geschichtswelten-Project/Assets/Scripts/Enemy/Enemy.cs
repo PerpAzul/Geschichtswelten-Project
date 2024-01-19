@@ -60,14 +60,10 @@ public class Enemy : MonoBehaviour
                     break;
                 case > 2f and <= 5f:
                     Debug.Log("Damage 2");
-                    TakeDamage(3);
+                    TakeDamage(5);
                     break;
-                case > 5f and <= 7.5f:
+                case > 5f:
                     Debug.Log("Damage 3");
-                    TakeDamage(7);
-                    break;
-                case >7.5f and <= 10f:
-                    Debug.Log("Damage 4");
                     TakeDamage(10);
                     break;
             }

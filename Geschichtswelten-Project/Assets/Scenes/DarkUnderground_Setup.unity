@@ -22173,7 +22173,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -22182,14 +22182,22 @@ PrefabInstance:
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547702407}
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: pickAmmo
       objectReference: {fileID: 0}
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: pickAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Gun, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3293732944074671280, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_Name
@@ -96882,7 +96890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -96891,14 +96899,22 @@ PrefabInstance:
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 183401294}
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: pickAmmo
       objectReference: {fileID: 0}
     - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: pickAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Gun, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293000210000221327, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3293732944074671280, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_Name
