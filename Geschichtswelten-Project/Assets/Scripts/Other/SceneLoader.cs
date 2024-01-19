@@ -20,6 +20,10 @@ public class SceneLoader : MonoBehaviour
         scenes[2].SetActive(false);
     }
 
+    public void StartGame()
+    {
+        SceneManager.LoadScene("DarkUnderground_Setup");
+    }
     public void OpenAdvancedSettings()
     {
         scenes[2].SetActive(false);
@@ -46,6 +50,11 @@ public class SceneLoader : MonoBehaviour
     public void LoadLevel()
     {
         SceneManager.LoadScene("DarkUnderground_Setup");
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("scene_lightsOff");
     }
 
     public void ExitToDesktop()
