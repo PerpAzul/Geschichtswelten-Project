@@ -15,14 +15,14 @@ public class InteractTubes : Interactable
     [SerializeField] private int index;
     [SerializeField] private GameObject monitor;
     [SerializeField] private GameObject upgrade;
+    [SerializeField] private GameObject screnoff;
+    [SerializeField] private GameObject screenon;
+    [SerializeField] private bool isUpgraded;
 
     protected override void Interact()
     {
         switch (index)
         {
-            case 0:
-                TestSolution();
-                break;
             case 2:
                 Change2Tubes();
                 break;
@@ -40,12 +40,24 @@ public class InteractTubes : Interactable
         }
     }
 
-    public void TestSolution()
+    private void Update()
     {
-        if (tube1.activeSelf == true && tube2.activeSelf == true && tube3.activeSelf == true && tube4.activeSelf == true && tube5.activeSelf == true && tube6.activeSelf == true)
+        if (!isUpgraded)
         {
-            monitor.GetComponent<BoxCollider>().enabled = false;
-            upgrade.GetComponent<BoxCollider>().enabled = true;
+            if (tube1.activeSelf == true && tube2.activeSelf == true && tube3.activeSelf == true && tube4.activeSelf == true && tube5.activeSelf == true && tube6.activeSelf == true)
+            {
+                if (index == 0)
+                {
+                    monitor.GetComponent<BoxCollider>().enabled = false;
+                    upgrade.GetComponent<BoxCollider>().enabled = true;
+                    screnoff.SetActive(false);
+                    screenon.SetActive(true);
+                    isUpgraded = true;
+                    return;
+                }
+                monitor.GetComponent<BoxCollider>().enabled = false;
+                isUpgraded = true;
+            }
         }
     }
 

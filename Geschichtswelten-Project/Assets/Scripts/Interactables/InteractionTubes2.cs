@@ -11,14 +11,12 @@ public class InteractionTubes2 : Interactable
     [SerializeField] private int index;
     [SerializeField] private GameObject monitor;
     [SerializeField] private LevelDoors orangeDoor;
+    private bool isSolved;
 
     protected override void Interact()
     {
         switch (index)
         {
-            case 0:
-                TestSolution();
-                break;
             case 1:
                 Change1Tube();
                 break;
@@ -36,12 +34,16 @@ public class InteractionTubes2 : Interactable
         }
     }
 
-    public void TestSolution()
+    private void Update()
     {
-        if (tube1.activeSelf == true && tube2.activeSelf == true && tube3.activeSelf == true && tube4.activeSelf == true)
+        if (!isSolved)
         {
-            monitor.GetComponent<BoxCollider>().enabled = false;
-            orangeDoor.OpenDoor();
+            if (tube1.activeSelf == true && tube2.activeSelf == true && tube3.activeSelf == true && tube4.activeSelf == true)
+            {
+                monitor.GetComponent<BoxCollider>().enabled = false;
+                orangeDoor.OpenDoor();
+                isSolved = true;
+            }
         }
     }
 
