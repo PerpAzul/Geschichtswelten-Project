@@ -10,6 +10,8 @@ TagManager:
   - Box
   - Panel
   - Badge
+  - Hangar
+  - Music
   layers:
   - Default
   - TransparentFX
