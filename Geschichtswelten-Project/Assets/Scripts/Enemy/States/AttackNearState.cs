@@ -9,7 +9,7 @@ public class AttackNearState : BaseState
 
     public override void Enter()
     {
-
+        stateMachine.GetAnimator().SetTrigger("Aggressive");
     }
 
     public override void Perform()
@@ -44,12 +44,13 @@ public class AttackNearState : BaseState
 
     public override void Exit()
     {
-
+        stateMachine.GetAnimator().SetTrigger("StopAggression");
     }
 
     public void Attack()
     {
         //Debug.Log("Attack");
         enemy.Player.GetComponent<PlayerHealth>().TakeDamage();
+        stateMachine.GetAnimator().SetTrigger("Attack");
     }
 }
