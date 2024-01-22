@@ -24,7 +24,8 @@ public class DialogTrigger : MonoBehaviour
         Debug.Log("collided with:" + other.name);
         if (other.CompareTag("Player"))
         {
-            this.gameObject.SetActive(false); //the Dialog should only be triggered once when passing through the door
+            //the Dialog should only be triggered once when passing through the door
+            gameObject.GetComponent<BoxCollider>().enabled = false;
             dialogSystemObject.SetActive(true); // reactivate the dialog system if it was inactive
             dialogSystemObject.GetComponent<DialogSystem>().AddMultipleLines(dialogLines);
         }
