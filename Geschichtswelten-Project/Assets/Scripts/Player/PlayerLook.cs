@@ -25,6 +25,7 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] private AudioSource _source;
     [SerializeField] private AudioClip pull;
     [SerializeField] private AudioClip push;
+    public int scene;
 
     
     private void Awake()
@@ -37,6 +38,10 @@ public class PlayerLook : MonoBehaviour
     //GravityPush Power with Collision Detection
     public void GravityPush()
     {
+        if (scene == 0)
+        {
+            return;
+        }
         if (_canUsePowers)
         {
             RaycastHit hit;
@@ -124,6 +129,10 @@ public class PlayerLook : MonoBehaviour
     //GravityPull with Detection 
     public void GravityPull()
     {
+        if (scene == 0)
+        {
+            return;
+        }
         if (_canUsePowers)
         {
             RaycastHit hit;
@@ -157,18 +166,7 @@ public class PlayerLook : MonoBehaviour
 
         Debug.Log("No Hit");
     }
-
-    private IEnumerator StartFloatCountdown(int time)
-    {
-        _turnoff.useGravity = true;
-        _canUsePowers = false;
-        _useGravityFloat = false;
-        yield return new WaitForSeconds(time);
-        _canUsePowers = true;
-        _state.inAir = false;
-        _turnoff.GetComponent<NavMeshAgent>().enabled = true;
-        navMeshisDeactivated = false;
-    }
+    
     private IEnumerator StartCountdown(int time)
     {
         _canUsePowers = false;

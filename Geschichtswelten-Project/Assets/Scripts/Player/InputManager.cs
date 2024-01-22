@@ -15,11 +15,10 @@ public class InputManager : MonoBehaviour
 
     void Awake()
     {
-        
         playerInput = new PlayerInput();
         playerActions = playerInput.PlayerBasics;
         powersActions = playerInput.Powers;
-        
+
         player = GetComponent<Player>();
         look = GetComponent<PlayerLook>();
         flash = GetComponent<Flashlight>();
@@ -31,20 +30,18 @@ public class InputManager : MonoBehaviour
         powersActions.GravityPull.performed += ctx => look.GravityPull();
         powersActions.ActivateGravityPush.performed += ctx => look.GravityPush();
         //powersActions.GravityFloat.performed += ctx => look.GravityFloat();
-        
     }
 
     private void FixedUpdate()
-    { 
+    {
         player.Move(playerActions.Move.ReadValue<Vector2>());
     }
-    
+
 
     private void OnEnable()
     {
         playerActions.Enable();
         powersActions.Enable();
-        
     }
 
     private void OnDisable()

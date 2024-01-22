@@ -15,7 +15,7 @@ public class StateMachine : MonoBehaviour
     {
         return animator;
     }
-    
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -29,14 +29,9 @@ public class StateMachine : MonoBehaviour
         {
             return;
         }
+
         if (activeState != null)
         {
-            if (Look.navMeshisDeactivated)
-            {
-                Debug.Log(Look.navMeshisDeactivated);
-                ChangeState(new WaitingState());
-            }
-            
             activeState.Perform();
         }
     }
