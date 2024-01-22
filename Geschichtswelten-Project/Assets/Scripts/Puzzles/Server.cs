@@ -10,7 +10,42 @@ public class Server : Interactable
 
     private void Awake()
     {
-        promptMessage = color.ToString();
+        switch (color)
+        {
+            case ServerColors.Red:
+                promptMessage = "Red";
+                break;
+            case ServerColors.Blue:
+                promptMessage = "Blue";
+                break;
+            case ServerColors.Green:
+                promptMessage = "Green";
+                break;
+            case ServerColors.Yellow:
+                promptMessage = "Yellow";
+                break;
+            case ServerColors.Red2:
+                promptMessage = "Red";
+                break;
+            case ServerColors.Blue2:
+                promptMessage = "Blue";
+                break;
+            case ServerColors.Green2:
+                promptMessage = "Green";
+                break;
+            case ServerColors.Yellow2:
+                promptMessage = "Yellow";
+                break;
+            case ServerColors.White:
+                promptMessage = "White";
+                break;
+            case ServerColors.Pink:
+                promptMessage = "Pink";
+                break;
+            case ServerColors.LightBlue:
+                promptMessage = "Light Blue";
+                break;
+        }
     }
 
     protected override void Interact()
