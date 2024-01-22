@@ -12,6 +12,7 @@ TagManager:
   - Badge
   - Hangar
   - Music
+  - Puzzle
   layers:
   - Default
   - TransparentFX

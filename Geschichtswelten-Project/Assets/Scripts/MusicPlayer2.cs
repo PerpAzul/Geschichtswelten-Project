@@ -12,11 +12,13 @@ public class MusicPlayer2 : MonoBehaviour
     [SerializeField] private AudioSource _audioSource2;
     [SerializeField] private List<AudioClip> Musics = new List<AudioClip>();
     public bool spookyMusicPlaying;
+    public bool onHangar;
 
     // Start is called before the first frame update
     void Start()
     {
         spookyMusicPlaying = true;
+        onHangar = false;
     }
 
     // Update is called once per frame
