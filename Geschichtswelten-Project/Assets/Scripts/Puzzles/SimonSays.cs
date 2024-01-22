@@ -25,6 +25,7 @@ public class SimonSays : MonoBehaviour
     [SerializeField] private AudioClip yellowButton;
     [SerializeField] private AudioClip blueButton;
     [SerializeField] private AudioSource generalAudioSource;
+    [SerializeField] private AudioClip _doorClip;
 
     #endregion
 
@@ -235,6 +236,7 @@ public class SimonSays : MonoBehaviour
         YellowButton.DisableBoxCollider();
         BlueButton.DisableBoxCollider();
         GreenButton.DisableBoxCollider();
+        generalAudioSource.PlayOneShot(_doorClip);
         door.GetComponent<Animation>().Play("HangarDoor1Open");
     }
 

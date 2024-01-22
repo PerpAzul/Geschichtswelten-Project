@@ -33,6 +33,7 @@ public class MusicTriggerScene2 : MonoBehaviour
                 _musicPlayer2.PlayMuteTransition();
                 _musicPlayer2.spookyMusicPlaying = false;
             }
+            
         }
     }
 }

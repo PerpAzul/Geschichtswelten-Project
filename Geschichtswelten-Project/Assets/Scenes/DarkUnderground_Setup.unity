@@ -3159,6 +3159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hangarDoor: {fileID: 0}
+  AudioSource: {fileID: 0}
+  AudioClip: {fileID: 0}
   isActivated: 0
   turnedOn: 0
 --- !u!65 &69455456
@@ -22913,7 +22915,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -28488,7 +28490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4050474928985422, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1776423
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 4050474928985422, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38258,6 +38260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 776365102}
+  _audio: {fileID: 579297954}
+  _clip: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
 --- !u!65 &841607909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39461,6 +39465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plate: {fileID: 1569954283}
+  _audio: {fileID: 579297954}
+  clip: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
 --- !u!1001 &867260852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43174,6 +43180,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 65606536635463694, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+      propertyPath: m_Size.z
+      value: 3.1422405
+      objectReference: {fileID: 0}
+    - target: {fileID: 65606536635463694, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65606536635463694, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+      propertyPath: m_Center.z
+      value: 0.42887974
+      objectReference: {fileID: 0}
+    - target: {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+      propertyPath: _clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
+    - target: {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 579297954}
     - target: {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: doorLocked
       value: 0
@@ -48860,6 +48886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hangarDoor: {fileID: 1102434709}
+  AudioSource: {fileID: 579297954}
+  AudioClip: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
   isActivated: 0
   turnedOn: 0
 --- !u!1001 &1103797627
@@ -51460,7 +51488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4050474928985422, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1776423
+      value: 1.118
       objectReference: {fileID: 0}
     - target: {fileID: 4050474928985422, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62388,6 +62416,7 @@ MonoBehaviour:
   yellowButton: {fileID: 8300000, guid: 434f39bd4301f401dbe636aff50a77bf, type: 3}
   blueButton: {fileID: 8300000, guid: 74db39c00835b4b5bbbddf040b333be0, type: 3}
   generalAudioSource: {fileID: 579297954}
+  _doorClip: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
   door: {fileID: 776365102}
   RedButton: {fileID: 496643309}
   BlueButton: {fileID: 1120158170}
@@ -67663,7 +67692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4050474928985422, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1776423
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 4050474928985422, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69021,6 +69050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hangarDoor: {fileID: 0}
+  AudioSource: {fileID: 0}
+  AudioClip: {fileID: 0}
   isActivated: 0
   turnedOn: 0
 --- !u!65 &1569954284
@@ -84815,6 +84846,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plate: {fileID: 2107117110}
+  _audio: {fileID: 579297954}
+  clip: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
 --- !u!4 &1829070738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4948196742744880, guid: 0db57f973da78f34e9a6284f0eb90671, type: 3}
@@ -85242,6 +85275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PressurePlate1: {fileID: 1569954283}
   PressurePlate2: {fileID: 2107117110}
+  aAudioSource: {fileID: 579297954}
+  _clip: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
 --- !u!1001 &1842696183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90991,6 +91026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plate: {fileID: 69455455}
+  _audio: {fileID: 579297954}
+  clip: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
 --- !u!1 &2002304272
 GameObject:
   m_ObjectHideFlags: 0
@@ -94072,6 +94109,8 @@ MonoBehaviour:
   useEvents: 0
   promptMessage: Door
   Keycard: {fileID: 1543706807}
+  AudioSource: {fileID: 579297954}
+  _clip: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
 --- !u!4 &2065743925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4638355216031824, guid: 798dd5b58555bee428239fe6bdf1c44d, type: 3}
@@ -95546,6 +95585,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hangarDoor: {fileID: 0}
+  AudioSource: {fileID: 0}
+  AudioClip: {fileID: 0}
   isActivated: 0
   turnedOn: 0
 --- !u!65 &2107117111
@@ -102391,6 +102432,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9113111924216423823, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: generalAudioSource
+      value: 
+      objectReference: {fileID: 579297954}
     m_RemovedComponents:
     - {fileID: 7151628117143318207, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
@@ -102405,6 +102450,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HangarDoorScene1
       objectReference: {fileID: 0}
+    - target: {fileID: 8155011300430160363, guid: d8b70fdde45bfa14baf50f17be26737c, type: 3}
+      propertyPath: AudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
+    - target: {fileID: 8155011300430160363, guid: d8b70fdde45bfa14baf50f17be26737c, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 579297954}
     - target: {fileID: 8159956094755411096, guid: d8b70fdde45bfa14baf50f17be26737c, type: 3}
       propertyPath: m_RootOrder
       value: 504
@@ -102502,6 +102555,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8399281812225027190, guid: 6141927242d0b47468cee9b8b399b43c, type: 3}
+      propertyPath: _clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
+    - target: {fileID: 8399281812225027190, guid: 6141927242d0b47468cee9b8b399b43c, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 579297954}
     - target: {fileID: 8399281812225027190, guid: 6141927242d0b47468cee9b8b399b43c, type: 3}
       propertyPath: _keycard
       value: 

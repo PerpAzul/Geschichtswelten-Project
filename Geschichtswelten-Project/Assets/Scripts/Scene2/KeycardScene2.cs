@@ -7,6 +7,8 @@ public class KeycardScene2 : Interactable
 {
     public bool hasKey;
     public int upgradeIndex;
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip _clip;
 
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class KeycardScene2 : Interactable
     {
         if (hasKey)
         {
+            _source.PlayOneShot(_clip);
             upgradeIndex++;
         }
     }

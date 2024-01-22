@@ -14,6 +14,7 @@ public class MiniSimonSays : MonoBehaviour
     [SerializeField] private AudioSource generalAudioSource;
     [SerializeField] private AudioClip fail;
     [SerializeField] private AudioClip success;
+    [SerializeField] private AudioClip _clip;
     private bool hasInput;
 
     [SerializeField] private GameObject monitorbox;
@@ -133,6 +134,7 @@ public class MiniSimonSays : MonoBehaviour
         _redButton.DisableBoxCollider();
         _purpleButton.DisableBoxCollider();
         _orangeButton.DisableBoxCollider();
-        
+        yield return new WaitForSeconds(0.5f);
+        generalAudioSource.PlayOneShot(_clip);
     }
 }

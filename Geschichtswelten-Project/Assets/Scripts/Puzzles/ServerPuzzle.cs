@@ -46,6 +46,9 @@ public class ServerPuzzle : MonoBehaviour
     [SerializeField] private GameObject Light2;
     [SerializeField] private GameObject plug1;
     [SerializeField] private GameObject plug2;
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip win;
+    [SerializeField] private AudioClip fail;
 
     private void Awake()
     {
@@ -78,7 +81,7 @@ public class ServerPuzzle : MonoBehaviour
                     plug2.GetComponent<MeshRenderer>().enabled = true;
                     ActivateOtherServers = true;
                     activateSolition = true;
-                    Failure();
+                    Failure2();
                 }
             }
         }
@@ -173,6 +176,7 @@ public class ServerPuzzle : MonoBehaviour
 
     private void Victory()
     {
+        _source.PlayOneShot(win);
         GetComponent<BoxCollider>().enabled = true;
         screenBlack.SetActive(false);
         screen.SetActive(true);
@@ -180,9 +184,16 @@ public class ServerPuzzle : MonoBehaviour
 
     private void Failure()
     {
+        _source.PlayOneShot(fail);
         Debug.Log("failure");
         playerInput = new List<ServerColors>();
         
+    }
+
+    private void Failure2()
+    {
+        Debug.Log("failure");
+        playerInput = new List<ServerColors>();
     }
 
     private void SelectRandomColor()

@@ -10,6 +10,8 @@ public class HangarDoor : MonoBehaviour
 
     bool doorCanClose = false;
     bool doorCanOpen = true;
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private AudioClip _clip;
 
     private void Start()
     {
@@ -24,6 +26,7 @@ public class HangarDoor : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (!doorLocked) {
+            audio.PlayOneShot(_clip);
             StartCoroutine(OpenDoor());
         }
     }
@@ -32,6 +35,7 @@ public class HangarDoor : MonoBehaviour
     {
         if (!doorLocked)
         {
+            audio.PlayOneShot(_clip);
             doorCanClose = true;
         }
     }

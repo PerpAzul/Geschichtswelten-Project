@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BadgePuzzle : Interactable
 {
@@ -11,6 +12,9 @@ public class BadgePuzzle : Interactable
     [SerializeField] private GameObject box;
     [SerializeField] private GameObject letter;
     [SerializeField] private GameObject zombie;
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip win;
+    [SerializeField] private AudioClip fail;
     public int count = 0;
 
     private void Awake()
@@ -54,6 +58,7 @@ public class BadgePuzzle : Interactable
 
     private void Winner()
     {
+        _source.PlayOneShot(win);
         box.GetComponent<Animation>().Play("Crate_Open");
         GetComponent<BoxCollider>().enabled = false;
         zombie.SetActive(true);
@@ -68,6 +73,6 @@ public class BadgePuzzle : Interactable
     private void ResetList()
     {
         input = new List<string>();
-
+        _source.PlayOneShot(fail);
     }
 }

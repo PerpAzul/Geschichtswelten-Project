@@ -8,6 +8,8 @@ public class Flashlight : MonoBehaviour
     public bool on;
     public bool off;
     public bool inCutscene;
+    [SerializeField] private AudioSource generalAudioSource;
+    [SerializeField] private AudioClip flashLightSound;
 
     void Start()
     {
@@ -25,6 +27,7 @@ public class Flashlight : MonoBehaviour
                 flashlight.SetActive(true);
                 off = false;
                 on = true;
+                generalAudioSource.PlayOneShot(flashLightSound);
                 return;
             }
             else if (on)
@@ -32,6 +35,7 @@ public class Flashlight : MonoBehaviour
                 flashlight.SetActive(false);
                 off = true;
                 on = false;
+                generalAudioSource.PlayOneShot(flashLightSound);
             }
         }
     }

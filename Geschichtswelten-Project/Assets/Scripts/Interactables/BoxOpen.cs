@@ -7,7 +7,8 @@ public class BoxOpen : Interactable
 {
     [SerializeField] private Keycard _keycard;
     public GameObject Box;
-
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private AudioClip _clip;
     protected override void Interact()
     {
         
@@ -17,6 +18,7 @@ public class BoxOpen : Interactable
             Debug.Log("Opening");
             Box.GetComponent<Animation>().Play("Crate_Open");
             Box.GetComponent<BoxCollider>().enabled = false;
+            audio.PlayOneShot(_clip);
         }
         else
         {

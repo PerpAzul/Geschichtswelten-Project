@@ -271,15 +271,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""GravityFloat"",
-                    ""type"": ""Button"",
-                    ""id"": ""fb445e83-baac-4abc-94f7-5dbab8d40626"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -324,28 +315,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""GravityPull"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""13775e12-1170-4cd7-86c2-2c46ed2dd43d"",
-                    ""path"": ""<Keyboard>/t"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""GravityFloat"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""15f0d7c6-708f-4f97-a710-5ce0961812dd"",
-                    ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""GravityFloat"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -921,7 +890,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Powers = asset.FindActionMap("Powers", throwIfNotFound: true);
         m_Powers_ActivateGravityPush = m_Powers.FindAction("Activate Gravity Push", throwIfNotFound: true);
         m_Powers_GravityPull = m_Powers.FindAction("GravityPull", throwIfNotFound: true);
-        m_Powers_GravityFloat = m_Powers.FindAction("GravityFloat", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1071,14 +1039,12 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private IPowersActions m_PowersActionsCallbackInterface;
     private readonly InputAction m_Powers_ActivateGravityPush;
     private readonly InputAction m_Powers_GravityPull;
-    private readonly InputAction m_Powers_GravityFloat;
     public struct PowersActions
     {
         private @PlayerInput m_Wrapper;
         public PowersActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @ActivateGravityPush => m_Wrapper.m_Powers_ActivateGravityPush;
         public InputAction @GravityPull => m_Wrapper.m_Powers_GravityPull;
-        public InputAction @GravityFloat => m_Wrapper.m_Powers_GravityFloat;
         public InputActionMap Get() { return m_Wrapper.m_Powers; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1094,9 +1060,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @GravityPull.started -= m_Wrapper.m_PowersActionsCallbackInterface.OnGravityPull;
                 @GravityPull.performed -= m_Wrapper.m_PowersActionsCallbackInterface.OnGravityPull;
                 @GravityPull.canceled -= m_Wrapper.m_PowersActionsCallbackInterface.OnGravityPull;
-                @GravityFloat.started -= m_Wrapper.m_PowersActionsCallbackInterface.OnGravityFloat;
-                @GravityFloat.performed -= m_Wrapper.m_PowersActionsCallbackInterface.OnGravityFloat;
-                @GravityFloat.canceled -= m_Wrapper.m_PowersActionsCallbackInterface.OnGravityFloat;
             }
             m_Wrapper.m_PowersActionsCallbackInterface = instance;
             if (instance != null)
@@ -1107,9 +1070,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @GravityPull.started += instance.OnGravityPull;
                 @GravityPull.performed += instance.OnGravityPull;
                 @GravityPull.canceled += instance.OnGravityPull;
-                @GravityFloat.started += instance.OnGravityFloat;
-                @GravityFloat.performed += instance.OnGravityFloat;
-                @GravityFloat.canceled += instance.OnGravityFloat;
             }
         }
     }
@@ -1265,7 +1225,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     {
         void OnActivateGravityPush(InputAction.CallbackContext context);
         void OnGravityPull(InputAction.CallbackContext context);
-        void OnGravityFloat(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

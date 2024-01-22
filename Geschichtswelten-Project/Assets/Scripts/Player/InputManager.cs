@@ -30,7 +30,7 @@ public class InputManager : MonoBehaviour
         //playerActions.PickupStuff.performed += ctx => look.PickUpStuff();
         powersActions.GravityPull.performed += ctx => look.GravityPull();
         powersActions.ActivateGravityPush.performed += ctx => look.GravityPush();
-        powersActions.GravityFloat.performed += ctx => look.GravityFloat();
+        //powersActions.GravityFloat.performed += ctx => look.GravityFloat();
         
     }
 

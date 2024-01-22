@@ -17,6 +17,8 @@ public class MedicineRoom : MonoBehaviour
     public GameObject monitor2;
     public GameObject upgrade;
     private bool canUpgrade;
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip clip;
 
 
     private void Update()
@@ -25,6 +27,7 @@ public class MedicineRoom : MonoBehaviour
         {
             if (_bed1.Equals(solution1) && _bed2.Equals(solution2) && _bed3.Equals(solution3))
             {
+                _source.PlayOneShot(clip);
                 Debug.Log("solved");
                 monitor1.SetActive(false);
                 monitor2.SetActive(true);

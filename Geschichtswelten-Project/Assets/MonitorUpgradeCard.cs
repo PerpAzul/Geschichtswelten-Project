@@ -6,6 +6,8 @@ using UnityEngine;
 public class MonitorUpgradeCard : Interactable
 {
     [SerializeField] private KeycardScene2 _keycardScene2;
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip _clip;
     
     protected override void Interact()
     {
@@ -22,6 +24,7 @@ public class MonitorUpgradeCard : Interactable
 
     public void EnableBoxCollider()
     {
+        AudioSource.PlayOneShot(_clip);
         GetComponent<BoxCollider>().enabled = true;
     }
 }

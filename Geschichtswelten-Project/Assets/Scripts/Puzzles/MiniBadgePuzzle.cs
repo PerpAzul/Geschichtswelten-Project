@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MiniBadgePuzzle : Interactable
 {
@@ -12,7 +13,9 @@ public class MiniBadgePuzzle : Interactable
     [SerializeField] private GameObject monitoron;
     [SerializeField] private GameObject monitoroff;
     [SerializeField] private GameObject monitorbox;
-
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip win;
+    [SerializeField] private AudioClip fail;
     protected override void Interact()
     {
         GetBadges();
@@ -45,6 +48,7 @@ public class MiniBadgePuzzle : Interactable
         {
             if (!input[i].Equals(solution[i]))
             {
+                _source.PlayOneShot(fail);
                 input = new List<string>();
                 return;
             }
@@ -55,6 +59,7 @@ public class MiniBadgePuzzle : Interactable
 
     private void Winner()
     {
+        _source.PlayOneShot(win);
         GetComponent<BoxCollider>().enabled = false;
         monitorbox.GetComponent<BoxCollider>().enabled = true;
         monitoroff.SetActive(false);

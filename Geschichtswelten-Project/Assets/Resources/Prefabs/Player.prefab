@@ -193,6 +193,8 @@ MonoBehaviour:
   on: 0
   off: 0
   inCutscene: 0
+  generalAudioSource: {fileID: 0}
+  flashLightSound: {fileID: 8300000, guid: 66db832a807be934b93e1df2c014d1c1, type: 3}
 --- !u!114 &6398357481623291102
 MonoBehaviour:
   m_ObjectHideFlags: 0

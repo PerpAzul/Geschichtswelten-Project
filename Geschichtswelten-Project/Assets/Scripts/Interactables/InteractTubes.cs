@@ -18,6 +18,8 @@ public class InteractTubes : Interactable
     [SerializeField] private GameObject screnoff;
     [SerializeField] private GameObject screenon;
     [SerializeField] private bool isUpgraded;
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip _clip;
 
     protected override void Interact()
     {
@@ -48,6 +50,7 @@ public class InteractTubes : Interactable
             {
                 if (index == 0)
                 {
+                    _source.PlayOneShot(_clip);
                     monitor.GetComponent<BoxCollider>().enabled = false;
                     upgrade.GetComponent<BoxCollider>().enabled = true;
                     screnoff.SetActive(false);

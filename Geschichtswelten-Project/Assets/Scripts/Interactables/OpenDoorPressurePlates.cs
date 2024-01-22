@@ -5,6 +5,8 @@ using UnityEngine;
 public class OpenDoorPressurePlates : MonoBehaviour
 {
     [SerializeField] private PressurePlate _plate;
+    [SerializeField] private AudioSource _audio;
+    [SerializeField] private AudioClip clip;
     private bool canClose;
 
     // Update is called once per frame
@@ -12,11 +14,13 @@ public class OpenDoorPressurePlates : MonoBehaviour
     {
         if (_plate.turnedOn && !canClose)
         {
+            _audio.PlayOneShot(clip);
             GetComponent<Animation>().Play("HangarDoor1Open");
             canClose = true;
         }
         else if (!_plate.turnedOn && canClose)
         {
+            _audio.PlayOneShot(clip);
             GetComponent<Animation>().Play("HangarDoor1Close");
             canClose = false;
         }

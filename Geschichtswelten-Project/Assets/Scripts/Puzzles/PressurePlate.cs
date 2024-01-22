@@ -8,6 +8,8 @@ using Debug = UnityEngine.Debug;
 public class PressurePlate : MonoBehaviour
 {
     [SerializeField] private HangarDoor _hangarDoor;
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip AudioClip;
     public bool isActivated;
     bool doorCanClose = false;
     bool doorCanOpen = true;
@@ -41,6 +43,7 @@ public class PressurePlate : MonoBehaviour
     */
     public void OpenDoorSimple()
     {
+        AudioSource.PlayOneShot(AudioClip);
         _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");
     }
 
@@ -54,7 +57,8 @@ public class PressurePlate : MonoBehaviour
         if (isOpen == 0)
         {
             isOpen = 1;
-            _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");   
+            AudioSource.PlayOneShot(AudioClip);
+            _hangarDoor.GetComponent<Animation>().Play("HangarDoor1Open");  
         }
     }
 }

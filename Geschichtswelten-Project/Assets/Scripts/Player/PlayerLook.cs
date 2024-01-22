@@ -22,6 +22,9 @@ public class PlayerLook : MonoBehaviour
     private RaycastHit PickUpHit;
     public bool navMeshisDeactivated = false;
     private StateMachine _state = new StateMachine();
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip pull;
+    [SerializeField] private AudioClip push;
 
     
     private void Awake()
@@ -47,6 +50,7 @@ public class PlayerLook : MonoBehaviour
                     var rigidbody = hitGameObject.GetComponent<Rigidbody>();
                     var distance = Vector3.Distance(transform.position, rigidbody.transform.position);
                     Debug.Log(distance);
+                    _source.PlayOneShot(push);
                     switch (distance)
                     {
                         case <= 5f:
@@ -80,44 +84,7 @@ public class PlayerLook : MonoBehaviour
         Debug.Log("No Hit");
     }
 
-    //GravityFloat 
-    public void GravityFloat()
-    {
-        if (_canUsePowers)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
-                    15f))
-            {
-                var hitGameObject = hit.collider.gameObject;
-                if (hitGameObject.CompareTag("Enemy"))
-                {
-                    _turnoff = hitGameObject.GetComponent<Rigidbody>();
-                    _turnoff.useGravity = false;
-                    Debug.Log("Float hit!");
-                    navMeshisDeactivated = true;
-                    _turnoff.GetComponent<NavMeshAgent>().enabled = false;
-                    _turnoff.AddForce(Vector3.up.normalized * 7.5f, ForceMode.VelocityChange);
-                    _useGravityFloat = true;
-                    _state.inAir = true;
-
-                    StartCoroutine(StartFloatCountdown(5));
-                }
-            }
-            else
-            {
-                StartCoroutine(StartCountdown(1));
-            }
-        }
-        else
-        {
-            return;
-        }
-
-
-        Debug.Log("End of Float Function");
-    }
-
+  
 
     /*
     //Can Pick Up Stuff
@@ -167,7 +134,7 @@ public class PlayerLook : MonoBehaviour
                 if (hitGameObject.CompareTag("Box"))
                 {
                     Debug.Log("Pull Hit");
-
+                    _source.PlayOneShot(pull);
                     var rigidbody = hitGameObject.GetComponent<Rigidbody>();
                     var distance = transform.position - rigidbody.transform.position;
                     rigidbody.AddForce(
