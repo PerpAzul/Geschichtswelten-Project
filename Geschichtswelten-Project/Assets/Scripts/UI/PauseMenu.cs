@@ -21,14 +21,12 @@ public class PauseMenu : MonoBehaviour
 
     private void Awake()
     {
-        
         PlayerInput = new PlayerInput();
         playerActions = PlayerInput.PauseMenu;
         playerActions.OpenMenu.performed += _ => DeterminePause();
         pauseMenu.SetActive(false);
         //gameUI.SetActive(true);
         OptionsMenu.SetActive(false);
-        
     }
 
     private void OnEnable()
@@ -61,6 +59,15 @@ public class PauseMenu : MonoBehaviour
 
     private void Unpause()
     {
+        if (cutscene.gameObject.activeSelf)
+        {
+            advancedOptions.SetActive(false);
+            pauseMenu.SetActive(false);
+            OptionsMenu.SetActive(false);
+            isPaused = false;
+            return;
+        }
+
         if (PapersUI.gameObject.activeSelf)
         {
             advancedOptions.SetActive(false);
@@ -69,7 +76,7 @@ public class PauseMenu : MonoBehaviour
             isPaused = false;
             return;
         }
-        
+
         if (keypad.gameObject.activeSelf)
         {
             advancedOptions.SetActive(false);
@@ -86,15 +93,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         OptionsMenu.SetActive(false);
         advancedOptions.SetActive(false);
-        if (cutscene.gameObject.GetComponent<CutsceneManager>().isActiveAndEnabled)
-        {
-            isPaused = false;
-        }
-        else
-        {
-            isPaused = false;
-            gameUI.SetActive(true);
-        }
+        gameUI.SetActive(true);
+        isPaused = false;
     }
 
     private void Pause()

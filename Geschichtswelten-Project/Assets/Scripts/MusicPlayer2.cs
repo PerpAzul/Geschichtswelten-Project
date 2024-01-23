@@ -9,15 +9,14 @@ public class MusicPlayer2 : MonoBehaviour
     //[SerializeField] private AudioClip _audioClip;
     public int index = 0;
     [SerializeField] private AudioSource _AudioSource;
-    [SerializeField] private AudioSource _audioSource2;
+    public AudioSource _audioSource2;
     [SerializeField] private List<AudioClip> Musics = new List<AudioClip>();
-    public bool spookyMusicPlaying;
+    public bool spookyMusicPlaying = false;
     public bool onHangar;
 
     // Start is called before the first frame update
     void Start()
     {
-        spookyMusicPlaying = true;
         onHangar = false;
     }
 
@@ -31,12 +30,6 @@ public class MusicPlayer2 : MonoBehaviour
         }
     }
     
-
-    public void changeSpookyMusic()
-    {
-        spookyMusicPlaying = !spookyMusicPlaying;
-    }
-
     public void PlayMixSource()
     {
         StartCoroutine(MixSource(_AudioSource, _audioSource2));
@@ -47,6 +40,10 @@ public class MusicPlayer2 : MonoBehaviour
         StartCoroutine(MuteTransition(_AudioSource));
     }
 
+    public void PlayMuteTransition2()
+    {
+        StartCoroutine(MuteTransition(_audioSource2));
+    }
     private AudioClip GetRandomClip()
     {
         return Musics[Random.Range(0, Musics.Count)];
@@ -61,6 +58,11 @@ public class MusicPlayer2 : MonoBehaviour
     {
         StartCoroutine(PlayMusicTransition(_AudioSource));
     }
+    public void PlayFadeIn2()
+    {
+        StartCoroutine(PlayMusicTransition(_audioSource2));
+    }
+
     IEnumerator MuteTransition(AudioSource target)
     {
         var percentage = 0f;

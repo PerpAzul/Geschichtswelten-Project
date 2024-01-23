@@ -50,7 +50,6 @@ public class CutsceneManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(index);
         switch (index)
         {
             case 0:
@@ -142,7 +141,6 @@ public class CutsceneManager : MonoBehaviour
             case 7:
                 Scene4.gameObject.SetActive(true);
                 gameUI.SetActive(false);
-
                 Time.timeScale = 0;
                 index++;
                 break;
