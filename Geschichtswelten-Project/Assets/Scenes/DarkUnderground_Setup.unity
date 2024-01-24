@@ -2973,9 +2973,9 @@ MonoBehaviour:
   _AudioSource: {fileID: 67661949}
   _audioSource2: {fileID: 293752255}
   Musics:
-  - {fileID: 8300000, guid: 8b051f61e6b54bb43b57ee3437cea927, type: 3}
-  - {fileID: 8300000, guid: d8a91461a3558488cba8a78113054562, type: 3}
-  - {fileID: 8300000, guid: a5fde12e27b1441468fbf3e084cbe453, type: 3}
+  - {fileID: 8300000, guid: 421411f2ba2681f44bf79c39418e39c4, type: 3}
+  - {fileID: 8300000, guid: bcf996c34b61eac4385c54c74a56551c, type: 3}
+  - {fileID: 8300000, guid: e323b89df4244db4ea04586f684ea20f, type: 3}
 --- !u!82 &67661949
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44412,6 +44412,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2819367522260345506, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
+      propertyPath: accessDeniedSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 0735d76c450d4984e870c76192e5488b, type: 3}
+    - target: {fileID: 2819367522260345506, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
+      propertyPath: buttonClickedSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 93975cf38faab374e89dc0a10f14a470, type: 3}
     - target: {fileID: 2819367522260345506, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -102454,6 +102462,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9113111924216423823, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: flashLightSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c1f3747f9c449b242a6ace40f1526271, type: 3}
     - target: {fileID: 9113111924216423823, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: generalAudioSource
       value: 

@@ -68,7 +68,7 @@ public class MusicPlayer2 : MonoBehaviour
         var percentage = 0f;
         while (target.volume > 0)
         {
-            target.volume = Mathf.Lerp(0.4f, 0, percentage);
+            target.volume = Mathf.Lerp(1f, 0, percentage);
             percentage += Time.deltaTime / 1.25f;
             yield return null;
         }
@@ -82,9 +82,9 @@ public class MusicPlayer2 : MonoBehaviour
     IEnumerator PlayMusicTransition(AudioSource target)
     {
         float percentage = 0;
-        while (target.volume < 0.4f)
+        while (target.volume < 1f)
         {
-            target.volume += Mathf.Lerp(0, 0.4f, percentage);
+            target.volume += Mathf.Lerp(0, 1f, percentage);
             percentage += Time.deltaTime / 1.25f;
             yield return null;
         }
@@ -100,7 +100,7 @@ public class MusicPlayer2 : MonoBehaviour
         float percentage = 0;
         while (nowPlaying.volume > 0)
         {
-            nowPlaying.volume = Mathf.Lerp(0.4f, 0, percentage);
+            nowPlaying.volume = Mathf.Lerp(1f, 0, percentage);
             percentage += Time.deltaTime / 1.25f;
             yield return null;
         }
@@ -113,9 +113,9 @@ public class MusicPlayer2 : MonoBehaviour
 
         target.UnPause();
         percentage = 0;
-        while (target.volume < 0.4f)
+        while (target.volume < 1f)
         {
-            target.volume += Mathf.Lerp(0, 0.4f, percentage);
+            target.volume += Mathf.Lerp(0, 1f, percentage);
             percentage += Time.deltaTime / 1.25f;
             yield return null;
         }
