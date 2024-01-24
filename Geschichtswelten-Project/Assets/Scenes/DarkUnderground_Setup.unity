@@ -22228,19 +22228,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3295739050987096730, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.8
+      value: -21.814
       objectReference: {fileID: 0}
     - target: {fileID: 3295739050987096730, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.36
+      value: 7.28
       objectReference: {fileID: 0}
     - target: {fileID: 3295739050987096730, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.4
+      value: 2.225
       objectReference: {fileID: 0}
     - target: {fileID: 3295739050987096730, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3295739050987096730, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_LocalRotation.x
@@ -22248,7 +22248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3295739050987096730, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3295739050987096730, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_LocalRotation.z
@@ -22260,7 +22260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3295739050987096730, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3295739050987096730, guid: 30894d8b557cfd54fb4fdf44ea6051b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -46385,7 +46385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 437920, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.694921
+      value: 17.33
       objectReference: {fileID: 0}
     - target: {fileID: 437920, guid: daad980f2698e774dbd96182485f9f6a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -61252,6 +61252,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2722531095538110266, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722531095731604548, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722531095849051481, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722531096139266808, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3412534399314919358, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
       value: '1 month ago.
@@ -67973,36 +67989,34 @@ PrefabInstance:
       objectReference: {fileID: 1500244293}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[0]
       value: 'Nadji: Wasn''t the experiments enough. You already discovered how to
-        create the weapon you wanted, you can do it to yourself or all your soldiers.
-        Just leave me alone, please. I am begging you please.'
+        create the weapon you wanted, you can do it to all your soldiers.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[1]
+      value: 'Nadji: Just leave me alone, please. I am begging you.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[2]
       value: 'Kurja: I still need you, but even if I didn''t I won''t let you go
         back to Bor and help your kind win the war.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
-      propertyPath: dialogLines.Array.data[2]
+      propertyPath: dialogLines.Array.data[3]
       value: 'Nadji: I don''t care about the war. I just want to be left alone.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
-      propertyPath: dialogLines.Array.data[3]
+      propertyPath: dialogLines.Array.data[4]
       value: 'Kurja: Even if I believed you and didn''t need you, your kind doesn''t
         deserve mercy.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
-      propertyPath: dialogLines.Array.data[4]
-      value: "Nadji: Just\u2026 Please. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[5]
-      value: 'Kurja: As you said kid, you are trying to help our people against those
-        terrorists, what better reason can you have?'
+      value: "Nadji: Just\u2026 Please. "
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[6]
