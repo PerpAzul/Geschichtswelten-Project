@@ -151,6 +151,7 @@ public class CutsceneManager : MonoBehaviour
                 index++;
                 break;
             case 10:
+                PlayerPrefs.SetInt("CompletedLvl1", 1);
                 SceneManager.LoadScene("scene_lightsOff");
                 break;
             default:

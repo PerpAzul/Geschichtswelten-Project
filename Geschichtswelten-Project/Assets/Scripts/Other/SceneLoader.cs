@@ -7,10 +7,16 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     public List<GameObject> scenes = new List<GameObject>();
+    [SerializeField] private GameObject lvl2Button;
 
     private void Awake()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (!Cursor.visible)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             return;
         }
@@ -33,6 +39,15 @@ public class SceneLoader : MonoBehaviour
     {
         scenes[0].SetActive(false);
         scenes[1].SetActive(true);
+        //disable lvl2 if lvl isn't completed yet
+        if (PlayerPrefs.HasKey("CompletedLvl1") && PlayerPrefs.GetInt("CompletedLvl1") == 1)
+        {
+            lvl2Button.SetActive(true);
+        }
+        else
+        {
+            lvl2Button.SetActive(false);
+        }
     }
 
     public void CloseLevelSelecter()
