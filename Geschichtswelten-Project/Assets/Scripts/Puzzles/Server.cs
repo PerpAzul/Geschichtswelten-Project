@@ -8,7 +8,7 @@ public class Server : Interactable
     public ServerColors color;
     [SerializeField] private ServerPuzzle _serverPuzzle;
 
-    private void Awake()
+    private void Start()
     {
         switch (color)
         {

@@ -141,7 +141,6 @@ public class ServerPuzzle : MonoBehaviour
         for (int i = 0; i < _BoxServer.Count; i++)
         {
             _BoxServer[i].GetComponent<BoxCollider>().enabled = true;
-            _BoxServer[i].GetComponent<Server>().promptMessage = _BoxServer[i].GetComponent<Server>().color.ToString();
         }
     }
     
