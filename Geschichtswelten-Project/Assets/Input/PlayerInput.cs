@@ -38,10 +38,10 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Look"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""16a38809-4960-4330-8821-cc03735d0d69"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone,NormalizeVector2"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
