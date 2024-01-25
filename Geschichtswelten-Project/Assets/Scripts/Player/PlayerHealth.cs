@@ -15,6 +15,9 @@ public class PlayerHealth : MonoBehaviour
     private float durationTimer;
     [SerializeField] private bool isHealing;
     private bool cannotHealHealth;
+    private Player playerScript;
+
+    public Transform respawnPoint; //this will always be set to the most recent respawn point that the player crossed
 
     private CameraShakeController cameraShakeScript;
 
@@ -23,6 +26,8 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
         cameraShakeScript = GetComponent<CameraShakeController>();
+        playerScript = gameObject.GetComponent<Player>();
+        respawnPoint = gameObject.transform; //setting the first respawn position to be the initial spawn position
     }
 
     void Update()
@@ -30,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
         if (overlay.color.a > 0)
         {
             durationTimer += Time.deltaTime;
-            Debug.Log(durationTimer);
+            //Debug.Log(durationTimer);
             if (isHealing)
             {
                 float tempAlpha = overlay.color.a;
@@ -50,7 +55,9 @@ public class PlayerHealth : MonoBehaviour
         currentHealth--;
         if (currentHealth == 0)
         {
-            SceneManager.LoadScene("Death Screen");
+            HealHealth();
+            Respawn();
+            //SceneManager.LoadScene("Death Screen");
         }
 
         durationTimer = 0;
@@ -90,5 +97,15 @@ public class PlayerHealth : MonoBehaviour
     private void SetToNull()
     {
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0f);
+    }
+
+    private void Respawn()
+    {
+        Debug.Log("Respawning");
+        //source: https://forum.unity.com/threads/does-transform-position-work-on-a-charactercontroller.36149/ The character controller doesn't like you to change the position externally, apparently
+        playerScript.DisableCharacterController();
+        gameObject.transform.position = respawnPoint.position;
+        //gameObject.transform.rotation = respawnPoint.rotation; //does not work, as mentioned on the forum linked above but should be fine anyways
+        playerScript.EnableCharacterController();
     }
 }

@@ -10,7 +10,6 @@ public class SearchState : BaseState
     public override void Enter()
     {
         enemy.Agent.SetDestination(enemy.LastknowPos);
-        stateMachine.GetAnimator().SetTrigger("Move");
     }
 
     public override void Perform()

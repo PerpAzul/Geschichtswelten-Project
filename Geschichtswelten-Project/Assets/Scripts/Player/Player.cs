@@ -63,4 +63,15 @@ public class Player : MonoBehaviour
         speed = baseSpeed;
         cameraShakeScript.StopRunning();
     }
+
+    public void EnableCharacterController()
+    {
+        controller.enabled = true;
+    }
+
+    public void DisableCharacterController()
+    {
+            controller.enabled = false;
+
+    }
 }
