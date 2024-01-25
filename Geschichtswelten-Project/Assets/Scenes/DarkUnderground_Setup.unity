@@ -61485,6 +61485,14 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+      propertyPath: _clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a53ec754cbd7c86438a5023b0891fc60, type: 3}
+    - target: {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 579297954}
+    - target: {fileID: 114888339105113788, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: doorLocked
       value: 0
       objectReference: {fileID: 0}
