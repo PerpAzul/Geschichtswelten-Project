@@ -10,6 +10,7 @@ public class LevelDoors : Interactable
     [SerializeField] private String color;
     [SerializeField] private AudioSource _audio;
     [SerializeField] private AudioClip _audioClip;
+    [SerializeField] private List<GameObject> enemies;
 
     protected override void Interact()
     {
@@ -18,6 +19,13 @@ public class LevelDoors : Interactable
             _audio.PlayOneShot(_audioClip);
             GetComponent<Animation>().Play("HangarDoor1Open");
             GetComponent<BoxCollider>().enabled = false;
+            if (index == 4)
+            {
+                foreach (var varEnemy in enemies)
+                {
+                    varEnemy.SetActive(true);
+                }
+            }
         }
         else
         {
@@ -30,11 +38,10 @@ public class LevelDoors : Interactable
         _audio.PlayOneShot(_audioClip);
         GetComponent<Animation>().Play("HangarDoor1Open");
     }
-    
+
     public void CloseDoor()
     {
         _audio.PlayOneShot(_audioClip);
         GetComponent<Animation>().Play("HangarDoor1Close");
     }
-    
 }

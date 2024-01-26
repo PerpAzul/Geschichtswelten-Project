@@ -56,15 +56,15 @@ public class Enemy : MonoBehaviour
             {
                 case <= 2f:
                     Debug.Log("Damage 1");
-                    TakeDamage(1);
+                    TakeDamage(5);
                     break;
                 case > 2f and <= 5f:
                     Debug.Log("Damage 2");
-                    TakeDamage(5);
+                    TakeDamage(10);
                     break;
                 case > 5f:
                     Debug.Log("Damage 3");
-                    TakeDamage(10);
+                    TakeDamage(20);
                     break;
             }
         }

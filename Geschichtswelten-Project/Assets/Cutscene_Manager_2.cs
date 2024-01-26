@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cutscene_Manager_2 : MonoBehaviour
 {
@@ -16,9 +17,12 @@ public class Cutscene_Manager_2 : MonoBehaviour
 
     public int index = 0;
     public bool inCutscene = true;
+    public bool isLoading = false;
 
     private void Awake()
     {
+        
+        index = 0;
         generalAudioSource.volume = 0.4f;
         generalAudioSource.clip = cutscene1Music;
         generalAudioSource.loop = true;
@@ -58,7 +62,6 @@ public class Cutscene_Manager_2 : MonoBehaviour
                 scenes[2].alpha = 0f;
                 scenes[3].alpha = 0f;
                 scenes[4].alpha += 0.05f;
-                
                 break;
             case 5:
                 //To Gameplay

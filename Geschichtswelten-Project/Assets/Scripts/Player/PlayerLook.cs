@@ -48,6 +48,7 @@ public class PlayerLook : MonoBehaviour
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
                     Mathf.Infinity))
             {
+                _source.PlayOneShot(push);
                 var hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Box"))
                 {
@@ -55,7 +56,7 @@ public class PlayerLook : MonoBehaviour
                     var rigidbody = hitGameObject.GetComponent<Rigidbody>();
                     var distance = Vector3.Distance(transform.position, rigidbody.transform.position);
                     Debug.Log(distance);
-                    _source.PlayOneShot(push);
+                    
                     switch (distance)
                     {
                         case <= 5f:
@@ -139,11 +140,11 @@ public class PlayerLook : MonoBehaviour
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit,
                     Mathf.Infinity))
             {
+                _source.PlayOneShot(pull);
                 var hitGameObject = hit.collider.gameObject;
                 if (hitGameObject.CompareTag("Box"))
                 {
                     Debug.Log("Pull Hit");
-                    _source.PlayOneShot(pull);
                     var rigidbody = hitGameObject.GetComponent<Rigidbody>();
                     var distance = transform.position - rigidbody.transform.position;
                     rigidbody.AddForce(

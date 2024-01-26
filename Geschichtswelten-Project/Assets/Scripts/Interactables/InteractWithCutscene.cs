@@ -10,33 +10,31 @@ public class InteractWithCutscene : MonoBehaviour
     public Cutscene_Manager_2 CutsceneManager2;
     public int index;
 
-    private CutsceneManager skip;
+
+    private CutsceneManager _skip;
 
     void Awake()
     {
-        
         cutsceneInput = new CutsceneInput();
         cutsceneActions = cutsceneInput.Continue;
 
-        skip = GetComponent<CutsceneManager>();
+        _skip = GetComponent<CutsceneManager>();
         CutsceneManager2 = GetComponent<Cutscene_Manager_2>();
 
         switch (index)
         {
             case 0:
-                cutsceneActions.Skip.performed += ctx => skip.Skip();
+                cutsceneActions.Skip.performed += ctx => _skip.Skip();
                 break;
             case 1:
                 cutsceneActions.Skip.performed += ctx => CutsceneManager2.skip();
                 break;
         }
-        
     }
 
     private void OnEnable()
     {
         cutsceneActions.Enable();
-        
     }
 
     private void OnDisable()
