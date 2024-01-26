@@ -1817,7 +1817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (INSERT NAME OF GAME HERE)
+  m_text: The child of rashiktar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 154e5c4c539b26e4691b67a17bad9f98, type: 2}
   m_sharedMaterial: {fileID: -375948068278318658, guid: 154e5c4c539b26e4691b67a17bad9f98, type: 2}
