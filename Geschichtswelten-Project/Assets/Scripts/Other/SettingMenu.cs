@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingMenu : MonoBehaviour
@@ -23,6 +24,8 @@ public class SettingMenu : MonoBehaviour
     private static bool isFullscreen = false;
 
     private static int indexResolution;
+
+    public AudioMixer audioMixer;
     //[SerializeField] private Dropdown advancedOptions;
 
     //https://www.youtube.com/watch?v=YOaYQrN1oYQ adapted some options from here
@@ -46,10 +49,10 @@ public class SettingMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(index);
     }
 
-    public void setFullScreen(bool isFoolscreen)
+    public void setFullScreen(bool toIsFullscreen)
     {
-        isFullscreen = isFoolscreen;
-        Screen.fullScreen = isFoolscreen;
+        SettingMenu.isFullscreen = toIsFullscreen;
+        Screen.fullScreen = toIsFullscreen;
     }
 
     public void SetResolution(int index)
