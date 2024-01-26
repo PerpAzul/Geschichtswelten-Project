@@ -628,7 +628,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1896385644}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: OpenLevelSelecter
+        m_MethodName: ExitToDesktop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3337,6 +3337,14 @@ PrefabInstance:
     - target: {fileID: 3769768646074902943, guid: 36cc9580cf485594c838babe8a88b078, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnableVSync
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769768646642892147, guid: 36cc9580cf485594c838babe8a88b078, type: 3}
+      propertyPath: m_IsOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769768646642892147, guid: 36cc9580cf485594c838babe8a88b078, type: 3}
+      propertyPath: m_Interactable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3769768646642892147, guid: 36cc9580cf485594c838babe8a88b078, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
