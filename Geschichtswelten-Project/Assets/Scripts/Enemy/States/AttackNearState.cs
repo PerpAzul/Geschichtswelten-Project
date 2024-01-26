@@ -20,7 +20,7 @@ public class AttackNearState : BaseState
         {
             changeTimer = 0;
             float targetDistance = Mathf.Abs(Vector3.Distance(enemy.Player.transform.position, enemy.transform.position));
-            if (targetDistance < enemy.Agent.stoppingDistance)
+            if (targetDistance < 1.5 * enemy.Agent.stoppingDistance)
             {
                 attackTimer += Time.deltaTime;
                 if (attackTimer > 1f)
@@ -30,12 +30,15 @@ public class AttackNearState : BaseState
                 }
             }
 
-            enemy.LastknowPos = enemy.Player.transform.position;
+            if (enemy.CanSeePlayer()) //this is necessary so the enemy does not chase the player back to the respawn point, if the player respawned (changed to a new position) after the attack
+            {
+                enemy.LastknowPos = enemy.Player.transform.position;
+            }
         }
         else
         { 
             changeTimer += Time.deltaTime;
-            if (changeTimer > 5f)
+            if (changeTimer > 2f)
             {
                 stateMachine.ChangeState(new SearchState());
             }
@@ -50,7 +53,8 @@ public class AttackNearState : BaseState
     public void Attack()
     {
         //Debug.Log("Attack");
-        enemy.Player.GetComponent<PlayerHealth>().TakeDamage();
         stateMachine.GetAnimator().SetTrigger("Attack");
+        enemy.Player.GetComponent<PlayerHealth>().TakeDamage();
+        
     }
 }

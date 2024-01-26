@@ -7,6 +7,7 @@ public class AttackState : BaseState
     private float moveTimer;
     private float shotTimer;
 
+    private float changeTimer;
     public override void Enter()
     {
         stateMachine.GetAnimator().SetTrigger("RaiseGun");
@@ -24,6 +25,7 @@ public class AttackState : BaseState
         {
             moveTimer += Time.deltaTime;
             shotTimer += Time.deltaTime;
+            changeTimer = 0;
             enemy.transform.LookAt(enemy.Player.transform);
 
             if (shotTimer > enemy.fireRate)
@@ -37,11 +39,23 @@ public class AttackState : BaseState
                 moveTimer = 0;
             }
 
-            enemy.LastknowPos = enemy.Player.transform.position;
+            if (enemy.CanSeePlayer()) //this is necessary so the enemy does not chase the player back to the respawn point, if the player respawned (changed to a new position) after the attack
+            {
+                enemy.LastknowPos = enemy.Player.transform.position;
+            }
         }
         else
         {
-            stateMachine.ChangeState(new SearchState());
+            if (changeTimer <= 0.00001)
+            {
+                enemy.Agent.SetDestination(enemy.transform.position + (Random.insideUnitSphere * 5));
+                moveTimer = 0;
+            }
+            changeTimer += Time.deltaTime;
+            if (changeTimer > 2f)
+            {
+                stateMachine.ChangeState(new SearchState());
+            }
         }
     }
 

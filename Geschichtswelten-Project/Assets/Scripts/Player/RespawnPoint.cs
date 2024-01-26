@@ -10,7 +10,7 @@ public class RespawnPoint : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerHealth>().respawnPoint = this.transform;
+            other.gameObject.GetComponent<PlayerHealth>().respawnPosition = this.transform.position;
         }
     }
 }

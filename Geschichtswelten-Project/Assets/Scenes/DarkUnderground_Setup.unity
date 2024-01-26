@@ -7087,6 +7087,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 588838259}
     - target: {fileID: 7922372726219283349, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: fireRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922372726219283349, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: gunBarrel
       value: 
       objectReference: {fileID: 1635608912}
@@ -65130,6 +65134,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3453833571307991572}
     - target: {fileID: 7922372726219283349, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: fireRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922372726219283349, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: gunBarrel
       value: 
       objectReference: {fileID: 3453833569641875849}
@@ -84963,6 +84971,10 @@ PrefabInstance:
       propertyPath: flash
       value: 
       objectReference: {fileID: 1728431968}
+    - target: {fileID: 7922372726219283349, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: fireRate
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7922372726219283349, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: gunBarrel
       value: 
