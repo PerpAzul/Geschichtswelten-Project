@@ -12,9 +12,11 @@ public class VolumeAdjuster : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey("volume"))
+        float output;
+        bool success = audioMixer.GetFloat("volume", out output); //using the last set value in the Audio Mixer to get the same sound volume between scenes
+        if (success)
         {
-            volumeSlider.value = PlayerPrefs.GetFloat("volume");
+            volumeSlider.value = output;
         }
     }
 
@@ -24,6 +26,5 @@ public class VolumeAdjuster : MonoBehaviour
         //TODO 
         Debug.Log(newVolume);
         audioMixer.SetFloat("volume", newVolume);
-        PlayerPrefs.SetFloat("volume", newVolume);
     }
 }
