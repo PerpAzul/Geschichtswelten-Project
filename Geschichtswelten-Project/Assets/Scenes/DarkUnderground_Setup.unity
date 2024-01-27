@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1317670463}
-  m_IndirectSpecularColor: {r: 0.04365709, g: 0.044818856, b: 0.05955075, a: 1}
+  m_IndirectSpecularColor: {r: 0.043578748, g: 0.044726565, b: 0.059461884, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2985,7 +2985,7 @@ AudioSource:
   m_GameObject: {fileID: 67661947}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7180471792369608451, guid: de74d57042e740849876f08469fdecc4, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0
@@ -13448,7 +13448,7 @@ AudioSource:
   m_GameObject: {fileID: 293752254}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7180471792369608451, guid: de74d57042e740849876f08469fdecc4, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -22950,7 +22950,7 @@ AudioSource:
   m_GameObject: {fileID: 579297953}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2277938714284846951, guid: de74d57042e740849876f08469fdecc4, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.8
@@ -23050,7 +23050,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &580085525
 PrefabInstance:
@@ -44472,6 +44472,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1766635199}
+    - target: {fileID: 2819367522260345504, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2277938714284846951, guid: de74d57042e740849876f08469fdecc4, type: 2}
     - target: {fileID: 2819367522260345505, guid: b48cb3929383f6d41b8ad7ffad322415, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -51753,7 +51757,7 @@ Transform:
   - {fileID: 338200936}
   - {fileID: 1038584394}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1165050700
 PrefabInstance:
@@ -61296,6 +61300,10 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 2722531094291156853, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.999939
+      objectReference: {fileID: 0}
     - target: {fileID: 2722531095167437865, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -61507,6 +61515,26 @@ PrefabInstance:
         it, it is just to make sure.\r\n- \u0160arada: I can't believe it, you forget
         everything! I like the bright colors the most.\r\n- Ep\xE4ill\xE4: Alright,
         now I got it.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630840620654652341, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630840620654652341, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8636147934336030965, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8636147934336030965, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8636147934336030965, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
@@ -62539,7 +62567,7 @@ Transform:
   - {fileID: 1652569702}
   - {fileID: 841607907}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1431027639
 MonoBehaviour:
