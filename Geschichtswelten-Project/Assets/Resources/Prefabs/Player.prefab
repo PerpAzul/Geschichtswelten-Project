@@ -213,6 +213,7 @@ MonoBehaviour:
   duration: 2
   fadeSpeed: 1.5
   isHealing: 0
+  respawnPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &8854784133178291727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +231,10 @@ MonoBehaviour:
   ySensitivity: 200
   hold: {fileID: 4007848511095130089}
   navMeshisDeactivated: 0
+  _source: {fileID: 0}
+  pull: {fileID: 0}
+  push: {fileID: 0}
+  scene: 0
 --- !u!114 &7151628117143318207
 MonoBehaviour:
   m_ObjectHideFlags: 0
