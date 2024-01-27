@@ -69,6 +69,7 @@ public class AttackState : BaseState
         if (stateMachine.GetAnimator().GetCurrentAnimatorStateInfo(0).IsName("idle pose with a gun"))
         {
             stateMachine.GetAnimator().SetTrigger("Shoot");
+            enemy.PlayShootingSound();
             Debug.Log("Shoot");
             enemy.flash.Play();
             Transform gunBarrel = enemy.gunBarrel;

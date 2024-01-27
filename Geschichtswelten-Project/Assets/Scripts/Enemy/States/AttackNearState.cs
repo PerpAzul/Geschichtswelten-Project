@@ -10,6 +10,7 @@ public class AttackNearState : BaseState
     public override void Enter()
     {
         stateMachine.GetAnimator().SetTrigger("Aggressive");
+        enemy.PlayInitialAggressionSound();
     }
 
     public override void Perform()
@@ -55,6 +56,7 @@ public class AttackNearState : BaseState
         //Debug.Log("Attack");
         stateMachine.GetAnimator().SetTrigger("Attack");
         enemy.Player.GetComponent<PlayerHealth>().TakeDamage();
+        enemy.PlayMeleeAttackSound();
         
     }
 }
