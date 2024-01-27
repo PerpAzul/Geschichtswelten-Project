@@ -61704,7 +61704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4386086944607270005, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4840346300819308445, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Value
@@ -86291,6 +86291,11 @@ PrefabInstance:
       value: 'Kurja: I understand but believe me, with this weapon it will all be
         over soon.'
       objectReference: {fileID: 0}
+    - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
+      propertyPath: dialogLines.Array.data[9]
+      value: 'Kurja: I understand but believe me, with this weapon it will all be
+        over soon.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703189, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_Name
       value: DialogTrigger
@@ -102889,7 +102894,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 562948894, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_AmplitudeGain
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 562948894, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_FrequencyGain
@@ -102991,6 +102996,10 @@ PrefabInstance:
       propertyPath: generalAudioSource
       value: 
       objectReference: {fileID: 579297954}
+    - target: {fileID: 5008036653556056688, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
+      propertyPath: m_UpdateMethod
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5008036653556056701, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.15999985
