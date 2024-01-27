@@ -37,6 +37,7 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] private GameObject weaponHolder;
     [SerializeField] private GameObject _player;
     private int index = 0;
+    private bool _stopInput;
 
     private void Awake()
     {
@@ -121,6 +122,7 @@ public class CutsceneManager : MonoBehaviour
                 break;
             //Nadji room Scene
             case 4:
+                
                 Scene3.gameObject.SetActive(true);
                 gameUI.SetActive(false);
                 Time.timeScale = 0;
@@ -151,11 +153,27 @@ public class CutsceneManager : MonoBehaviour
                 index++;
                 break;
             case 10:
+                if (_stopInput)
+                {
+                    return;
+                }
                 PlayerPrefs.SetInt("CompletedLvl1", 1);
-                SceneManager.LoadScene("scene_lightsOff");
+                StartCoroutine(LoadNextScene());
+                //SceneManager.LoadScene("scene_lightsOff");
+                _stopInput = true;
                 break;
             default:
                 return;
+        }
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("scene_lightsOff");
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
         }
     }
 }

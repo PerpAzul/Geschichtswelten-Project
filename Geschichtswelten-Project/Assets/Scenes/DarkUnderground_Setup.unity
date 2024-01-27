@@ -103005,7 +103005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_VerticalAxis.m_MaxSpeed
-      value: 0.2197347
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_VerticalAxis.m_SpeedMode
@@ -103013,7 +103013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_HorizontalAxis.m_MaxSpeed
-      value: 0.2227704
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_HorizontalAxis.m_SpeedMode
