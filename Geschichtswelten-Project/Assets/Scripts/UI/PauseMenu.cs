@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject OptionsMenu;
     [SerializeField] private GameObject tutorialText;
+    [SerializeField] private GameObject tutorialGotItButton;
     [SerializeField] private GameObject PapersUI;
     [SerializeField] private GameObject keypad;
     [SerializeField] private GameObject cutscene;
@@ -147,9 +148,11 @@ public class PauseMenu : MonoBehaviour
     public void OpenTutorialPage()
     {
         tutorialText.SetActive(true);
+        tutorialGotItButton.SetActive(true);
     }
     public void CloseTutorialPage()
     {
         tutorialText.SetActive(false);
+        tutorialGotItButton.SetActive(false);
     }
 }
