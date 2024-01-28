@@ -20,15 +20,23 @@ public class SceneLoader : MonoBehaviour
         {
             return;
         }
-
+        
         scenes[0].SetActive(true);
         scenes[1].SetActive(false);
         scenes[2].SetActive(false);
+        scenes[4].SetActive(false);
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene("DarkUnderground_Setup");
+        if (PlayerPrefs.HasKey("TutorialDone"))
+        {
+            SceneManager.LoadScene("DarkUnderground_Setup");
+        }
+        else
+        {
+            OpenTutorial();
+        }
     }
     public void OpenAdvancedSettings()
     {
@@ -64,7 +72,14 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene("DarkUnderground_Setup");
+        if (PlayerPrefs.HasKey("TutorialDone"))
+        {
+            SceneManager.LoadScene("DarkUnderground_Setup");
+        }
+        else
+        {
+            OpenTutorial();
+        }
     }
 
     public void LoadLevel2()
@@ -95,5 +110,19 @@ public class SceneLoader : MonoBehaviour
     {
         scenes[3].SetActive(false);
         scenes[2].SetActive(true);
+    }
+
+    public void OpenTutorial()
+    {
+        scenes[0].SetActive(false);
+        scenes[1].SetActive(false);
+        scenes[2].SetActive(false);
+        scenes[4].SetActive(true);
+    }
+    public void CloseTutorial()
+    {
+        scenes[4].SetActive(false);
+        PlayerPrefs.SetInt("TutorialDone", 1);
+        StartGame();
     }
 }

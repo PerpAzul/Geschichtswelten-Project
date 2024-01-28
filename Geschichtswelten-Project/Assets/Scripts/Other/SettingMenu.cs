@@ -51,8 +51,6 @@ public class SettingMenu : MonoBehaviour
     [SerializeField] private Toggle softParticles;
 
     #endregion
-
-    public AudioMixer audioMixer;
     //[SerializeField] private Dropdown advancedOptions;
 
     //https://www.youtube.com/watch?v=YOaYQrN1oYQ adapted some options from here
