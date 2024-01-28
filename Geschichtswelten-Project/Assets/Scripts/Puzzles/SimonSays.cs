@@ -69,7 +69,15 @@ public class SimonSays : MonoBehaviour
         for (int i = 0; i < maxnumber; i++)
         {
             StartCoroutine(FlashColors());
-            yield return new WaitForSeconds(2 * (count + 1));
+            if (count == 0)
+            {
+                yield return new WaitForSeconds(4);
+            }
+            else
+            {
+                yield return new WaitForSeconds(2 * (count + 1));
+            }
+
             CheckPlayerCount();
             if (stop)
             {
@@ -232,6 +240,7 @@ public class SimonSays : MonoBehaviour
             YellowButton.ActivateRenderer();
             yield return new WaitForSeconds(0.2f);
         }
+
         RedButton.DisableBoxCollider();
         YellowButton.DisableBoxCollider();
         BlueButton.DisableBoxCollider();

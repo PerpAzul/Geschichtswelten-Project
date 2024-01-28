@@ -173,7 +173,6 @@ public class SettingMenu : MonoBehaviour
             default:
                 break;
         }
-
         antiAliasing.value = index;
     }
 

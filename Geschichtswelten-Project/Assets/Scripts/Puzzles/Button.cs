@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,11 @@ public class Button : Interactable
     [SerializeField] private AudioClip buttonSound;
     public SimonSays.Colors Colors;
     public bool pressed = false;
+
+    private void Awake()
+    {
+        promptMessage = Colors + " Button";
+    }
 
     protected override void Interact()
     {

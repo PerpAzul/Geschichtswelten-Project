@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1317670463}
-  m_IndirectSpecularColor: {r: 0.043578748, g: 0.044726565, b: 0.059461884, a: 1}
+  m_IndirectSpecularColor: {r: 0.04365709, g: 0.044818856, b: 0.05955075, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2973,9 +2973,9 @@ MonoBehaviour:
   _AudioSource: {fileID: 67661949}
   _audioSource2: {fileID: 293752255}
   Musics:
-  - {fileID: 8300000, guid: 421411f2ba2681f44bf79c39418e39c4, type: 3}
+  - {fileID: 8300000, guid: d4495fc9fada1c04e9785d09269e07ba, type: 3}
   - {fileID: 8300000, guid: bcf996c34b61eac4385c54c74a56551c, type: 3}
-  - {fileID: 8300000, guid: e323b89df4244db4ea04586f684ea20f, type: 3}
+  - {fileID: 8300000, guid: 8db376a04e6e1cc4e8cac08bd23058ec, type: 3}
 --- !u!82 &67661949
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28641,6 +28641,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23233257954451706, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c9ae0a0700a68ae41bef65c61b1ccb6c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
 --- !u!4 &603994021 stripped
@@ -51662,6 +51666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate3
       objectReference: {fileID: 0}
+    - target: {fileID: 1325537884976974, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4050474928985422, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -51722,6 +51730,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23233257954451706, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23f47356165495940908086b65bb2f36, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
 --- !u!1 &1161090587 stripped
@@ -61925,7 +61937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1483456558547258, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4951408050531192, guid: debf8696585df89458a0b504eaa56a0c, type: 3}
       propertyPath: m_RootOrder
@@ -68249,6 +68261,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23233257954451706, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 494003f4995199b43837e90e7d0f462d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea589d6f72084c447a9e97ea265921a2, type: 3}
 --- !u!4 &1550829666 stripped
@@ -102947,7 +102963,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 562948894, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_AmplitudeGain
-      value: 0.1
+      value: 0.07950526
       objectReference: {fileID: 0}
     - target: {fileID: 562948894, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_FrequencyGain

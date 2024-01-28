@@ -74,7 +74,7 @@ public class SceneLoader : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("TutorialDone"))
         {
-            SceneManager.LoadScene("DarkUnderground_Setup");
+            StartCoroutine(LoadNextScene("DarkUnderground_Setup"));
         }
         else
         {
@@ -84,7 +84,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLevel2()
     {
-        SceneManager.LoadScene("scene_lightsOff");
+        StartCoroutine(LoadNextScene("scene_lightsOff"));
     }
 
     public void ExitToDesktop()
@@ -124,5 +124,15 @@ public class SceneLoader : MonoBehaviour
         scenes[4].SetActive(false);
         PlayerPrefs.SetInt("TutorialDone", 1);
         StartGame();
+    }
+    
+    IEnumerator LoadNextScene(string _scene)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(_scene);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

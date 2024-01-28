@@ -35,7 +35,6 @@ public class HangarDoor : MonoBehaviour
     {
         if (!doorLocked)
         {
-            audio.PlayOneShot(_clip);
             doorCanClose = true;
         }
     }
