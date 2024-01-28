@@ -7075,6 +7075,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1955284624}
     - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7281914
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7779021
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Size.z
+      value: 0.98476374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Center.x
+      value: 0.014476776
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Center.y
+      value: 1.3452399
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Center.z
+      value: 0.1619814
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -65489,6 +65513,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1955284624}
     - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7597656
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7652988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Size.z
+      value: 0.98122025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Center.x
+      value: -0.00957489
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Center.y
+      value: 1.3515415
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Center.z
+      value: 0.098407745
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -65508,6 +65556,14 @@ PrefabInstance:
       propertyPath: gunBarrel
       value: 
       objectReference: {fileID: 3453833569641875849}
+    - target: {fileID: 9176140368570016347, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Height
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176140368570016347, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
 --- !u!4 &1490990153 stripped
@@ -85341,6 +85397,30 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1955284624}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6839504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7835891
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Size.z
+      value: 1.0154011
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Center.x
+      value: 0.030142784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Center.y
+      value: 1.3423964
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
+      propertyPath: m_Center.z
+      value: 0.1781913
+      objectReference: {fileID: 0}
     - target: {fileID: 5038917262348301742, guid: e5836d050fdb354479bcd0d285bf2f22, type: 3}
       propertyPath: m_IsTrigger
       value: 1
