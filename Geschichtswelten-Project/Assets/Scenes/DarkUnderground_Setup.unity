@@ -2974,7 +2974,7 @@ MonoBehaviour:
   _audioSource2: {fileID: 293752255}
   Musics:
   - {fileID: 8300000, guid: d4495fc9fada1c04e9785d09269e07ba, type: 3}
-  - {fileID: 8300000, guid: bcf996c34b61eac4385c54c74a56551c, type: 3}
+  - {fileID: 8300000, guid: db5e8bd86b7bd9249a91e700dba5a2af, type: 3}
   - {fileID: 8300000, guid: 8db376a04e6e1cc4e8cac08bd23058ec, type: 3}
 --- !u!82 &67661949
 AudioSource:
