@@ -1,37 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SettingMenu : MonoBehaviour
 {
-    private static int _indexForGame;
-
-    private static int _indexForAntiAliasing;
+    
 
     private static int _vSyncIndex;
-
-    private static int _qualityShadowIndex;
-
-    private static int _shadowResolutionIndex;
-
-    private static int _shadowDistanceIndex;
-
     private static bool _softParticles;
 
     private static bool _isFullscreen;
-
-    private static int _indexResolution;
-
-    private static float _sensitivityX;
-    private static float _sensitivityY;
-
     [SerializeField] private CinemachineVirtualCamera playerCam;
 
     #region Dropdowns
@@ -58,27 +38,27 @@ public class SettingMenu : MonoBehaviour
     {
         if (!SceneManager.GetActiveScene().ToString().Equals("Start Menu"))
         {
-            Debug.Log(_indexForGame);
-            ChangeQuality(_indexForGame == 0 ? 2 : _indexForGame);
-            ChangeAntiAliasing(_indexForAntiAliasing == 0 ? 2 : _indexForAntiAliasing);
-            EnableVSync(_vSyncIndex == 0 ? 0 : _vSyncIndex);
-            SetShadowQuality(_qualityShadowIndex == 0 ? 1 : _qualityShadowIndex);
-            //ChangeShadowDistance(_shadowDistanceIndex == 0 ? 0 : _shadowDistanceIndex);
-            SetShadowResolution(_shadowResolutionIndex == 0 ? 1 : _shadowResolutionIndex);
+            ChangeQuality(PlayerPrefs.GetInt("Quality") == 0 ? 2 : PlayerPrefs.GetInt("Quality"));
+            ChangeAntiAliasing(PlayerPrefs.GetInt("AntiAliasing") == 0 ? 2 : PlayerPrefs.GetInt("AntiAliasing"));
+            EnableVSync(PlayerPrefs.GetInt("VSync") == 0 ? 0 : PlayerPrefs.GetInt("VSync"));
+            SetShadowQuality(PlayerPrefs.GetInt("ShadowQuality") == 0 ? 1 : PlayerPrefs.GetInt("ShadowQuality"));
+            ChangeShadowDistance(PlayerPrefs.GetInt("ShadowDistance") == 0 ? 0 : PlayerPrefs.GetInt("ShadowDistance"));
+            SetShadowResolution(PlayerPrefs.GetInt("ShadowResolution") == 0 ? 1 : PlayerPrefs.GetInt("ShadowResolution"));
             SoftParticles(_softParticles != false && _softParticles);
             setFullScreen(_isFullscreen);
-            SetResolution(_indexResolution == 0 ? 1 : _indexResolution);
-            SetSensitivityX(_sensitivityX == 0f ? 0.25f : _sensitivityX);
-            SetSensitivityY(_sensitivityY == 0f ? 0.25f : _sensitivityX);
+            SetResolution(PlayerPrefs.GetInt("Resolution Value") == 0 ? 1 : PlayerPrefs.GetInt("Resolution Value"));
+            SetSensitivityX(PlayerPrefs.GetFloat("SensitivityX") == 0f ? 0.25f : PlayerPrefs.GetFloat("SensitivityX"));
+            SetSensitivityY(PlayerPrefs.GetFloat("SensitivityY") == 0f ? 0.25f : PlayerPrefs.GetFloat("SensitivityY"));
         }
     }
 
     // Start is called before the first frame update
     public void ChangeQuality(int index)
     {
-        _indexForGame = index;
+        
         QualitySettings.SetQualityLevel(index);
-        quality.value = _indexForGame;
+        PlayerPrefs.SetInt("Quality", index);
+        quality.value = index;
     }
 
     public void setFullScreen(bool toIsFullscreen)
@@ -90,7 +70,7 @@ public class SettingMenu : MonoBehaviour
 
     public void SetResolution(int index)
     {
-        _indexResolution = index;
+      
         switch (index)
         {
             case 0:
@@ -112,13 +92,12 @@ public class SettingMenu : MonoBehaviour
             default:
                 break;
         }
-
+        PlayerPrefs.SetInt("Resolution Value", index);
         resolution.value = index;
     }
 
     public void ChangeShadowDistance(int index)
     {
-        _shadowDistanceIndex = index;
         switch (index)
         {
             case 0:
@@ -144,6 +123,7 @@ public class SettingMenu : MonoBehaviour
         }
         //Dunno why ShadowDistance does not work here
         //shadowDistance.value = _shadowDistanceIndex;
+        PlayerPrefs.SetInt("ShadowDistance", index);
     }
 
     public void SoftParticles(bool isOn)
@@ -155,7 +135,6 @@ public class SettingMenu : MonoBehaviour
 
     public void ChangeAntiAliasing(int index)
     {
-        _indexForAntiAliasing = index;
         switch (index)
         {
             case 0:
@@ -173,12 +152,13 @@ public class SettingMenu : MonoBehaviour
             default:
                 break;
         }
+        PlayerPrefs.SetInt("AntiAliasing", index);
         antiAliasing.value = index;
     }
 
     public void EnableVSync(int index)
     {
-        _vSyncIndex = index;
+        //_vSyncIndex = index;
         switch (index)
         {
             case 0:
@@ -193,13 +173,12 @@ public class SettingMenu : MonoBehaviour
             default:
                 break;
         }
-
-        vsync.value = _vSyncIndex;
+        PlayerPrefs.SetInt("VSync", index);
+        vsync.value = index;
     }
 
     public void SetShadowResolution(int index)
     {
-        _shadowResolutionIndex = index;
         switch (index)
         {
             case 0:
@@ -217,7 +196,7 @@ public class SettingMenu : MonoBehaviour
             default:
                 break;
         }
-
+        PlayerPrefs.SetInt("ShadowResolution", index);
         shadowResolution.value = index;
     }
 
@@ -225,7 +204,6 @@ public class SettingMenu : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Equals("Start Menu"))
         {
-            _sensitivityX = value;
             return;
         }
 
@@ -233,7 +211,7 @@ public class SettingMenu : MonoBehaviour
         {
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = value;
         }
-
+        PlayerPrefs.SetFloat("SensitivityX", value);
         sensitivityX.value = value;
     }
 
@@ -241,7 +219,6 @@ public class SettingMenu : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Equals("Start Menu"))
         {
-            _sensitivityY = value;
             return;
         }
 
@@ -250,13 +227,12 @@ public class SettingMenu : MonoBehaviour
             Debug.Log("Changing");
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = value;
         }
-
+        PlayerPrefs.SetFloat("SensitivityY", value);
         sensitivityY.value = value;
     }
 
     public void SetShadowQuality(int index)
     {
-        _qualityShadowIndex = index;
         switch (index)
         {
             case 0:
@@ -271,7 +247,7 @@ public class SettingMenu : MonoBehaviour
             default:
                 break;
         }
-
+        PlayerPrefs.SetInt("ShadowQuality", index);
         shadowQuality.value = index;
     }
 }
