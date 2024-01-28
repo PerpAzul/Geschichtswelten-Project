@@ -152,7 +152,7 @@ public class PlayerLook : MonoBehaviour
                         distance * 75.75f,
                         ForceMode.Force);
                         
-                    StartCoroutine(StartCountdown(1));
+                    StartCoroutine(StartCountdown(2));
                 }
             }
             else

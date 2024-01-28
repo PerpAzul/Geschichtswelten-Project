@@ -10,7 +10,7 @@ public class BadgeMiniPuzzle : Interactable
     protected override void Interact()
     {
         _miniBadgePuzzle.count++;
-        text.text = "MiniBadge: " + _miniBadgePuzzle.count; 
+        text.text = "Badges: " + _miniBadgePuzzle.count; 
         Destroy(gameObject);
     }
 }

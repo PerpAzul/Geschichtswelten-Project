@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public AudioClip shootingSound;
     public AudioClip deathSound;
     public AudioClip initialAggressionSound;
+    public AudioClip boxhit;
     private AudioSource thisAudioSource; // every enemy should also have an AudioSource element
     #endregion
 
@@ -72,19 +73,20 @@ public class Enemy : MonoBehaviour
             var temp = other.gameObject;
             var speed = Vector3.Magnitude(temp.GetComponent<Rigidbody>().velocity);
             Debug.Log(speed);
+            thisAudioSource.PlayOneShot(boxhit);
             switch (speed)
             {
                 case <= 2f:
                     Debug.Log("Damage 1");
-                    TakeDamage(5);
+                    TakeDamage(10);
                     break;
                 case > 2f and <= 5f:
                     Debug.Log("Damage 2");
-                    TakeDamage(10);
+                    TakeDamage(20);
                     break;
                 case > 5f:
                     Debug.Log("Damage 3");
-                    TakeDamage(20);
+                    TakeDamage(30);
                     break;
             }
         }

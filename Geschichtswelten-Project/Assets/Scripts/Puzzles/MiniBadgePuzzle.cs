@@ -40,6 +40,7 @@ public class MiniBadgePuzzle : Interactable
     {
         if (input.Count == 0)
         {
+            _source.PlayOneShot(fail);
             input = new List<string>();
             return;
         }
