@@ -2146,7 +2146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -50}
+  m_AnchoredPosition: {x: 142, y: -50}
   m_SizeDelta: {x: 1920, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078572837
@@ -2442,8 +2442,34 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Xbox\n\nA\nLeft Stick\nRight Stick\nA\nRight\tStick  Press(R3)\nLeft   
-    Stick  Press(L3)\nStart\nB\nRT\nLT\nX\nY"
+  m_text: 'Xbox
+
+
+    A
+
+    LS
+
+    RS
+
+    LS (Hold)
+
+    RS (Press)
+
+    A
+
+    X
+
+    Y
+
+    LT
+
+    RT
+
+    Start
+
+    Mouse
+
+    B'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2470,8 +2496,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2555,7 +2581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1000, y: -45}
+  m_AnchoredPosition: {x: 1056, y: -45}
   m_SizeDelta: {x: 500, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195441137
@@ -2585,26 +2611,28 @@ MonoBehaviour:
 
     WASD
 
-    Move Mouse
+    Mouse
 
-    F
+    Shift (Hold)
 
     G
 
-    Left Shift(hold)
-
-    Esc
-
-    Q
-
-    Left
-    Click
-
-    Right Click
+    F
 
     R
 
-    Tab'
+    Tab
+
+    Right
+    Click
+
+    Left Click
+
+    Esc
+
+    Mouse
+
+    Q'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2631,8 +2659,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2716,7 +2744,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -45}
+  m_AnchoredPosition: {x: 410, y: -45}
   m_SizeDelta: {x: 500, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1199223343
@@ -2742,31 +2770,33 @@ MonoBehaviour:
   m_text: 'Function
 
 
-    Go through cutscene
+    Next Cutscene
 
     Move
 
     Look
 
-    Interact with
-    objects
-
-    Toggle Flashlight
-
     Sprint
 
-    Open Pause Menu
+    Flashlight
 
-    Leave keypad
-    input
-
-    Shoot
-
-    Aim
+    Interact
+    with Objects
 
     Reload
 
-    Switch Weapon'
+    Switch Weapon
+
+    Aim
+
+    Shoot
+
+    Pause
+
+    Buttons
+    in UI and Keypad
+
+    Leave Keypad'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2793,8 +2823,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2829,7 +2859,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 49.373474}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4161,7 +4191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -85.27, y: -500}
+  m_AnchoredPosition: {x: -13, y: -500}
   m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952052912
@@ -4293,7 +4323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1700, y: -45}
+  m_AnchoredPosition: {x: 1739, y: -45}
   m_SizeDelta: {x: 500, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954445658
@@ -4316,7 +4346,34 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Playstation\n\nX\nLeft Stick\nRight Stick\nX\n\n\nOptions\nO\nR2\nL2\n\u25A1\nTriangle"
+  m_text: 'Playstation
+
+
+    Cross
+
+    L3
+
+    R3
+
+    L3 (Hold)
+
+    R3 (Press)
+
+    Cross
+
+    Square
+
+    Triangle
+
+    L2
+
+    R2
+
+    Start
+
+    Mouse
+
+    Circle'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4343,8 +4400,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

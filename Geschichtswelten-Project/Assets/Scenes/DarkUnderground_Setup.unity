@@ -61484,7 +61484,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 258677052, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 694584148, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
@@ -61542,7 +61542,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 641894068926216803, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
-      value: "Playstation\n\nX\nLeft Stick\nRight Stick\nX\n\n\nOptions\nO\nR2\nL2\n\u25A1\nTriangle"
+      value: 'Playstation
+
+
+        Cross
+
+        L3
+
+        R3
+
+        L3 (Hold)
+
+        R3
+        (Press)
+
+        Cross
+
+        Square
+
+        Triangle
+
+        L2
+
+        R2
+
+        Start
+
+        Mouse
+
+        Circle'
+      objectReference: {fileID: 0}
+    - target: {fileID: 641894068926216803, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 641894068926216803, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 680230020390396791, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -61590,6 +61626,7 @@ PrefabInstance:
       propertyPath: m_text
       value: '2 years ago.
 
+
         - Head Scientist: This facility will no longer
         be used. The new one will be ready in a month and the Loppu Project will
         already start being transported. This will be my last day working in this
@@ -61602,37 +61639,50 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1434136223487801828, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1056
+      objectReference: {fileID: 0}
     - target: {fileID: 2009393118956607772, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
       value: 'Function
 
 
-        Go through Cutscene
+        Next Cutscene
 
         Move
 
         Look
 
-        Interact
-        with objects
-
-        Toggle Flashlight
-
         Sprint
 
-        Open Pause
-        Menu
+        Flashlight
 
-        Leave Keypad Input
-
-        Shoot
-
-        Aim
+        Interact
+        with Objects
 
         Reload
 
-        Switch
-        Weapon'
+        Switch Weapon
+
+        Aim
+
+        Shoot
+
+        Pause
+
+        Buttons
+        in UI and Keypad
+
+        Leave Keypad'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009393118956607772, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009393118956607772, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2090958042155608891, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -61645,6 +61695,10 @@ PrefabInstance:
     - target: {fileID: 2148870380517325260, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148870380517325260, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1739
       objectReference: {fileID: 0}
     - target: {fileID: 2722531094291156853, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -61820,7 +61874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3182407998266961586, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 818.3
+      value: 874
       objectReference: {fileID: 0}
     - target: {fileID: 3182407998266961586, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -61837,6 +61891,7 @@ PrefabInstance:
     - target: {fileID: 3412534399314919358, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
       value: '1 month ago.
+
 
         - Head Scientist: It is done. The Loppu Project
         was a success. This is the biggest technology discovery of all time chief.
@@ -62064,6 +62119,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6120555295861034290, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 410
+      objectReference: {fileID: 0}
     - target: {fileID: 6192507678488737349, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
       value: 'PC
@@ -62073,26 +62132,36 @@ PrefabInstance:
 
         WASD
 
-        Move Mouse
+        Mouse
 
-        F
+        Shift (Hold)
 
         G
 
-        Left
-        Shift(hold)
-
-        Esc
-
-        Q
-
-        Left Click
-
-        Right Click
+        F
 
         R
 
-        Tab'
+        Tab
+
+        Right
+        Click
+
+        Left Click
+
+        Esc
+
+        Mouse
+
+        Q'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192507678488737349, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192507678488737349, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6301365480691040544, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
@@ -62101,28 +62170,38 @@ PrefabInstance:
 
         A
 
-        Left Stick
+        LS
 
-        Right Stick
+        RS
+
+        LS (Hold)
+
+        RS
+        (Press)
 
         A
 
-        Right
-        Stick Press  (R3)
+        X
 
-        Left Stick Press     (L3)
-
-        Start
-
-        B
-
-        RT
+        Y
 
         LT
 
-        X
+        RT
 
-        Y'
+        Start
+
+        Mouse
+
+        B'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301365480691040544, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301365480691040544, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6660688140283708474, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
@@ -62141,6 +62220,10 @@ PrefabInstance:
     - target: {fileID: 6776602488714716165, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6776602488714716165, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 7341023999004065338, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_Color.b

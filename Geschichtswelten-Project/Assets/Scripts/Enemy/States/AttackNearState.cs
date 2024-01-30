@@ -57,6 +57,5 @@ public class AttackNearState : BaseState
         stateMachine.GetAnimator().SetTrigger("Attack");
         enemy.Player.GetComponent<PlayerHealth>().TakeDamage();
         enemy.PlayMeleeAttackSound();
-        
     }
 }
