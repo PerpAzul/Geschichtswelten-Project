@@ -6,11 +6,8 @@ using UnityEngine.UI;
 
 public class SettingMenu : MonoBehaviour
 {
-    
-
     private static int _vSyncIndex;
     private static bool _softParticles;
-
     private static bool _isFullscreen;
     [SerializeField] private CinemachineVirtualCamera playerCam;
 
@@ -31,6 +28,7 @@ public class SettingMenu : MonoBehaviour
     [SerializeField] private Toggle softParticles;
 
     #endregion
+    
     //[SerializeField] private Dropdown advancedOptions;
 
     //https://www.youtube.com/watch?v=YOaYQrN1oYQ adapted some options from here
@@ -47,15 +45,14 @@ public class SettingMenu : MonoBehaviour
             SoftParticles(_softParticles != false && _softParticles);
             setFullScreen(_isFullscreen);
             SetResolution(PlayerPrefs.GetInt("Resolution Value") == 0 ? 1 : PlayerPrefs.GetInt("Resolution Value"));
-            SetSensitivityX(PlayerPrefs.GetFloat("SensitivityX") == 0f ? 0.25f : PlayerPrefs.GetFloat("SensitivityX"));
-            SetSensitivityY(PlayerPrefs.GetFloat("SensitivityY") == 0f ? 0.25f : PlayerPrefs.GetFloat("SensitivityY"));
+            SetSensitivityX(PlayerPrefs.GetFloat("X") == 0f ? 0.25f : PlayerPrefs.GetFloat("X"));
+            SetSensitivityY(PlayerPrefs.GetFloat("Y") == 0f ? 0.25f : PlayerPrefs.GetFloat("Y"));
         }
     }
 
     // Start is called before the first frame update
     public void ChangeQuality(int index)
     {
-        
         QualitySettings.SetQualityLevel(index);
         PlayerPrefs.SetInt("Quality", index);
         quality.value = index;
@@ -63,14 +60,13 @@ public class SettingMenu : MonoBehaviour
 
     public void setFullScreen(bool toIsFullscreen)
     {
-        SettingMenu._isFullscreen = toIsFullscreen;
+        _isFullscreen = toIsFullscreen;
         Screen.fullScreen = toIsFullscreen;
         fullscreen.isOn = toIsFullscreen;
     }
 
     public void SetResolution(int index)
     {
-      
         switch (index)
         {
             case 0:
@@ -89,8 +85,6 @@ public class SettingMenu : MonoBehaviour
             case 4:
                 Screen.SetResolution(3840, 2160, _isFullscreen);
                 break;
-            default:
-                break;
         }
         PlayerPrefs.SetInt("Resolution Value", index);
         resolution.value = index;
@@ -98,7 +92,7 @@ public class SettingMenu : MonoBehaviour
 
     public void ChangeShadowDistance(int index)
     {
-        switch (index)
+        switch (index)  
         {
             case 0:
                 QualitySettings.shadowDistance = 0;
@@ -118,11 +112,7 @@ public class SettingMenu : MonoBehaviour
             case 5:
                 QualitySettings.shadowDistance = 300;
                 break;
-            default:
-                break;
         }
-        //Dunno why ShadowDistance does not work here
-        //shadowDistance.value = _shadowDistanceIndex;
         PlayerPrefs.SetInt("ShadowDistance", index);
     }
 
@@ -149,8 +139,6 @@ public class SettingMenu : MonoBehaviour
             case 3:
                 QualitySettings.antiAliasing = 8;
                 break;
-            default:
-                break;
         }
         PlayerPrefs.SetInt("AntiAliasing", index);
         antiAliasing.value = index;
@@ -158,7 +146,6 @@ public class SettingMenu : MonoBehaviour
 
     public void EnableVSync(int index)
     {
-        //_vSyncIndex = index;
         switch (index)
         {
             case 0:
@@ -170,13 +157,15 @@ public class SettingMenu : MonoBehaviour
             case 2:
                 QualitySettings.vSyncCount = index;
                 break;
-            default:
-                break;
         }
         PlayerPrefs.SetInt("VSync", index);
         vsync.value = index;
     }
 
+    public void Save()
+    {
+        PlayerPrefs.Save();
+    }
     public void SetShadowResolution(int index)
     {
         switch (index)
@@ -193,8 +182,6 @@ public class SettingMenu : MonoBehaviour
             case 3:
                 QualitySettings.shadowResolution = ShadowResolution.VeryHigh;
                 break;
-            default:
-                break;
         }
         PlayerPrefs.SetInt("ShadowResolution", index);
         shadowResolution.value = index;
@@ -204,6 +191,7 @@ public class SettingMenu : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Equals("Start Menu"))
         {
+            PlayerPrefs.SetFloat("X", value);
             return;
         }
 
@@ -211,7 +199,7 @@ public class SettingMenu : MonoBehaviour
         {
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = value;
         }
-        PlayerPrefs.SetFloat("SensitivityX", value);
+        PlayerPrefs.SetFloat("X", value);
         sensitivityX.value = value;
     }
 
@@ -219,15 +207,15 @@ public class SettingMenu : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Equals("Start Menu"))
         {
+            PlayerPrefs.SetFloat("Y", value);
             return;
         }
 
         if (SceneManager.GetActiveScene().buildIndex != 0)
         {
-            Debug.Log("Changing");
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = value;
         }
-        PlayerPrefs.SetFloat("SensitivityY", value);
+        PlayerPrefs.SetFloat("Y", value);
         sensitivityY.value = value;
     }
 
@@ -243,8 +231,6 @@ public class SettingMenu : MonoBehaviour
                 break;
             case 2:
                 QualitySettings.shadows = ShadowQuality.All;
-                break;
-            default:
                 break;
         }
         PlayerPrefs.SetInt("ShadowQuality", index);

@@ -31,6 +31,8 @@ public class LetterInteract : Interactable
         }
         else
         {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = false;
             gameUI.SetActive(true);
             papers.SetActive(false);
             Text.SetActive(false);

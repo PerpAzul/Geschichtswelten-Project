@@ -61,10 +61,14 @@ public class PauseMenu : MonoBehaviour
 
     private void Unpause()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
         if (tutorialText.activeSelf)
         {
             tutorialText.SetActive(false);
+            tutorialGotItButton.SetActive(false);
         }
+        
         if (cutscene.gameObject.activeSelf)
         {
             advancedOptions.SetActive(false);
@@ -93,8 +97,7 @@ public class PauseMenu : MonoBehaviour
             return;
         }
 
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
+        
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         OptionsMenu.SetActive(false);

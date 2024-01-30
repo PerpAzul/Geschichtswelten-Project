@@ -61484,7 +61484,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 258677052, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 694584148, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
@@ -61725,6 +61725,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 258677052}
     - target: {fileID: 2722531095531035817, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 893013061}
+    - target: {fileID: 2722531095531035817, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: OptionsMenu
       value: 
       objectReference: {fileID: 1519965784}
@@ -61956,6 +61960,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1873135194}
+    - target: {fileID: 3432038361092471028, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1873135195}
+    - target: {fileID: 3432038361092471028, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Save
+      objectReference: {fileID: 0}
     - target: {fileID: 3432038361092471035, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_SizeDelta.x
       value: 207.6573

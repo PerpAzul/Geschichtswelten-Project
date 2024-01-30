@@ -74,6 +74,7 @@ public class SceneLoader : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("TutorialDone"))
         {
+            PlayerPrefs.Save();
             StartCoroutine(LoadNextScene("DarkUnderground_Setup"));
         }
         else
