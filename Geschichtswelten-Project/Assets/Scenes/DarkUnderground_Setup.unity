@@ -61496,6 +61496,12 @@ PrefabInstance:
         the NHM, and I need you in this mission, but I also need you to trust me
         without questions.
       objectReference: {fileID: 0}
+    - target: {fileID: 1545887243, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
+      propertyPath: m_text
+      value: "1 day ago\r \n\nMessage from Facility Xeno:\n\nWARNING!!!\r\n\nSubject
+        GP160 from the Loppu Project has escaped and is highly dangerous. Any sighting
+        of the subject is to be reported immediately."
+      objectReference: {fileID: 0}
     - target: {fileID: 1662666318, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: _player
       value: 
@@ -61629,9 +61635,9 @@ PrefabInstance:
 
         - Head Scientist: This facility will no longer
         be used. The new one will be ready in a month and the Loppu Project will
-        already start being transported. This will be my last day working in this
-        facility. I know it didn''t had the technology necessary to finish the project.
-        It just was where everything started, and I guess I will miss it.
+        start being transported. This will be my last day working in this facility.
+        I know it didn''t have the technology necessary to finish the project. It
+        was just where everything started, and I guess I will miss it.
 
 '
       objectReference: {fileID: 0}
@@ -61901,10 +61907,10 @@ PrefabInstance:
         was a success. This is the biggest technology discovery of all time chief.
 
         -
-        Kurja: Our dreams will finally become true.
+        Kurja: Our dreams will finally come true.
 
         - Head Scientist: They
-        already are.
+        already have.
 
 '
       objectReference: {fileID: 0}
@@ -62124,7 +62130,7 @@ PrefabInstance:
       propertyPath: m_text
       value: "Attention all Personell! \nDue to recent break in attempts, a new Security
         System has been implemented. \n\nPlease read carefully though the systems
-        steps:\n\n1: Opens the door in the other side of the corridor.\n2: Opens
+        steps:\n\n1: Opens the door on the other side of the corridor.\n2: Opens
         the red.\n3: Opens the green.\n2 and 3: Opens the white."
       objectReference: {fileID: 0}
     - target: {fileID: 6120555295861034290, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
@@ -62220,12 +62226,12 @@ PrefabInstance:
       value: "- Ep\xE4ill\xE4: Who changed the password again?\r\n- \u0160arada:
         I did. Remember to look at the planets. First comes my favorite planet, then
         the one with my favorite color, then the last one left.\r\n- Ep\xE4ill\xE4:
-        You told me that when I was drunk last week, how would I remember. \n- \u0160arada:
-        But you still remember how I tripped and fell in our boss.\r\n- Ep\xE4ill\xE4:
+        You told me that when I was drunk last week, how would I remember?\n- \u0160arada:
+        But you still remember how I tripped and fell on our boss.\r\n- Ep\xE4ill\xE4:
         That I wouldn't forget.\r\n- \u0160arada: Fine. But don't you remember how
         I love the big planets that make the universe seem so huge?\r\n- Ep\xE4ill\xE4:
         Oh yeah that\u2019s right, and what about your favorite color. I remember
-        it, it is just to make sure.\r\n- \u0160arada: I can't believe it, you forget
+        it, but just to make sure.\r..\n- \u0160arada: I can't believe it. You forget
         everything! I like the bright colors the most.\r\n- Ep\xE4ill\xE4: Alright,
         now I got it.\r\n"
       objectReference: {fileID: 0}
@@ -69078,8 +69084,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[0]
-      value: 'Nadji: Wasn''t the experiments enough. You already discovered how to
-        create the weapon you wanted, you can do it to all your soldiers.'
+      value: 'Nadji: Wasn''t the experiments enough? You''ve already discovered how
+        to create the weapon you wanted, you can do it to all your soldiers.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[1]
@@ -86951,15 +86957,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[6]
-      value: "Kurja: We are in war for a long-time kid, the NHM, our people, have
-        already suffered to much in the hands of those filthy terrorists. Don\u2019t
+      value: "Kurja: We have been  in war for a long-time kid. The NHM, our people,
+        have already suffered too much at the hands of those filthy terrorists. Don\u2019t
         you care about that?  "
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[7]
-      value: 'Yuri: I care about it. I dedicated my life to helping our people. I
-        just thought maybe relaxing a little bit would help to clear our minds and
-        think about the next move. '
+      value: 'Yuri: Of course I care about it. I''ve dedicated my life to helping
+        our people. I just thought maybe relaxing a little bit would help clear our
+        minds and think about the next move. '
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[8]
@@ -96496,7 +96502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[0]
-      value: 'Yuri: There was something I have been wanting to discuss with you chief.'
+      value: 'Yuri: There is something I have been wanting to discuss with you chief.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[1]
@@ -96512,9 +96518,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[4]
-      value: 'Yuri: Well, it''s just that I dedicated my whole life trying to be
-        the best soldier possible and to help our people win the war and I don''t
-        even know why we are fighting this war.  '
+      value: 'Yuri: Well, it''s just that I''ve dedicated my whole life trying to
+        be the best soldier possible and  helping our people win the war and I don''t
+        even know why we are fighting it.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[5]
@@ -96532,8 +96538,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[8]
-      value: 'Kurja: They are horrific persons, terrorists, and you know that. End
-        of Discussion.'
+      value: 'Kurja: They are horrific people, terrorists, and you know that. End
+        of discussion.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703189, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: m_Name
