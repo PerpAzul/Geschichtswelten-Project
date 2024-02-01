@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
     public List<GameObject> scenes = new List<GameObject>();
     [SerializeField] private GameObject lvl2Button;
 
+    public static bool tutorialDone = false;
     private void Awake()
     {
         if (!Cursor.visible)
@@ -29,7 +30,7 @@ public class SceneLoader : MonoBehaviour
 
     public void StartGame()
     {
-        if (PlayerPrefs.HasKey("TutorialDone"))
+        if (tutorialDone)
         {
             SceneManager.LoadScene("DarkUnderground_Setup");
         }
@@ -72,7 +73,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLevel()
     {
-        if (PlayerPrefs.HasKey("TutorialDone"))
+        if (tutorialDone)
         {
             PlayerPrefs.Save();
             StartCoroutine(LoadNextScene("DarkUnderground_Setup"));
@@ -123,7 +124,7 @@ public class SceneLoader : MonoBehaviour
     public void CloseTutorial()
     {
         scenes[4].SetActive(false);
-        PlayerPrefs.SetInt("TutorialDone", 1);
+        tutorialDone = true;
         StartGame();
     }
     
