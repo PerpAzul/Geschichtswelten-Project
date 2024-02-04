@@ -239,6 +239,18 @@ public class Cutscene_Manager_2 : MonoBehaviour
             case 20:
                 index++;
                 break;
+            case 21:
+                StartCoroutine(LoadNextScene());
+                break;
+        }
+    }
+    IEnumerator LoadNextScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("thanks");
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
         }
     }
 }
