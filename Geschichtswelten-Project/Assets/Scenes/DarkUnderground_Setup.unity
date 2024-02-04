@@ -61976,11 +61976,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3432038361092471035, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 207.6573
+      value: 268.069
       objectReference: {fileID: 0}
     - target: {fileID: 3432038361092471035, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 46.1563
+      value: 53.9593
       objectReference: {fileID: 0}
     - target: {fileID: 3432038361092471035, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -61988,11 +61988,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3432038361092471035, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80
+      value: 89.815
       objectReference: {fileID: 0}
     - target: {fileID: 3432038361194684096, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_text
-      value: return to menu
+      value: return to Pause menu
       objectReference: {fileID: 0}
     - target: {fileID: 3432038361656149194, guid: 864042b266f10d741a37b353c03e8fd3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -69084,8 +69084,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[0]
-      value: 'Nadji: Wasn''t the experiments enough? You''ve already discovered how
-        to create the weapon you wanted, you can do it to all your soldiers.'
+      value: 'Nadji: Weren''t the experiments enough? You''ve already discovered
+        how to create the weapon you wanted, you can do it to all your soldiers.'
       objectReference: {fileID: 0}
     - target: {fileID: 3122256404153703188, guid: e576e866b4fa39c488c9b34d048d6dd5, type: 3}
       propertyPath: dialogLines.Array.data[1]
@@ -103796,7 +103796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_VerticalAxis.m_MaxSpeed
-      value: 0.25
+      value: 0.7809173
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_VerticalAxis.m_SpeedMode
@@ -103804,7 +103804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_HorizontalAxis.m_MaxSpeed
-      value: 0.25
+      value: 1.141186
       objectReference: {fileID: 0}
     - target: {fileID: 6223447335724503246, guid: b06820c665c7eab4db6477040a4feedd, type: 3}
       propertyPath: m_HorizontalAxis.m_SpeedMode
